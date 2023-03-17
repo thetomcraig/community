@@ -68,9 +68,7 @@ if app.platform == "windows":
             "talent home": os.path.expandvars("%AppData%\\Talon"),
             "talent user": os.path.expandvars("%AppData%\\Talon\\user"),
             "talent recordings": os.path.expandvars("%AppData%\\talon\\recordings"),
-            "talent plugins": os.path.expandvars(
-                "%ProgramFiles%\\Talon\\talon_plugins"
-            ),
+            "talent plugins": os.path.expandvars("%ProgramFiles%\\Talon Rust\\talon_plugins") if app.branch == "rust" else os.path.expandvars("%ProgramFiles%\\Talon\\talon_plugins") ,
             "root": "\\",
         }
 
@@ -108,7 +106,7 @@ class UserActionsWin:
         actions.key("alt-tab")
 
     def system_open_directory(path):
-        #     actions.user.exec(f'explorer.exe "{path}"')
+        actions.user.exec(f'explorer.exe "{path}"')
 
         # def system_show_clipboard():
         #     actions.key("super-v")
