@@ -1,0 +1,15 @@
+system shutdown:    user.system_shutdown()
+system restart:     user.system_restart()
+system rest:        user.system_hibernate()
+system lock:        user.system_lock()
+task manager:       user.system_task_manager()
+desktop show:       user.system_show_desktop()
+task view:          user.system_task_view()
+switcher:           user.system_switcher()
+clip show:          user.system_show_clipboard()
+settings show:             user.system_show_settings()
+# ^kill focused$: user.system_kill_focused_application()
+configure {user.system_setting}:
+     user.system_setting(system_setting)
+summon <user.directory>:
+     user.system_open_directory(directory)
