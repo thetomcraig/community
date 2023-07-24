@@ -10,10 +10,10 @@ key pad six: keypad_6
 key pad seven: keypad_7
 key pad eight: keypad_8
 key pad nine: keypad_9
-key pad point: keypad_decimal
+key pad dot: keypad_decimal
 key pad plus: keypad_plus
 key pad minus: keypad_minus
-key pad times: keypad_multiply
-key pad stroke: keypad_divide
+key pad plex: keypad_multiply
+key pad slash: keypad_divide
 key pad equals: keypad_equals
 key pad clear: keypad_clear
