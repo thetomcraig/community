@@ -155,6 +155,8 @@ punctuation_words = {
     "slash": "/",
     "question mark": "?",
     "queue": "?",
+            "q": "?",
+
     "exclamation mark": "!",
     "exclamation point": "!",
     "bang": "!",
@@ -175,10 +177,13 @@ punctuation_words = {
     "right paren": ")",
 }
 symbol_key_words = {
-    "dot": ".",
+    # "dot": ".",
     "point": ".",
     "quote": "'",
     "question": "?",
+    "queue": "?",
+        "q": "?",
+
     "apostrophe": "'",
     "L square": "[",
     "left square": "[",
