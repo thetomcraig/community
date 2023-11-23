@@ -14,6 +14,12 @@ please [<user.text>]:
     user.vscode("workbench.action.showCommands")
     insert(user.text or "")
 
+# Vim
+toggle vim:
+    user.vscode("toggleVim")
+
+
+
 # Sidebar
 bar explore: user.vscode("workbench.view.explorer")
 bar extensions: user.vscode("workbench.view.extensions")
@@ -138,10 +144,18 @@ toggle mark: user.vscode("bookmarks.toggle")
 go next mark: user.vscode("bookmarks.jumpToNext")
 go last mark: user.vscode("bookmarks.jumpToPrevious")
 
+# Project Manager Plugin
+bar projects: user.vscode("workbench.view.extension.project-manager")
+(go project | go projects):
+    user.vscode("projectManager.listProjects")
+
 close other tabs: user.vscode("workbench.action.closeOtherEditors")
 close all tabs: user.vscode("workbench.action.closeAllEditors")
 close tabs way right: user.vscode("workbench.action.closeEditorsToTheRight")
 close tabs way left: user.vscode("workbench.action.closeEditorsToTheLeft")
+
+# Close splits other than the current one
+only: user.vscode("workbench.action.showEditorTab")
 
 # Folding
 fold that: user.vscode("editor.fold")
@@ -210,7 +224,6 @@ test debug file: user.vscode("testing.debugCurrentFile")
 test debug all: user.vscode("testing.debugAll")
 test debug failed: user.vscode("testing.debugFailTests")
 test debug last: user.vscode("testing.debugLastRun")
-
 test cancel: user.vscode("testing.cancelRun")
 
 # Debugging
@@ -264,6 +277,8 @@ hover show: user.vscode("editor.action.showHover")
 join lines: user.vscode("editor.action.joinLines")
 
 full screen: user.vscode("workbench.action.toggleFullScreen")
+
+isolate : user.vscode("workbench.action.toggleSidebarVisibility")
 
 curse undo: user.vscode("cursorUndo")
 
