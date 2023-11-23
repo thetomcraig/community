@@ -1,6 +1,6 @@
 grip, DataGrip
-term, iTerm2
-finder, File Explorer
+terminal, WindowsTerminal.exe
+explorer, explorer.exe
 one note, ONENOTE
 lock, slack.exe
 app, slack.exe
