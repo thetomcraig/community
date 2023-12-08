@@ -70,6 +70,9 @@ def format_phrase_without_adding_to_history(word_list, formatters: str):
 def surround(by):
     return lambda i, word, last: (by if i == 0 else "") + word + (by if last else "")
 
+def surround_and_append(left_side, right_side, post_string):
+    # For markdown I would like to pull this from the clipboard
+    return lambda i, word, last: (left_side if i == 0 else "") + word + (right_side + post_string if last else "")
 
 def words_with_joiner(joiner):
     """Pass through words unchanged, but add a separator between them."""
@@ -157,6 +160,8 @@ formatters_dict = {
     "ALL_LOWERCASE": (SEP, every_word(lambda w: w.lower())),
     "DOUBLE_QUOTED_STRING": (SEP, surround('"')),
     "SINGLE_QUOTED_STRING": (SEP, surround("'")),
+    "BACKTICKS": (SEP, surround("`")),
+    "MARKDOWN_LINK": (SEP, surround_and_append("[","]","()")),
     "SPACE_SURROUNDED_STRING": (SEP, surround(" ")),
     "DOT_SEPARATED": words_with_joiner("."),
     "DOT_SNAKE": (NOSEP, lambda i, word, _: "." + word if i == 0 else "_" + word),
@@ -186,6 +191,8 @@ code_formatter_names = {
     "smash": "NO_SPACES",
     "snake": "SNAKE_CASE",
     "string": "SINGLE_QUOTED_STRING",
+    "code": "BACKTICKS",
+    "link": "MARKDOWN_LINK",
 }
 prose_formatter_names = {
     "say": "NOOP",
