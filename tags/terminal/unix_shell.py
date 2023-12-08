@@ -54,3 +54,9 @@ class Actions:
         actions.key("ctrl-c")
         actions.insert("y")
         actions.key("enter")
+
+    def terminal_complete_suggestion():
+            """complete the suggested line,
+            to be used with auto suggest zsh plugin"""
+            actions.key("ctrl-j")
+            actions.key("enter")
