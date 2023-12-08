@@ -28,3 +28,6 @@ class Actions:
 
     def terminal_kill_all():
         """kills the running command"""
+
+    def terminal_complete_suggestion():
+        """kills the running command"""
