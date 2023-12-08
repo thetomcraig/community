@@ -8,6 +8,7 @@ focus <user.running_applications>: user.switcher_focus(running_applications)
 focus$: user.switcher_menu()
 
 coder : user.switcher_focus("code")
+terminal : user.switcher_focus("term")
 brave : user.switcher_focus("brave")
 
 running list: user.switcher_toggle_running()
