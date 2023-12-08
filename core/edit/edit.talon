@@ -19,7 +19,10 @@ go word right: edit.word_right()
 go left: edit.left()
 go right: edit.right()
 go up: edit.up()
+north: edit.up()
 go down: edit.down()
+south: edit.down()
+
 
 go line start | head: edit.line_start()
 go line end | tail: edit.line_end()
@@ -170,6 +173,11 @@ clone line: edit.line_clone()
 # Insert new line
 new line above: edit.line_insert_up()
 new line below | slap: edit.line_insert_down()
+slapper:
+    edit.line_insert_down()
+    edit.line_insert_down()
+
+okay: edit.return_text()
 
 # Insert padding with optional symbols
 (pad | padding): user.insert_between(" ", " ")
@@ -184,4 +192,5 @@ redo that: edit.redo()
 
 # Save
 file save: edit.save()
+disk: edit.save()
 file save all: edit.save_all()
