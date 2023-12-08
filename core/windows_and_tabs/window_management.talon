@@ -9,6 +9,7 @@ focus$: user.switcher_menu()
 focus last: user.switcher_focus_last()
 
 coder : user.switcher_focus("code")
+terminal : user.switcher_focus("term")
 brave : user.switcher_focus("brave")
 
 running list: user.switcher_toggle_running()
