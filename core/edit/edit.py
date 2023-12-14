@@ -70,6 +70,9 @@ class EditActions:
         actions.edit.word_left()
         actions.edit.extend_word_right()
 
+    def escape():
+        actions.key("escape")
+
 
 @mod.action_class
 class Actions:
