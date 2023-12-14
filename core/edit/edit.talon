@@ -179,7 +179,7 @@ slapper:
     edit.line_insert_down()
     edit.line_insert_down()
 
-okay: edit.return_text()
+okay: edit.line_insert_down()
 
 # Insert padding with optional symbols
 (pad | padding): user.insert_between(" ", " ")
