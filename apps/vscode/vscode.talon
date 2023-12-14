@@ -155,7 +155,8 @@ close tabs way right: user.vscode("workbench.action.closeEditorsToTheRight")
 close tabs way left: user.vscode("workbench.action.closeEditorsToTheLeft")
 
 # Close splits other than the current one
-only: user.vscode("workbench.action.showEditorTab")
+only: user.vscode("workbench.action.closeEditorsInOtherGroups")
+
 
 # Folding
 fold that: user.vscode("editor.fold")

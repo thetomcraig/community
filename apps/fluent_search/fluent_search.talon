@@ -14,7 +14,7 @@ os: windows
 ^fluent$: key(ctrl-space)
 
 # Search using Screen hotkey (displays labels; screen 1 only)
-^target$: key(shift-ctrl-space)
+^ax$: key(shift-ctrl-space)
 
 # -- LaunchBar
 # Search hotkey (in fluent_search.py)
