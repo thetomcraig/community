@@ -17,7 +17,9 @@ go word left: edit.word_left()
 go word right: edit.word_right()
 
 go left: edit.left()
+tug: edit.left()
 go right: edit.right()
+push: edit.right()
 go up: edit.up()
 north: edit.up()
 go down: edit.down()
@@ -187,10 +189,14 @@ okay: edit.return_text()
     insert(" ")
 
 # Undo/redo
-undo that: edit.undo()
+undo that | revert: edit.undo()
 redo that: edit.redo()
 
 # Save
 file save: edit.save()
 disk: edit.save()
 file save all: edit.save_all()
+disk all: edit.save_all()
+
+# Misc Edit
+scrape: edit.escape()
