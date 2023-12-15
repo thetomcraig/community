@@ -143,6 +143,7 @@ punctuation_words = {
     ",": ",",  # <== these things
     "back tick": "`",
     "comma": ",",
+    "drip": ",",
     # Workaround for issue with conformer b-series; see #946
     "coma": ",",
     "period": ".",
@@ -151,12 +152,12 @@ punctuation_words = {
     "dash": "-",
     "semicolon": ";",
     "colon": ":",
+    "stack": ":",
     "forward slash": "/",
     "slash": "/",
     "question mark": "?",
     "queue": "?",
-            "q": "?",
-
+    "q": "?",
     "exclamation mark": "!",
     "exclamation point": "!",
     "bang": "!",

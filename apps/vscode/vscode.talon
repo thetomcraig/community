@@ -103,6 +103,7 @@ file delete:
 file open folder: user.vscode("revealFileInOS")
 file reveal: user.vscode("workbench.files.action.showActiveFileInExplorer")
 save ugly: user.vscode("workbench.action.files.saveWithoutFormatting")
+save all: user.vscode("workbench.action.files.saveAll")
 
 # Language Features
 suggest show: user.vscode("editor.action.triggerSuggest")
