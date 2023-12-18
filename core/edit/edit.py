@@ -70,9 +70,6 @@ class EditActions:
         actions.edit.word_left()
         actions.edit.extend_word_right()
 
-    def escape():
-        actions.key("escape")
-
 
 @mod.action_class
 class Actions:
@@ -88,6 +85,10 @@ class Actions:
     def delete_right():
         """Delete character to the right"""
         actions.key("delete")
+
+    def escape():
+        """Escape key"""
+        actions.key("escape")
 
     def words_left(n: int):
         """Moves left by n words."""
