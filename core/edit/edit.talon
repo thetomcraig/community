@@ -110,6 +110,7 @@ clear way down:
 
 # Copy
 copy that: edit.copy()
+snag: edit.copy()
 copy all: user.copy_all()
 copy line: user.copy_line()
 copy line start: user.copy_line_start()
@@ -158,6 +159,7 @@ cut word right: user.cut_word_right()
 
 # Paste
 (pace | paste) that: edit.paste()
+slam: edit.paste()
 (pace | paste) enter:
     edit.paste()
     key(enter)
@@ -199,4 +201,4 @@ file save all: edit.save_all()
 disk all: edit.save_all()
 
 # Misc Edit
-scrape: edit.escape()
+scrape: user.escape()
