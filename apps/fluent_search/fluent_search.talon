@@ -11,10 +11,10 @@ os: windows
 # ^ax$: key(alt-;)
 
 # Open Fluent
-^fluent$: key(ctrl-space)
+^fluent$: key(shift-ctrl-space)
 
 # Search using Screen hotkey (displays labels; screen 1 only)
-^ax$: key(shift-ctrl-space)
+^ax$: key(shift-ctrl-alt-space)
 
 # -- LaunchBar
 # Search hotkey (in fluent_search.py)
