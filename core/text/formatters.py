@@ -91,6 +91,15 @@ def first_vs_rest(first_func, rest_func=lambda w: w):
     first_func = first_func or (lambda w: w)
     return lambda i, word, _: first_func(word) if i == 0 else rest_func(word)
 
+def nice_sentence():
+    def format_words(i, word, is_end):
+        if is_end:
+            return word + ".  "
+        elif i == 0:
+            return word[0].upper() + word[1:] + " "
+        else:
+            return word + " "
+    return format_words
 
 def title_case():
     last_word = None
@@ -171,6 +180,7 @@ formatters_dict = {
         SEP,
         first_vs_rest(lambda w: title_case()(0, w, True)),
     ),
+    "CAPITALIZE_FIRST_WORD_APPEND_PERIOD_AND_SPACES": (NOSEP, nice_sentence()),
     "CAPITALIZE_ALL_WORDS": (SEP, title_case()),
 }
 
@@ -197,7 +207,7 @@ code_formatter_names = {
 prose_formatter_names = {
     "say": "NOOP",
     "speak": "NOOP",
-    "sentence": "CAPITALIZE_FIRST_WORD",
+    "sentence": "CAPITALIZE_FIRST_WORD_APPEND_PERIOD_AND_SPACES",
     "title": "CAPITALIZE_ALL_WORDS",
 }
 # Mapping from spoken phrases to formatters
