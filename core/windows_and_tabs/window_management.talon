@@ -11,6 +11,7 @@ focus last: user.switcher_focus_last()
 coder : user.switcher_focus("code")
 terminal : user.switcher_focus("term")
 brave : user.switcher_focus("brave")
+outlook : user.switcher_focus("outlook")
 
 running list: user.switcher_toggle_running()
 running close: user.switcher_hide_running()
