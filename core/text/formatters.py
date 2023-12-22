@@ -207,7 +207,8 @@ code_formatter_names = {
 prose_formatter_names = {
     "say": "NOOP",
     "speak": "NOOP",
-    "sentence": "CAPITALIZE_FIRST_WORD_APPEND_PERIOD_AND_SPACES",
+    "sentence": "CAPITALIZE_FIRST_WORD",
+    "dot sentence": "CAPITALIZE_FIRST_WORD_APPEND_PERIOD_AND_SPACES",
     "title": "CAPITALIZE_ALL_WORDS",
 }
 # Mapping from spoken phrases to formatters
