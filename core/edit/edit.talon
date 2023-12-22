@@ -202,3 +202,4 @@ disk all: edit.save_all()
 
 # Misc Edit
 scrape: user.escape()
+abort: user.escape()
