@@ -108,7 +108,7 @@ save all: user.vscode("workbench.action.files.saveAll")
 # Language Features
 suggest show: user.vscode("editor.action.triggerSuggest")
 hint show: user.vscode("editor.action.triggerParameterHints")
-definition show: user.vscode("editor.action.revealDefinition")
+definition show | go deaf: user.vscode("editor.action.revealDefinition")
 definition peek: user.vscode("editor.action.peekDefinition")
 definition side: user.vscode("editor.action.revealDefinitionAside")
 references show: user.vscode("editor.action.goToReferences")
@@ -131,6 +131,7 @@ refactor this: user.vscode("editor.action.refactor")
 (go declaration | follow): user.vscode("editor.action.revealDefinition")
 go back: user.vscode("workbench.action.navigateBack")
 go forward: user.vscode("workbench.action.navigateForward")
+go line: user.vscode("workbench.action.gotoLine")
 go implementation: user.vscode("editor.action.goToImplementation")
 go type: user.vscode("editor.action.goToTypeDefinition")
 go usage: user.vscode("references-view.find")
@@ -285,7 +286,9 @@ join lines: user.vscode("editor.action.joinLines")
 
 full screen: user.vscode("workbench.action.toggleFullScreen")
 
-isolate : user.vscode("workbench.action.toggleSidebarVisibility")
+isolate | iso :
+    user.vscode("workbench.action.toggleSidebarVisibility")
+    user.vscode("workbench.action.terminal.kill")
 
 curse undo: user.vscode("cursorUndo")
 curse redo: user.vscode("cursorRedo")
