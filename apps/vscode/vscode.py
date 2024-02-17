@@ -100,10 +100,7 @@ class EditActions:
         actions.user.vscode("workbench.action.files.saveAll")
 
     def find(text=None):
-        if is_mac:
-            actions.key("cmd-f")
-        else:
-            actions.key("ctrl-f")
+        actions.user.vscode("actions.find")
         if text is not None:
             actions.insert(text)
 
@@ -278,11 +275,7 @@ class UserActions:
 
     def find(text: str):
         """Triggers find in current editor"""
-        if is_mac:
-            actions.key("cmd-f")
-        else:
-            actions.key("ctrl-f")
-
+        actions.user.vscode("actions.find")
         if text:
             actions.insert(text)
 
