@@ -265,6 +265,7 @@ alternate_keys = {
     "delete": "backspace",
     #'junk': 'backspace',
     "forward delete": "delete",
+    "chop": "delete",
     "page up": "pageup",
     "page down": "pagedown",
 }
