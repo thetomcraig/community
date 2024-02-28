@@ -156,6 +156,9 @@ bar projects: user.vscode("workbench.view.extension.project-manager")
 (go project | go projects):
     user.vscode("projectManager.listProjects")
 
+# Docker
+bar docker: user.vscode("workbench.view.extension.dockerView")
+
 close other tabs: user.vscode("workbench.action.closeOtherEditors")
 close all tabs: user.vscode("workbench.action.closeAllEditors")
 close tabs way right: user.vscode("workbench.action.closeEditorsToTheRight")
