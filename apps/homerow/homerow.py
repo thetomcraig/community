@@ -24,7 +24,7 @@ class UserActions:
             # (when the Homerow search window is not visible)
             pass
 
-        actions.key("ctrl-shift-space")
+        actions.key("ctrl-space")
         for attempt in range(10):
             actions.sleep("50ms")
             try:
