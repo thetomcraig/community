@@ -153,6 +153,7 @@ punctuation_words = {
     "semicolon": ";",
     "colon": ":",
     "stack": ":",
+    "arrow": "->",
     "forward slash": "/",
     "slash": "/",
     "question mark": "?",
