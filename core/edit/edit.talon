@@ -5,6 +5,9 @@ zoom reset: edit.zoom_reset()
 
 # Searching
 find it: edit.find()
+unfind:
+    edit.find()
+    user.escape()
 next one: edit.find_next()
 
 # Navigation
@@ -192,7 +195,7 @@ okay: edit.line_insert_down()
 
 # Undo/redo
 undo that | revert: edit.undo()
-redo that: edit.redo()
+redo that | devert: edit.redo()
 
 # Save
 file save: edit.save()
