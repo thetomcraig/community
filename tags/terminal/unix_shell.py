@@ -52,8 +52,11 @@ class Actions:
     def terminal_kill_all():
         """kills the running command"""
         actions.key("ctrl-c")
-        actions.insert("y")
         actions.key("enter")
+
+    def terminal_kill_word():
+        """kills one word to the left"""
+        actions.key("ctrl-w")
 
     def terminal_complete_suggestion():
             """complete the suggested line,
