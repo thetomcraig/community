@@ -26,11 +26,26 @@ class Actions:
     def terminal_rerun_search(command: str):
         """Searches through the previously executed commands"""
 
+    def terminal_word_left():
+        """moves one word to the left"""
+
+    def terminal_word_right():
+        """moves one word to the left"""
+
+    def terminal_complete_suggestion():
+        """kills the running command"""
+
     def terminal_kill_all():
         """kills the running command"""
 
     def terminal_kill_word():
         """kills one word to the left"""
 
-    def terminal_complete_suggestion():
-        """kills the running command"""
+    def terminal_kill_line():
+        """kills the entire line"""
+
+    def terminal_kill_line_left():
+        """kills from cursor to beginning of line"""
+
+    def terminal_kill_line_right():
+        """kills from cursor to end of line"""

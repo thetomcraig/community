@@ -13,9 +13,16 @@ clear screen: user.terminal_clear_screen()
 run last: user.terminal_run_last()
 rerun [<user.text>]: user.terminal_rerun_search(text or "")
 rerun search: user.terminal_rerun_search("")
+
+word left: user.terminal_word_left()
+word right: user.terminal_word_right()
+complete: user.terminal_complete_suggestion()
+
 kill all | kill it: user.terminal_kill_all()
 kill word: user.terminal_kill_word()
-complete: user.terminal_complete_suggestion()
+kill line: user.terminal_kill_line()
+kill left: user.terminal_kill_line_left()
+kill right: user.terminal_kill_line_right()
 
 copy paste:
     edit.copy()
