@@ -1,4 +1,6 @@
 from talon import Context, actions, clip
+from talon.mac import applescript
+
 
 ctx = Context()
 ctx.matches = r"""
@@ -9,10 +11,20 @@ os: mac
 @ctx.action_class("edit")
 class EditActions:
     def copy():
-        actions.key("cmd-c")
+        actions.key("cmd-c")      
+        applescript.run(
+            r"""
+        display notification "Text copied to clipboard" with title "Talon"
+        """
+        )
 
     def cut():
         actions.key("cmd-x")
+        applescript.run(
+            r"""
+        display notification "Text cut, and copied to clipboard" with title "Talon"
+        """
+        )
 
     def delete():
         actions.key("backspace")
