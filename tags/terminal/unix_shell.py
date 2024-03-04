@@ -44,6 +44,12 @@ class Actions:
         """Repeats the last command"""
         actions.key("up enter")
 
+    def terminal_run_last_with_sudo():
+        """Repeats the last command, prepending sudo"""
+        actions.insert("sudo !!")
+        actions.key("enter")
+        actions.key("enter")
+
     def terminal_rerun_search(command: str):
         """Searches through the previously executed commands"""
         actions.key("ctrl-r")
