@@ -23,6 +23,9 @@ class Actions:
     def terminal_run_last():
         """Repeats the last command"""
 
+    def terminal_run_last_with_sudo():
+        """Repeats the last command, prepending sudo"""
+
     def terminal_rerun_search(command: str):
         """Searches through the previously executed commands"""
 
