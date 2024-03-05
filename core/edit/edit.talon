@@ -28,6 +28,10 @@ north: edit.up()
 go down: edit.down()
 south: edit.down()
 
+pick one: 
+    user.pick_list_option(1)
+pick two: 
+    user.pick_list_option(2)
 
 go line start | head: edit.line_start()
 go line end | tail: edit.line_end()
