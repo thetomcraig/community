@@ -20,9 +20,9 @@ go word left: edit.word_left()
 go word right: edit.word_right()
 
 go left: edit.left()
-tug: edit.left()
+tug: edit.word_left()
 go right: edit.right()
-push: edit.right()
+push: edit.word_right()
 go up: edit.up()
 north: edit.up()
 go down: edit.down()
@@ -194,7 +194,7 @@ okay: edit.line_insert_down()
     insert(" ")
 
 # Undo/redo
-undo that | revert: edit.undo()
+undo that | revert | fuck: edit.undo()
 redo that | devert: edit.redo()
 
 # Save
