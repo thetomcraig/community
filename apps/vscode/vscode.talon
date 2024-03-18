@@ -26,6 +26,7 @@ bar explore: user.vscode("workbench.view.explorer")
 bar extensions: user.vscode("workbench.view.extensions")
 bar outline: user.vscode("outline.focus")
 bar run: user.vscode("workbench.view.debug")
+bar remote: user.vscode("workbench.action.remote.showMenu")
 bar search: user.vscode("workbench.view.search")
 bar source: user.vscode("workbench.view.scm")
 bar test: user.vscode("workbench.view.testing.focus")
@@ -158,6 +159,9 @@ bar projects: user.vscode("workbench.view.extension.project-manager")
 
 # Docker
 bar docker: user.vscode("workbench.view.extension.dockerView")
+
+# Azure
+bar azure: user.vscode("workbench.view.extension.azure")
 
 close other tabs: user.vscode("workbench.action.closeOtherEditors")
 close all tabs: user.vscode("workbench.action.closeAllEditors")
