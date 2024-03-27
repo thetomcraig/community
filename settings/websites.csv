@@ -20,6 +20,10 @@ https://chat.openai.com/,chat
 https://ayadev.atlassian.net/jira/software/c/projects/MCZ/boards/1433/backlog,backlog
 https://ayadev.atlassian.net/jira/software/c/projects/MCZ/boards/1433?assignee=712020%3Aaa4c8fe2-64f1-4e5e-97fe-ae1f306bd07e,sprint
 https://github.com/AyaHealthcare/polarisv3_FE,polaris front end
+https://github.com/AyaHealthcare/polarisv3_FE/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc, front end PRs
 https://github.com/AyaHealthcare/polarisv3_BE,polaris back end
+https://github.com/AyaHealthcare/polarisv3_BE/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc, back end PRs
 https://github.com/AyaHealthcare/polarisv3-ai,polaris AI
+https://github.com/AyaHealthcare/polarisv3-ai/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc, AI PRs
 https://github.com/AyaHealthcare/Polarisv3_stack,polaris stack
+https://github.com/AyaHealthcare/Polarisv3_stack/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc, stack PRs
