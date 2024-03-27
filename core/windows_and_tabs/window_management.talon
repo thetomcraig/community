@@ -14,7 +14,7 @@ focus$: user.switcher_menu()
 focus last: user.switcher_focus_last()
 
 coder : user.switcher_focus("code")
-terminal : user.switcher_focus("term")
+terminal | term: user.switcher_focus("term")
 brave : user.switcher_focus("brave")
 outlook : user.switcher_focus("outlook")
 teams: user.switcher_focus("teams")
