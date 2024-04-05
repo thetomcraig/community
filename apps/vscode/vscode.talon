@@ -18,7 +18,7 @@ go view [<user.text>]:
     user.vscode("workbench.action.openView")
     insert(user.text or "")
 # Vim
-toggle vim:
+toggle vim | vim toggle | switch vim | vim switch:
     user.vscode("toggleVim")
 
 # Sidebar
