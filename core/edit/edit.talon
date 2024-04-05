@@ -28,13 +28,13 @@ north: edit.up()
 go down: edit.down()
 south: edit.down()
 
-pick one: 
+pick one:
     user.pick_list_option(1)
-pick two: 
+pick two:
     user.pick_list_option(2)
 
-go line start | head: edit.line_start()
-go line end | tail: edit.line_end()
+go line start | pre line | head: edit.line_start()
+go line end | post line | tail: edit.line_end()
 
 go way left:
     edit.line_start()
@@ -75,11 +75,11 @@ indent [more]: edit.indent_more()
 
 # Delete
 clear all: user.delete_all()
-clear line: edit.delete_line()
-clear line start: user.delete_line_start()
-clear line end: user.delete_line_end()
-clear left: edit.delete()
-clear right: user.delete_right()
+clear line | chuck  line: edit.delete_line()
+clear line start | chuck  line start: user.delete_line_start()
+clear line end | chuck line end: user.delete_line_end()
+clear left | left: edit.delete()
+clear right | right: user.delete_right()
 
 clear up:
     edit.extend_line_up()
