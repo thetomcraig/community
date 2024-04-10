@@ -269,6 +269,7 @@ _snap_positions = {
     # Special
     "center": RelativeScreenPos(1 / 8, 1 / 6, 7 / 8, 5 / 6),
     "full": RelativeScreenPos(0, 0, 1, 1),
+    "max": RelativeScreenPos(0, 0, 1, 1),
     "fullscreen": RelativeScreenPos(0, 0, 1, 1),
 }
 
@@ -286,7 +287,7 @@ ctx.lists["user.window_snap_positions"] = _snap_positions.keys()
 class Actions:
     def snap_screen_and_full(screen_number: int) -> None:
         """
-        teste
+        testing
         """
         _move_to_screen(ui.active_window(), screen_number)
         _snap_window_helper(ui.active_window(), "full")
