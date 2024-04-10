@@ -1,4 +1,5 @@
 window (new | open): app.window_open()
+tile new: app.window_open()
 window next: app.window_next()
 next win | tile next: app.window_next()
 window last | tile last: app.window_previous()
