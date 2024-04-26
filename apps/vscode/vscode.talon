@@ -27,10 +27,15 @@ bar extensions: user.vscode("workbench.view.extensions")
 bar outline: user.vscode("outline.focus")
 bar run: user.vscode("workbench.view.debug")
 bar remote: user.vscode("workbench.action.remote.showMenu")
-bar search: user.vscode("workbench.view.search")
+bar search:
+    # Hide first because if it's already shown and the search bar itself isn't in focus,
+    # then the search bar text will not be highlighted
+    user.vscode("workbench.action.closeSidebar")
+    user.vscode("workbench.view.search")
 bar source: user.vscode("workbench.view.scm")
 bar test: user.vscode("workbench.view.testing.focus")
 bar switch: user.vscode("workbench.action.toggleSidebarVisibility")
+bar hide: user.vscode("workbench.action.closeSidebar")
 
 # Symbol search
 symbol hunt [<user.text>]:
@@ -163,7 +168,10 @@ bar docker: user.vscode("workbench.view.extension.dockerView")
 # Azure
 bar azure: user.vscode("workbench.view.extension.azure")
 
-close other tabs: user.vscode("workbench.action.closeOtherEditors")
+# GitHub copilot
+pilot chat: user.vscode("workbench.action.openQuickChat.copilot")
+
+close other tabs | tab only: user.vscode("workbench.action.closeOtherEditors")
 close all tabs: user.vscode("workbench.action.closeAllEditors")
 close tabs way right: user.vscode("workbench.action.closeEditorsToTheRight")
 close tabs way left: user.vscode("workbench.action.closeEditorsToTheLeft")
