@@ -122,7 +122,7 @@ copy all: user.copy_all()
 copy line: user.copy_line()
 copy line start: user.copy_line_start()
 copy line end: user.copy_line_end()
-copy word: user.copy_word()
+copy word | snag this: user.copy_word()
 copy word left: user.copy_word_left()
 copy word right: user.copy_word_right()
 
@@ -167,6 +167,9 @@ cut word right: user.cut_word_right()
 # Paste
 (pace | paste) that: edit.paste()
 slam: edit.paste()
+slammer:
+    edit.paste()
+    key(enter)
 (pace | paste) enter:
     edit.paste()
     key(enter)
