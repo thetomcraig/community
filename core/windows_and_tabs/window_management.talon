@@ -19,6 +19,7 @@ brave : user.switcher_focus("brave")
 outlook : user.switcher_focus("outlook")
 teams: user.switcher_focus("teams")
 mail: user.switcher_focus("mail")
+merge: user.switcher_focus("Araxis Merge")
 
 running list: user.switcher_toggle_running()
 running close: user.switcher_hide_running()
