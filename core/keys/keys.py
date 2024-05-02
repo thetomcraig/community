@@ -174,17 +174,16 @@ punctuation_words = {
     "hyphen": "-",
     "L paren": "(",
     "left paren": "(",
+    "lar": "(",
     "R paren": ")",
     "right paren": ")",
+    "rar": "(",
 }
 symbol_key_words = {
     # "dot": ".",
     # "point": ".",
     "quote": "'",
     "question": "?",
-    "queue": "?",
-        "q": "?",
-
     "apostrophe": "'",
     "L square": "[",
     "left square": "[",
@@ -226,6 +225,7 @@ symbol_key_words = {
     "r curly bracket": "}",
     "right curly bracket": "}",
     "r brack": "}",
+    "rack": "}",
     "r bracket": "}",
     "right bracket": "}",
     "racer": "}",
