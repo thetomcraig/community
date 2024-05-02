@@ -19,3 +19,6 @@ class tab_actions:
 
     def tab_duplicate():
         """Duplicates the current tab."""
+
+    def tab_abandon():
+        """Closes current tab and selects 'do not save' on dialog"""
