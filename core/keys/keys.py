@@ -153,6 +153,7 @@ punctuation_words = {
     "semicolon": ";",
     "colon": ":",
     "stack": ":",
+    "dripper": ":",
     "arrow": "->",
     "forward slash": "/",
     "slash": "/",
@@ -199,6 +200,7 @@ symbol_key_words = {
     "slash": "/",
     "backslash": "\\",
     "fall": "\\",
+    "whack": "\\",
     "minus": "-",
     "dash": "-",
     "equals": "=",
@@ -278,6 +280,7 @@ simple_keys = [
 alternate_keys = {
     "wipe": "backspace",
     "delete": "backspace",
+    "void": "space",
     #'junk': 'backspace',
     "forward delete": "delete",
     "chop": "delete",
