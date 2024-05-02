@@ -116,10 +116,10 @@ clear way down:
     edit.delete()
 
 # Copy
-copy that: edit.copy()
+copy that | snag that : edit.copy()
 snag: edit.copy()
-copy all: user.copy_all()
-copy line: user.copy_line()
+copy all | snag all that: user.copy_all()
+copy line | a snag line: user.copy_line()
 copy line start: user.copy_line_start()
 copy line end: user.copy_line_end()
 copy word | snag this: user.copy_word()
@@ -141,9 +141,9 @@ copy word right: user.copy_word_right()
 #     edit.copy()
 
 # Cut
-cut that: edit.cut()
-cut all: user.cut_all()
-cut line: user.cut_line()
+cut that | carve that: edit.cut()
+cut all | carve all: user.cut_all()
+cut line | carve line: user.cut_line()
 cut line start: user.cut_line_start()
 cut line end: user.cut_line_end()
 cut word: user.cut_word()
@@ -201,8 +201,11 @@ okay: edit.line_insert_down()
     insert(" ")
 
 # Undo/redo
-undo that | revert | fuck: edit.undo()
+undo that | revert | vert | fuck: edit.undo()
 redo that | devert: edit.redo()
+
+trip quote: insert('"""')
+trip grave: insert('```')
 
 # Save
 file save: edit.save()
