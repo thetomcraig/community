@@ -204,8 +204,6 @@ okay: edit.line_insert_down()
 undo that | revert | vert | fuck: edit.undo()
 redo that | devert: edit.redo()
 
-trip quote: insert('"""')
-trip grave: insert('```')
 
 # Save
 file save: edit.save()
