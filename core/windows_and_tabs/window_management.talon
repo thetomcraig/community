@@ -1,6 +1,7 @@
 window (new | open): app.window_open()
 tile new: app.window_open()
 window next: app.window_next()
+window last: app.window_previous()
 next win | tile next: app.window_next()
 window last | tile last: app.window_previous()
 last win: app.window_previous()
@@ -26,15 +27,11 @@ running list: user.switcher_toggle_running()
 running close: user.switcher_hide_running()
 launch <user.launch_applications>: user.switcher_launch(launch_applications)
 
-# move to one: user.snap_screen_and_full(1)
-# move to two: user.snap_screen_and_full(2)
-# move to three: user.snap_screen_and_full(3)
-
-# snap <user.window_snap_position>: user.snap_window(window_snap_position)
+snap <user.window_snap_position>: user.snap_window(window_snap_position)
+snap next [screen]: user.move_window_next_screen()
+snap last [screen]: user.move_window_previous_screen()
+snap screen <number>: user.move_window_to_screen(number)
 tile <user.window_snap_position>: user.snap_window(window_snap_position)
-# snap next [screen]: user.move_window_next_screen()
-# snap last [screen]: user.move_window_previous_screen()
-snap screen <number> | splay <number>: user.move_window_to_screen(number)
 
 snap <user.running_applications> <user.window_snap_position>:
     user.snap_app(running_applications, window_snap_position)
