@@ -79,11 +79,20 @@ wrap switch: user.vscode("editor.action.toggleWordWrap")
 zen switch: user.vscode("workbench.action.toggleZenMode")
 
 # File Commands
-file hunt [<user.text>] | doc [<user.text>]:
+doc [<user.text>]:
     user.vscode("workbench.action.quickOpen")
     sleep(50ms)
     insert(text or "")
-file hunt (pace | paste) | doc (pace | paste):
+# File Commands
+doc [<user.text>]:
+    user.vscode("workbench.action.quickOpen")
+    sleep(50ms)
+    insert(text or "")
+file hunt (pace | paste):
+    user.vscode("workbench.action.quickOpen")
+    sleep(50ms)
+    edit.paste()
+doc (pace | paste):
     user.vscode("workbench.action.quickOpen")
     sleep(50ms)
     edit.paste()
