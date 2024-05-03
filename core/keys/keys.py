@@ -175,10 +175,10 @@ punctuation_words = {
     "hyphen": "-",
     "L paren": "(",
     "left paren": "(",
-    "lar": "(",
+    "lair": "(",
     "R paren": ")",
     "right paren": ")",
-    "rar": "(",
+    "rare": ")",
 }
 symbol_key_words = {
     "dot": ".",
