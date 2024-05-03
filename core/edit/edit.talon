@@ -28,10 +28,13 @@ north: edit.up()
 go down: edit.down()
 south: edit.down()
 
-go way left | go line start | pre line | head::
+go line start | head: edit.line_start()
+pre line: edit.line_start()
+go line end | tail: edit.line_end()
+post line: edit.line_end()
+go way left::
     edit.line_start()
     edit.line_start()
-go way right | go line end | post line | tail: edit.line_end()
 go way up: edit.file_start()
 go way down: edit.file_end()
 
@@ -67,11 +70,16 @@ indent [more]: edit.indent_more()
 
 # Delete
 clear all: user.delete_all()
-clear line | chuck  line: edit.delete_line()
-clear line start | chuck  line start: user.delete_line_start()
-clear line end | chuck line end: user.delete_line_end()
-clear left | left: edit.delete()
-clear right | right: user.delete_right()
+clear line: edit.delete_line()
+chuck  line: edit.delete_line()
+clear line start: user.delete_line_start()
+chuck  line start: user.delete_line_start()
+clear line end: user.delete_line_end()
+chuck line end: user.delete_line_end()
+clear left: edit.delete()
+chuck left: edit.delete()
+clear right: user.delete_right()
+chuck right: user.delete_right()
 
 clear up:
     edit.extend_line_up()
