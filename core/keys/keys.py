@@ -181,8 +181,8 @@ punctuation_words = {
     "rar": "(",
 }
 symbol_key_words = {
-    # "dot": ".",
-    # "point": ".",
+    "dot": ".",
+    "point": ".",
     "quote": "'",
     "question": "?",
     "apostrophe": "'",
