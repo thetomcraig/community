@@ -108,8 +108,7 @@ clear way down:
     edit.delete()
 
 # Copy
-copy that | snag that : edit.copy()
-snag: edit.copy()
+copy that | snag | snga that : edit.copy()
 copy all | snag all that: user.copy_all()
 copy line | a snag line: user.copy_line()
 copy line start: user.copy_line_start()
@@ -182,8 +181,6 @@ new line below | slap: edit.line_insert_down()
 slapper:
     edit.line_insert_down()
     edit.line_insert_down()
-
-okay: edit.line_insert_down()
 
 # Insert padding with optional symbols
 (pad | padding): user.insert_between(" ", " ")
