@@ -108,12 +108,14 @@ clear way down:
     edit.delete()
 
 # Copy
-copy that | snag | snga that : edit.copy()
+copy that: edit.copy()
+snag | snag that: edit.copy()
 copy all | snag all that: user.copy_all()
 copy line | a snag line: user.copy_line()
 copy line start: user.copy_line_start()
 copy line end: user.copy_line_end()
-copy word | snag this: user.copy_word()
+copy word : user.copy_word()
+snag this: user.copy_word()
 copy word left: user.copy_word_left()
 copy word right: user.copy_word_right()
 
@@ -132,9 +134,12 @@ copy word right: user.copy_word_right()
 #     edit.copy()
 
 # Cut
-cut that | carve that: edit.cut()
-cut all | carve all: user.cut_all()
-cut line | carve line: user.cut_line()
+cut that: edit.cut()
+ carve that: edit.cut()
+cut all: user.cut_all()
+carve all: user.cut_all()
+cut line: user.cut_line()
+carve line: user.cut_line()
 cut line start: user.cut_line_start()
 cut line end: user.cut_line_end()
 cut word: user.cut_word()
@@ -182,6 +187,8 @@ slapper:
     edit.line_insert_down()
     edit.line_insert_down()
 
+okay: edit.line_insert_down()
+
 # Insert padding with optional symbols
 (pad | padding): user.insert_between(" ", " ")
 (pad | padding) <user.symbol_key>+:
@@ -190,8 +197,10 @@ slapper:
     insert(" ")
 
 # Undo/redo
-undo that | revert | vert | fuck: edit.undo()
-redo that | devert: edit.redo()
+undo that: edit.undo()
+revert | vert | fuck: edit.undo()
+redo that: edit.redo()
+devert: edit.redo()
 
 
 # Save
