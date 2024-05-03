@@ -32,9 +32,10 @@ go line start | head: edit.line_start()
 pre line: edit.line_start()
 go line end | tail: edit.line_end()
 post line: edit.line_end()
-go way left::
+go way left:
     edit.line_start()
     edit.line_start()
+go way right: edit.line_end()
 go way up: edit.file_start()
 go way down: edit.file_end()
 
