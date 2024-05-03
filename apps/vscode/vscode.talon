@@ -89,9 +89,9 @@ file hunt (pace | paste) | doc (pace | paste):
     edit.paste()
 doc pop [<user.text>]:
     user.vscode("workbench.action.quickOpen")
-    sleep(50ms)
+    sleep(100ms)
     insert(text or "")
-    sleep(50ms)
+    sleep(100ms)
     key(enter)
 
 file copy name: user.vscode("fileutils.copyFileName")
