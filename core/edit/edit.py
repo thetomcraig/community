@@ -90,12 +90,6 @@ class Actions:
         """Escape key"""
         actions.key("escape")
 
-    def pick_list_option(n: int):
-        """Pick from a dropdown list"""
-        for _ in range(n):
-            actions.key("down")
-        actions.key("enter")
-
     def words_left(n: int):
         """Moves left by n words."""
         for _ in range(n):
