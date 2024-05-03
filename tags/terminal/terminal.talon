@@ -14,16 +14,16 @@ run last: user.terminal_run_last()
 sudo last: user.terminal_run_last_with_sudo()
 rerun [<user.text>]: user.terminal_rerun_search(text or "")
 rerun search: user.terminal_rerun_search("")
-
-word left: user.terminal_word_left()
-word right: user.terminal_word_right()
-complete: user.terminal_complete_suggestion()
-
-kill all | kill it: user.terminal_kill_all()
+kill all: user.terminal_kill_all()
+kill it: user.terminal_kill_all()
 kill word: user.terminal_kill_word()
 kill line: user.terminal_kill_line()
 kill left: user.terminal_kill_line_left()
 kill right: user.terminal_kill_line_right()
+
+word left: user.terminal_word_left()
+word right: user.terminal_word_right()
+complete: user.terminal_complete_suggestion()
 
 copy paste:
     edit.copy()
