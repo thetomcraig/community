@@ -170,6 +170,9 @@ clone line: edit.line_clone()
 # Insert new line
 new line above: edit.line_insert_up()
 new line below | slap: edit.line_insert_down()
+slapper:
+    edit.line_insert_down()
+    edit.line_insert_down()
 
 # Insert padding with optional symbols
 (pad | padding): user.insert_between(" ", " ")
@@ -184,4 +187,5 @@ redo that: edit.redo()
 
 # Save
 file save: edit.save()
+disk: edit.save()
 file save all: edit.save_all()
