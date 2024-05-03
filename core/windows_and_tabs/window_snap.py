@@ -285,13 +285,6 @@ ctx.lists["user.window_snap_positions"] = _snap_positions.keys()
 
 @mod.action_class
 class Actions:
-    def snap_screen_and_full(screen_number: int) -> None:
-        """
-        testing
-        """
-        _move_to_screen(ui.active_window(), screen_number)
-        _snap_window_helper(ui.active_window(), "full")
-
     def snap_window(position: RelativeScreenPos) -> None:
         """Move the active window to a specific position on its current screen, given a `RelativeScreenPos` object."""
         _snap_window_helper(ui.active_window(), position)
