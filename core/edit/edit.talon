@@ -173,10 +173,7 @@ cut word right: user.cut_word_right()
 
 # Paste
 (pace | paste) that: edit.paste()
-slam: edit.paste()
-slammer:
-    edit.paste()
-    key(enter)
+
 (pace | paste) enter:
     edit.paste()
     key(enter)
@@ -194,9 +191,6 @@ clone line: edit.line_clone()
 # Insert new line
 new line above: edit.line_insert_up()
 new line below | slap: edit.line_insert_down()
-slapper:
-    edit.line_insert_down()
-    edit.line_insert_down()
 
 okay: edit.line_insert_down()
 
