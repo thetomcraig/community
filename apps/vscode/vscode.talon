@@ -102,6 +102,10 @@ doc pop [<user.text>]:
     insert(text or "")
     sleep(100ms)
     key(enter)
+res next:
+    user.vscode("search.action.focusNextSearchResult")
+res last:
+    user.vscode("search.action.focusLastSearchResult")
 
 file copy name: user.vscode("fileutils.copyFileName")
 file copy path: user.vscode("copyFilePath")
