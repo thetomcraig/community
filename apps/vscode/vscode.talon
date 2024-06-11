@@ -23,9 +23,11 @@ toggle vim | vim toggle | switch vim | vim switch:
 
 # Sidebar
 bar explore: user.vscode("workbench.view.explorer")
+bar file: user.vscode("workbench.view.explorer")
 bar extensions: user.vscode("workbench.view.extensions")
 bar outline: user.vscode("outline.focus")
 bar run: user.vscode("workbench.view.debug")
+bar debug: user.vscode("workbench.view.debug")
 bar remote: user.vscode("workbench.action.remote.showMenu")
 bar search:
     # Hide first because if it's already shown and the search bar itself isn't in focus,
