@@ -19,8 +19,12 @@ Warren,warren
 Ben,ben
 Sid,sid
 Polaris,polaris
+P1, AP one
 
 
+psycopg2,psycho PG two
+psycopg2,psycho PG to
+psycopg2,psycho peg two
 sys,cis
 sys,sis
 sudo,pseudo
@@ -33,7 +37,8 @@ tmux, teabox
 tmux,teamux
 tmux,teemux
 django,jango
-version,virgin
+
+
 .py,dot pi
 .py,dot pie
 isort,eye sort
@@ -44,14 +49,24 @@ Azure,azure
 vault,volt
 arrow,aero
 mySQL,my sequel
-mkdir, make dir
+mkdir,make dir
+ER,er
+rq,cu
+
+hist,hissed
+none,nun
+version,virgin
+an,anne
+
+vscode,vasco
+dapr,dapper
+iTerm2,iTerm to
+iTerm2,iTerm two
+iTerm2,iTerm too
 
 add,ad
 site,sight
-ER,er
+site, cite
 
 
-
-
-
-
+ublock,you block
