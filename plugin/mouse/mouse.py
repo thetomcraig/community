@@ -1,6 +1,7 @@
 import os
 
-from talon import Context, Module, actions, app, clip, cron, ctrl, imgui, settings, ui
+from talon import (Context, Module, actions, app, clip, cron, ctrl, imgui,
+                   settings, ui)
 from talon_plugins import eye_zoom_mouse
 
 key = actions.key
@@ -166,6 +167,18 @@ class Actions:
         global continuous_scroll_mode
         continuous_scroll_mode = "scroll down continuous"
         mouse_scroll(settings.get("user.mouse_continuous_scroll_amount"))()
+
+        if scroll_job is None:
+            start_scroll()
+
+        if not settings.get("user.mouse_hide_mouse_gui"):
+            gui_wheel.show()
+
+    def mouse_scroll_down_with_multiplier(multiplier: float = 1):
+        """Scrolls down continuously take some multiplier argument"""
+        global continuous_scroll_mode
+        continuous_scroll_mode = "scroll down continuous"
+        mouse_scroll(settings.get("user.mouse_continuous_scroll_amount")*multiplier)()
 
         if scroll_job is None:
             start_scroll()
