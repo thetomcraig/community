@@ -83,11 +83,6 @@ doc [<user.text>]:
     user.vscode("workbench.action.quickOpen")
     sleep(50ms)
     insert(text or "")
-# File Commands
-doc [<user.text>]:
-    user.vscode("workbench.action.quickOpen")
-    sleep(50ms)
-    insert(text or "")
 file hunt (pace | paste):
     user.vscode("workbench.action.quickOpen")
     sleep(50ms)
