@@ -151,6 +151,7 @@ punctuation_words = {
     "full stop": ".",
     "dash": "-",
     "semicolon": ";",
+    "semi": ";",
     "colon": ":",
     "stack": ":",
     "dripper": ":",
@@ -175,9 +176,11 @@ punctuation_words = {
     "hyphen": "-",
     "L paren": "(",
     "left paren": "(",
+    "left round": "(",
     "lair": "(",
     "R paren": ")",
     "right paren": ")",
+    "right round": ")",
     "rare": ")",
 }
 symbol_key_words = {
