@@ -10,6 +10,7 @@ search for <user.text>$:
     insert("{text}")
     key(enter)
 hunt this <user.text>: user.find(text)
+hunter <user.text>: user.find(text)
 go page | page focus: browser.focus_page()
 address copy | url copy | copy address | copy url:
     browser.focus_address()
