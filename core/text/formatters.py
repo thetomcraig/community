@@ -195,7 +195,7 @@ code_formatter_names = {
     "hammer": "PUBLIC_CAMEL_CASE",
     "pascal": "PUBLIC_CAMEL_CASE",
     "kebab": "DASH_SEPARATED",
-    "speared": "DASH_SEPARATED",
+    "spear": "DASH_SEPARATED",
     "packed": "DOUBLE_COLON_SEPARATED",
     "padded": "SPACE_SURROUNDED_STRING",
     "slasher": "ALL_SLASHES",
