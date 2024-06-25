@@ -185,8 +185,8 @@ bar docker: user.vscode("workbench.view.extension.dockerView")
 # Azure
 bar azure: user.vscode("workbench.view.extension.azure")
 
-# GitHub copilot
-pilot chat: user.vscode("workbench.action.openQuickChat.copilot")
+# AI chat
+pilot chat: user.vscode("continue.quickEdit")
 
 close other tabs | tab only: user.vscode("workbench.action.closeOtherEditors")
 close all tabs: user.vscode("workbench.action.closeAllEditors")
@@ -247,6 +247,7 @@ git sync: user.vscode("git.sync")
 git unstage: user.vscode("git.unstage")
 git unstage all: user.vscode("git.unstageAll")
 pull request: user.vscode("pr.create")
+git open | open in GitHub: user.vscode("extension.openInGitHub")
 # Use keyboard shortcuts because VSCode relies on when clause contexts to choose the appropriate
 # action: https://code.visualstudio.com/api/references/when-clause-contexts
 change next: key(alt-f5)
@@ -341,4 +342,4 @@ cell run: user.vscode("notebook.cell.execute")
 
 install local: user.vscode("workbench.extensions.action.installVSIX")
 preview markdown: user.vscode("markdown.showPreview")
-split markdown: user.vscode("markdown.showPreviewToSide")
+split markdown | split preview: user.vscode("markdown.showPreviewToSide")
