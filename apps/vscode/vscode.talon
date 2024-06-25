@@ -101,6 +101,13 @@ doc pop [<user.text>]:
     key(enter)
 res next:
     user.vscode("search.action.focusNextSearchResult")
+res second:
+    user.vscode("search.action.focusNextSearchResult")
+    user.vscode("search.action.focusNextSearchResult")
+res third:
+    user.vscode("search.action.focusNextSearchResult")
+    user.vscode("search.action.focusNextSearchResult")
+    user.vscode("search.action.focusNextSearchResult")
 res last:
     user.vscode("search.action.focusLastSearchResult")
 
