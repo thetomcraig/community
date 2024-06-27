@@ -21,6 +21,8 @@ go view [<user.text>]:
 toggle vim | vim toggle | switch vim | vim switch:
     user.vscode("toggleVim")
 
+toggle hats:
+    user.vscode("cursorless.toggleDecorations")
 # Sidebar
 bar explore: user.vscode("workbench.view.explorer")
 bar file: user.vscode("workbench.view.explorer")
