@@ -37,6 +37,7 @@ urls
 nginx, engine x
 conf
 vim
+jq
 toml
 seaborn
 dataframe
@@ -73,3 +74,7 @@ GlobalScape
 Sendgrid
 P1
 QA
+endpoint
+npm
+nvm
+chatgpt
