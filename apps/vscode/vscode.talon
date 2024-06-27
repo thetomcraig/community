@@ -31,11 +31,12 @@ bar outline: user.vscode("outline.focus")
 bar run: user.vscode("workbench.view.debug")
 bar debug: user.vscode("workbench.view.debug")
 bar remote: user.vscode("workbench.action.remote.showMenu")
-bar search:
-    # Hide first because if it's already shown and the search bar itself isn't in focus,
-    # then the search bar text will not be highlighted
-    user.vscode("workbench.action.closeSidebar")
-    user.vscode("workbench.view.search")
+# bar search | searcher:
+# # hunt this <user.text>: user.find(text)
+#     # Hide first because if it's already shown and the search bar itself isn't in focus,
+#     # then the search bar text will not be highlighted
+#     user.vscode("workbench.action.closeSidebar")
+#     user.vscode("workbench.view.search")
 bar source: user.vscode("workbench.view.scm")
 bar test: user.vscode("workbench.view.testing.focus")
 bar chat: user.vscode("workbench.action.focusAuxiliaryBar")
