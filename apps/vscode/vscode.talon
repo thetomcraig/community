@@ -198,6 +198,12 @@ go last mark: user.vscode("bookmarks.jumpToPrevious")
 bar projects: user.vscode("workbench.view.extension.project-manager")
 (go project | go projects):
     user.vscode("projectManager.listProjects")
+sesh pop [<user.text>] | sesher [<user.text>]:
+    user.vscode("projectManager.listProjects")
+    sleep(100ms)
+    insert(text or "")
+    sleep(100ms)
+    key(enter)
 
 # Docker
 bar docker: user.vscode("workbench.view.extension.dockerView")
