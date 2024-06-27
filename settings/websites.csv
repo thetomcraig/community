@@ -17,6 +17,8 @@ https://en.wikipedia.org/,wikipedia
 https://www.youtube.com/,youtube
 https://chat.openai.com/,chat
 
+https://www.icloud.com/,icloud
+
 https://ayadev.atlassian.net/jira/software/c/projects/MCZ/boards/1433/backlog,backlog
 https://ayadev.atlassian.net/jira/software/c/projects/MCZ/boards/1433?assignee=712020%3Aaa4c8fe2-64f1-4e5e-97fe-ae1f306bd07e,sprint
 https://github.com/AyaHealthcare/polarisv3_FE,polaris front end
@@ -29,4 +31,7 @@ https://github.com/AyaHealthcare/Polarisv3_stack,polaris stack
 https://github.com/AyaHealthcare/Polarisv3_stack/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc, stack PRs
 https://github.com/AyaHealthcare/Polaris_ML,polaris ML
 https://github.com/AyaHealthcare/Polaris_ML/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc, ML PRs
+https://dev-internal.polarishealth.ai/, dev VM
+http://sand-internal.polarishealth.ai/, sand VM
+http://localhost:4200/,polaris local host
 
