@@ -353,6 +353,7 @@ full screen: user.vscode("workbench.action.toggleFullScreen")
 isolate | iso :
     user.vscode("workbench.action.toggleSidebarVisibility")
     user.vscode("workbench.action.terminal.kill")
+    user.vscode("workbench.action.closeAuxiliaryBar")
 
 curse undo: user.vscode("cursorUndo")
 curse redo: user.vscode("cursorRedo")
