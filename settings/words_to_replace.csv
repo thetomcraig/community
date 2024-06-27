@@ -12,13 +12,15 @@ October,october
 November,november
 December,december
 
+auto,oto
+error,err
 
 Lewis,louis
 Warren,warren
 Ben,ben
 Sid,sid
-Polaris,polaris
 P1, AP one
+polaris,pollers
 
 
 psycopg2,psycho PG two
@@ -36,6 +38,8 @@ tmux, teabox
 tmux,teamux
 tmux,teemux
 django,jango
+etc,et see
+etc,Betsy
 
 
 .py,dot pi
@@ -45,6 +49,7 @@ util,you till
 debugpy, debug pie
 Redis,redis
 Azure,azure
+Azure,adger
 vault,volt
 arrow,aero
 mySQL,my sequel
@@ -56,6 +61,7 @@ hist,hissed
 none,nun
 version,virgin
 an,anne
+config,convict
 
 vscode,vasco
 dapr,dapper
