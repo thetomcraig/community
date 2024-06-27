@@ -135,7 +135,6 @@ file delete:
     sleep(150ms)
 file open folder: user.vscode("revealFileInOS")
 file reveal: user.vscode("workbench.files.action.showActiveFileInExplorer")
-
 file last:
     user.vscode("workbench.files.action.showActiveFileInExplorer")
     key(up)
