@@ -213,9 +213,11 @@ devert: edit.redo()
 file save: edit.save()
 disk: edit.save()
 file save all: edit.save_all()
-disk all: edit.save_all()
-disker: edit.save_all()
 
-# Misc Edit
-scrape: user.escape()
-abort: user.escape()
+[go] line mid: user.line_middle()
+# disk all: edit.save_all()
+# disker: edit.save_all()
+
+# # Misc Edit
+# scrape: user.escape()
+# abort: user.escape()
