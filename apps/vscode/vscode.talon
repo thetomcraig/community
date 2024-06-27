@@ -135,6 +135,16 @@ file delete:
     sleep(150ms)
 file open folder: user.vscode("revealFileInOS")
 file reveal: user.vscode("workbench.files.action.showActiveFileInExplorer")
+
+file last:
+    user.vscode("workbench.files.action.showActiveFileInExplorer")
+    key(up)
+    user.vscode("explorer.openAndPassFocus")
+file next:
+    user.vscode("workbench.files.action.showActiveFileInExplorer")
+    key(down)
+    user.vscode("explorer.openAndPassFocus")
+
 save ugly: user.vscode("workbench.action.files.saveWithoutFormatting")
 save all: user.vscode("workbench.action.files.saveAll")
 
