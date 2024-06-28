@@ -18,3 +18,6 @@ tag(): user.tabs
 go split <user.arrow_key>: user.tmux_keybind(arrow_key)
 #Say a number after this command to switch to pane
 go split: user.tmux_execute_command("display-panes -d 0")
+
+next pane: user.split_next()
+last pane: user.split_last()
