@@ -36,7 +36,7 @@ class Actions:
         """moves one word to the left"""
 
     def terminal_complete_suggestion():
-        """kills the running command"""
+        """Complete the ZSH suggested command"""
 
     def terminal_kill_all():
         """kills the running command"""

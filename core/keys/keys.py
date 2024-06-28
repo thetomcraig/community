@@ -184,10 +184,13 @@ punctuation_words = {
     "rare": ")",
 }
 symbol_key_words = {
-    "dot": ".",
+    # "dot": ".",
     "point": ".",
     "quote": "'",
     "question": "?",
+    "queue": "?",
+        "q": "?",
+
     "apostrophe": "'",
     "L square": "[",
     "left square": "[",

@@ -192,6 +192,11 @@ clone line: edit.line_clone()
 # Insert new line
 new line above: edit.line_insert_up()
 new line below | slap: edit.line_insert_down()
+slapper:
+    edit.line_insert_down()
+    edit.line_insert_down()
+
+okay: edit.line_insert_down()
 
 okay: edit.line_insert_down()
 
@@ -215,9 +220,9 @@ disk: edit.save()
 file save all: edit.save_all()
 
 [go] line mid: user.line_middle()
-# disk all: edit.save_all()
-# disker: edit.save_all()
+disk all: edit.save_all()
+disker: edit.save_all()
 
-# # Misc Edit
-# scrape: user.escape()
-# abort: user.escape()
+# Misc Edit
+scrape: user.escape()
+abort: user.escape()

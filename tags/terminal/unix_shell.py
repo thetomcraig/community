@@ -91,4 +91,4 @@ class Actions:
         """kills from cursor to end of line"""
         actions.key("ctrl-k")
 
-    
+

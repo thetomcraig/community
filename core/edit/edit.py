@@ -20,6 +20,9 @@ class EditActions:
         actions.edit.line_end()
         actions.key("enter")
 
+    def return_text():
+        actions.key("enter")
+
     def selection_clone():
         actions.edit.copy()
         actions.edit.select_none()
@@ -66,6 +69,9 @@ class EditActions:
 
         actions.edit.word_left()
         actions.edit.extend_word_right()
+
+    def escape():
+        actions.key("escape")
 
 
 @mod.action_class
