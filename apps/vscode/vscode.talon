@@ -135,6 +135,7 @@ file delete:
     user.vscode("fileutils.removeFile")
     sleep(150ms)
 file open folder: user.vscode("revealFileInOS")
+file show: user.vscode("revealFileInOS")
 file reveal: user.vscode("workbench.files.action.showActiveFileInExplorer")
 file last:
     user.vscode("workbench.files.action.showActiveFileInExplorer")
@@ -174,10 +175,6 @@ refactor this: user.vscode("editor.action.refactor")
 (go declaration | follow): user.vscode("editor.action.revealDefinition")
 go back: user.vscode("workbench.action.navigateBack")
 go forward: user.vscode("workbench.action.navigateForward")
-go line [<user.text>]:
-    user.vscode("workbench.action.gotoLine")
-    insert(text or "")
-    key(enter)
 
 go implementation: user.vscode("editor.action.goToImplementation")
 go type: user.vscode("editor.action.goToTypeDefinition")
