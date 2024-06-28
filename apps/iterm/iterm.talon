@@ -1,6 +1,8 @@
 os: mac
 app: iterm2
+title: /^default/
 -
+tag(): user.tmux
 tag(): terminal
 # todo: filemanager support
 #tag(): user.file_manager
