@@ -89,6 +89,10 @@ class Actions:
         """Delete character to the right"""
         actions.key("delete")
 
+    def escape():
+        """Escape key"""
+        actions.key("escape")
+
     def words_left(n: int):
         """Moves left by n words."""
         for _ in range(n):
@@ -221,3 +225,11 @@ class Actions:
         """Delete to end of current line"""
         actions.user.select_line_end()
         actions.edit.delete()
+
+    def line_middle():
+        """Go to the middle of the line"""
+        actions.edit.select_line()
+        half_line_length = int(len(actions.edit.selected_text()) / 2)
+        actions.edit.left()
+        for i in range(0, half_line_length):
+            actions.edit.right()

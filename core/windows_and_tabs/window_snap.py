@@ -10,14 +10,14 @@ Originally from dweil/talon_community - modified for newapi by jcaw.
 import logging
 from typing import Optional
 
-from talon import Context, Module, actions, ui
+from talon import Context, Module, actions, settings, ui
 
 mod = Module()
 mod.list(
     "window_snap_positions",
     "Predefined window positions for the current window. See `RelativeScreenPos`.",
 )
-setting_window_snap_screen = mod.setting(
+mod.setting(
     "window_snap_screen",
     type=str,
     default="proportional",
@@ -116,7 +116,7 @@ def _move_to_screen(
 
     dest = dest_screen.visible_rect
     src = src_screen.visible_rect
-    how = setting_window_snap_screen.get()
+    how = settings.get("user.window_snap_screen")
     if how == "size aware":
         r = window.rect
         left, right = interpolate_interval(
@@ -269,6 +269,7 @@ _snap_positions = {
     # Special
     "center": RelativeScreenPos(1 / 8, 1 / 6, 7 / 8, 5 / 6),
     "full": RelativeScreenPos(0, 0, 1, 1),
+    "max": RelativeScreenPos(0, 0, 1, 1),
     "fullscreen": RelativeScreenPos(0, 0, 1, 1),
 }
 

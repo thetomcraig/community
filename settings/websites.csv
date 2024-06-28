@@ -1,0 +1,37 @@
+URL,Spoken name
+http://talonvoice.com,talon home page
+http://talonvoice.slack.com/messages/help,talon slack
+https://talon.wiki/,talon wiki
+https://chaosparrot.github.io/talon_practice/,talon practice
+https://search.talonvoice.com/search/,talon repository search
+https://www.amazon.com/,amazon
+https://dropbox.com/,dropbox
+https://www.google.com/,google
+https://calendar.google.com,google calendar
+https://maps.google.com/,google maps
+https://scholar.google.com/,google scholar
+https://mail.google.com/,gmail
+https://github.com/,github
+https://gist.github.com/,gist
+https://en.wikipedia.org/,wikipedia
+https://www.youtube.com/,youtube
+https://chat.openai.com/,chat
+
+https://www.icloud.com/,icloud
+
+https://ayadev.atlassian.net/jira/software/c/projects/MCZ/boards/1433/backlog,backlog
+https://ayadev.atlassian.net/jira/software/c/projects/MCZ/boards/1433?assignee=712020%3Aaa4c8fe2-64f1-4e5e-97fe-ae1f306bd07e,sprint
+https://github.com/AyaHealthcare/polarisv3_FE,polaris front end
+https://github.com/AyaHealthcare/polarisv3_FE/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc, front end PRs
+https://github.com/AyaHealthcare/polarisv3_BE,polaris back end
+https://github.com/AyaHealthcare/polarisv3_BE/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc, back end PRs
+https://github.com/AyaHealthcare/polarisv3-ai,polaris AI
+https://github.com/AyaHealthcare/polarisv3-ai/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc, AI PRs
+https://github.com/AyaHealthcare/Polarisv3_stack,polaris stack
+https://github.com/AyaHealthcare/Polarisv3_stack/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc, stack PRs
+https://github.com/AyaHealthcare/Polaris_ML,polaris ML
+https://github.com/AyaHealthcare/Polaris_ML/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc, ML PRs
+https://dev-internal.polarishealth.ai/, dev VM
+http://sand-internal.polarishealth.ai/, sand VM
+http://localhost:4200/,polaris local host
+

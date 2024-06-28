@@ -44,19 +44,51 @@ class Actions:
         """Repeats the last command"""
         actions.key("up enter")
 
+    def terminal_run_last_with_sudo():
+        """Repeats the last command, prepending sudo"""
+        actions.insert("sudo !!")
+        actions.key("enter")
+        actions.key("enter")
+
     def terminal_rerun_search(command: str):
         """Searches through the previously executed commands"""
         actions.key("ctrl-r")
         actions.insert(command)
 
+    def terminal_word_left():
+        """moves one word to the left"""
+        actions.key("alt-left")
+
+    def terminal_word_right():
+        """moves one word to the right"""
+        actions.key("alt-right")
+
+    def terminal_complete_suggestion():
+        """complete the suggested line,
+        to be used with auto suggest zsh plugin"""
+        actions.key("ctrl-j")
+        actions.key("enter")
+
     def terminal_kill_all():
         """kills the running command"""
         actions.key("ctrl-c")
-        actions.insert("y")
         actions.key("enter")
 
-    def terminal_complete_suggestion():
-            """complete the suggested line,
-            to be used with auto suggest zsh plugin"""
-            actions.key("ctrl-j")
-            actions.key("enter")
+    def terminal_kill_word():
+        """kills one word to the left"""
+        actions.key("ctrl-w")
+
+    def terminal_kill_line():
+        """kills the entire line"""
+        actions.key("home")
+        actions.key("ctrl-k")
+
+    def terminal_kill_line_left():
+        """kills from cursor to beginning of line"""
+        actions.key("ctrl-u")
+
+    def terminal_kill_line_right():
+        """kills from cursor to end of line"""
+        actions.key("ctrl-k")
+
+

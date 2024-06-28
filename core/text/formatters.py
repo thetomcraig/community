@@ -91,6 +91,15 @@ def first_vs_rest(first_func, rest_func=lambda w: w):
     first_func = first_func or (lambda w: w)
     return lambda i, word, _: first_func(word) if i == 0 else rest_func(word)
 
+def nice_sentence():
+    def format_words(i, word, is_end):
+        if is_end:
+            return word + ".  "
+        elif i == 0:
+            return word[0].upper() + word[1:] + " "
+        else:
+            return word + " "
+    return format_words
 
 def title_case():
     last_word = None
@@ -165,11 +174,13 @@ formatters_dict = {
     "SPACE_SURROUNDED_STRING": (SEP, surround(" ")),
     "DOT_SEPARATED": words_with_joiner("."),
     "DOT_SNAKE": (NOSEP, lambda i, word, _: "." + word if i == 0 else "_" + word),
-    "SLASH_SEPARATED": (NOSEP, every_word(lambda w: "/" + w)),
+    "ALL_SLASHES": (NOSEP, every_word(lambda w: "/" + w)),
+    "SLASH_SEPARATED": words_with_joiner("/"),
     "CAPITALIZE_FIRST_WORD": (
         SEP,
         first_vs_rest(lambda w: title_case()(0, w, True)),
     ),
+    "CAPITALIZE_FIRST_WORD_APPEND_PERIOD_AND_SPACES": (NOSEP, nice_sentence()),
     "CAPITALIZE_ALL_WORDS": (SEP, title_case()),
 }
 
@@ -182,10 +193,13 @@ code_formatter_names = {
     "dub string": "DOUBLE_QUOTED_STRING",
     "dunder": "DOUBLE_UNDERSCORE",
     "hammer": "PUBLIC_CAMEL_CASE",
+    "pascal": "PUBLIC_CAMEL_CASE",
     "kebab": "DASH_SEPARATED",
+    "spear": "DASH_SEPARATED",
     "packed": "DOUBLE_COLON_SEPARATED",
     "padded": "SPACE_SURROUNDED_STRING",
-    "slasher": "SLASH_SEPARATED",
+    "slasher": "ALL_SLASHES",
+    "conga": "SLASH_SEPARATED",
     "smash": "NO_SPACES",
     "snake": "SNAKE_CASE",
     "string": "SINGLE_QUOTED_STRING",
@@ -196,6 +210,7 @@ prose_formatter_names = {
     "say": "NOOP",
     "speak": "NOOP",
     "sentence": "CAPITALIZE_FIRST_WORD",
+    "dot sentence": "CAPITALIZE_FIRST_WORD_APPEND_PERIOD_AND_SPACES",
     "title": "CAPITALIZE_ALL_WORDS",
 }
 # Mapping from spoken phrases to formatters

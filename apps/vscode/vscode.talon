@@ -14,21 +14,34 @@ please [<user.text>]:
     user.vscode("workbench.action.showCommands")
     insert(user.text or "")
 
+go view [<user.text>]:
+    user.vscode("workbench.action.openView")
+    insert(user.text or "")
 # Vim
-toggle vim:
+toggle vim | vim toggle | switch vim | vim switch:
     user.vscode("toggleVim")
 
-
-
+toggle hats:
+    user.vscode("cursorless.toggleDecorations")
 # Sidebar
 bar explore: user.vscode("workbench.view.explorer")
+bar file: user.vscode("workbench.view.explorer")
 bar extensions: user.vscode("workbench.view.extensions")
 bar outline: user.vscode("outline.focus")
 bar run: user.vscode("workbench.view.debug")
-bar search: user.vscode("workbench.view.search")
+bar debug: user.vscode("workbench.view.debug")
+bar remote: user.vscode("workbench.action.remote.showMenu")
+# bar search | searcher:
+# # hunt this <user.text>: user.find(text)
+#     # Hide first because if it's already shown and the search bar itself isn't in focus,
+#     # then the search bar text will not be highlighted
+#     user.vscode("workbench.action.closeSidebar")
+#     user.vscode("workbench.view.search")
 bar source: user.vscode("workbench.view.scm")
 bar test: user.vscode("workbench.view.testing.focus")
+bar chat: user.vscode("workbench.action.focusAuxiliaryBar")
 bar switch: user.vscode("workbench.action.toggleSidebarVisibility")
+bar hide: user.vscode("workbench.action.closeSidebar")
 
 # Symbol search
 symbol hunt [<user.text>]:
@@ -60,6 +73,10 @@ show shortcuts: user.vscode("workbench.action.openGlobalKeybindings")
 show shortcuts json: user.vscode("workbench.action.openGlobalKeybindingsFile")
 show snippets: user.vscode("workbench.action.openSnippets")
 
+# VSCode Snippets
+snip (last | previous): user.vscode("jumpToPrevSnippetPlaceholder")
+snip next: user.vscode("jumpToNextSnippetPlaceholder")
+
 # Display
 centered switch: user.vscode("workbench.action.toggleCenteredLayout")
 fullscreen switch: user.vscode("workbench.action.toggleFullScreen")
@@ -68,7 +85,7 @@ wrap switch: user.vscode("editor.action.toggleWordWrap")
 zen switch: user.vscode("workbench.action.toggleZenMode")
 
 # File Commands
-file hunt [<user.text>]:
+doc [<user.text>]:
     user.vscode("workbench.action.quickOpen")
     sleep(50ms)
     insert(text or "")
@@ -76,6 +93,28 @@ file hunt (pace | paste):
     user.vscode("workbench.action.quickOpen")
     sleep(50ms)
     edit.paste()
+doc (pace | paste):
+    user.vscode("workbench.action.quickOpen")
+    sleep(50ms)
+    edit.paste()
+doc pop [<user.text>]:
+    user.vscode("workbench.action.quickOpen")
+    sleep(100ms)
+    insert(text or "")
+    sleep(100ms)
+    key(enter)
+res next:
+    user.vscode("search.action.focusNextSearchResult")
+res second:
+    user.vscode("search.action.focusNextSearchResult")
+    user.vscode("search.action.focusNextSearchResult")
+res third:
+    user.vscode("search.action.focusNextSearchResult")
+    user.vscode("search.action.focusNextSearchResult")
+    user.vscode("search.action.focusNextSearchResult")
+res last:
+    user.vscode("search.action.focusLastSearchResult")
+
 file copy name: user.vscode("fileutils.copyFileName")
 file copy path: user.vscode("copyFilePath")
 file copy local [path]: user.vscode("copyRelativeFilePath")
@@ -97,7 +136,17 @@ file delete:
     sleep(150ms)
 file open folder: user.vscode("revealFileInOS")
 file reveal: user.vscode("workbench.files.action.showActiveFileInExplorer")
+file last:
+    user.vscode("workbench.files.action.showActiveFileInExplorer")
+    key(up)
+    user.vscode("explorer.openAndPassFocus")
+file next:
+    user.vscode("workbench.files.action.showActiveFileInExplorer")
+    key(down)
+    user.vscode("explorer.openAndPassFocus")
+
 save ugly: user.vscode("workbench.action.files.saveWithoutFormatting")
+save all: user.vscode("workbench.action.files.saveAll")
 
 # Language Features
 suggest show: user.vscode("editor.action.triggerSuggest")
@@ -125,6 +174,11 @@ refactor this: user.vscode("editor.action.refactor")
 (go declaration | follow): user.vscode("editor.action.revealDefinition")
 go back: user.vscode("workbench.action.navigateBack")
 go forward: user.vscode("workbench.action.navigateForward")
+go line [<user.text>]:
+    user.vscode("workbench.action.gotoLine")
+    insert(text or "")
+    key(enter)
+
 go implementation: user.vscode("editor.action.goToImplementation")
 go type: user.vscode("editor.action.goToTypeDefinition")
 go usage: user.vscode("references-view.find")
@@ -148,14 +202,29 @@ go last mark: user.vscode("bookmarks.jumpToPrevious")
 bar projects: user.vscode("workbench.view.extension.project-manager")
 (go project | go projects):
     user.vscode("projectManager.listProjects")
+sesh pop [<user.text>] | sesher [<user.text>]:
+    user.vscode("projectManager.listProjects")
+    sleep(100ms)
+    insert(text or "")
+    sleep(100ms)
+    key(enter)
 
-close other tabs: user.vscode("workbench.action.closeOtherEditors")
+# Docker
+bar docker: user.vscode("workbench.view.extension.dockerView")
+
+# Azure
+bar azure: user.vscode("workbench.view.extension.azure")
+
+# AI chat
+pilot chat: user.vscode("continue.quickEdit")
+
+close other tabs | tab only: user.vscode("workbench.action.closeOtherEditors")
 close all tabs: user.vscode("workbench.action.closeAllEditors")
 close tabs way right: user.vscode("workbench.action.closeEditorsToTheRight")
 close tabs way left: user.vscode("workbench.action.closeEditorsToTheLeft")
 
 # Close splits other than the current one
-only: user.vscode("workbench.action.closeEditorsInOtherGroups")
+own | only: user.vscode("workbench.action.closeEditorsInOtherGroups")
 
 
 # Folding
@@ -208,6 +277,7 @@ git sync: user.vscode("git.sync")
 git unstage: user.vscode("git.unstage")
 git unstage all: user.vscode("git.unstageAll")
 pull request: user.vscode("pr.create")
+git open | open in GitHub: user.vscode("extension.openInGitHub")
 # Use keyboard shortcuts because VSCode relies on when clause contexts to choose the appropriate
 # action: https://code.visualstudio.com/api/references/when-clause-contexts
 change next: key(alt-f5)
@@ -230,14 +300,19 @@ test cancel: user.vscode("testing.cancelRun")
 # Debugging
 break point: user.vscode("editor.debug.action.toggleBreakpoint")
 step over: user.vscode("workbench.action.debug.stepOver")
+bug over: user.vscode("workbench.action.debug.stepOver")
 debug step into: user.vscode("workbench.action.debug.stepInto")
 debug step out [of]: user.vscode("workbench.action.debug.stepOut")
 debug start: user.vscode("workbench.action.debug.start")
+bug start: user.vscode("workbench.a)ction.debug.start")
 debug pause: user.vscode("workbench.action.debug.pause")
 debug stopper: user.vscode("workbench.action.debug.stop")
 debug continue: user.vscode("workbench.action.debug.continue")
+bug next: user.vscode("workbench.action.debug.continue")
 debug restart: user.vscode("workbench.action.debug.restart")
+bug restart: user.vscode("workbench.action.debug.restart")
 debug console: user.vscode("workbench.debug.action.toggleRepl")
+bug console: user.vscode("workbench.debug.action.toggleRepl")
 debug clean: user.vscode("workbench.debug.panel.action.clearReplAction")
 
 # Terminal
@@ -279,9 +354,13 @@ join lines: user.vscode("editor.action.joinLines")
 
 full screen: user.vscode("workbench.action.toggleFullScreen")
 
-isolate : user.vscode("workbench.action.toggleSidebarVisibility")
+isolate | iso :
+    user.vscode("workbench.action.toggleSidebarVisibility")
+    user.vscode("workbench.action.terminal.kill")
+    user.vscode("workbench.action.closeAuxiliaryBar")
 
 curse undo: user.vscode("cursorUndo")
+curse redo: user.vscode("cursorRedo")
 
 select word: user.vscode("editor.action.addSelectionToNextFindMatch")
 skip word: user.vscode("editor.action.moveSelectionToNextFindMatch")
@@ -294,3 +373,4 @@ cell run: user.vscode("notebook.cell.execute")
 
 install local: user.vscode("workbench.extensions.action.installVSIX")
 preview markdown: user.vscode("markdown.showPreview")
+split markdown | split preview: user.vscode("markdown.showPreviewToSide")

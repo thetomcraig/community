@@ -1,6 +1,16 @@
 tag: browser
 -
 address bar | go address | go url: browser.focus_address()
+search address <user.text>$:
+    browser.focus_address()
+    insert("{text}")
+    key(enter)
+search for <user.text>$:
+    app.tab_open()
+    insert("{text}")
+    key(enter)
+hunt this <user.text>: user.find(text)
+hunter <user.text>: user.find(text)
 go page | page focus: browser.focus_page()
 address copy | url copy | copy address | copy url:
     browser.focus_address()
