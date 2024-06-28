@@ -95,6 +95,10 @@ class EditActions:
     def save_all():
         actions.user.vscode("workbench.action.files.saveAll")
 
+    def do_not_save():
+        actions.key("cmd-w")
+        actions.key("cmd-d")
+
     def find(text=None):
         if is_mac:
             actions.key("cmd-f")
