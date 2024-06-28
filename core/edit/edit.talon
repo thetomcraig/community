@@ -198,5 +198,10 @@ disk: edit.save()
 file save all: edit.save_all()
 disk all: edit.save_all()
 
+# TODO
+def don't save:
+    edit.do_not_save()
+
+
 # Misc Edit
 scrape: edit.escape()
