@@ -154,7 +154,7 @@ punctuation_words = {
     "semi": ";",
     "colon": ":",
     "stack": ":",
-    "dripper": ":",
+    "dripper": ",",
     "arrow": "->",
     "forward slash": "/",
     "slash": "/",
