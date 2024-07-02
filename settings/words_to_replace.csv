@@ -52,8 +52,10 @@ debugpy, debug pie
 Redis,redis
 Azure,azure
 Azure,adger
+Azure,ager
 vault,volt
 arrow,aero
+
 mySQL,my sequel
 mkdir,make dir
 ER,er
