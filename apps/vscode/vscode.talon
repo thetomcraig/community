@@ -216,12 +216,11 @@ bar azure: user.vscode("workbench.view.extension.azure")
 pilot chat: user.vscode("continue.quickEdit")
 
 close other tabs | tab only: user.vscode("workbench.action.closeOtherEditors")
-close all tabs: user.vscode("workbench.action.closeAllEditors")
 close tabs way right: user.vscode("workbench.action.closeEditorsToTheRight")
 close tabs way left: user.vscode("workbench.action.closeEditorsToTheLeft")
 
 # Close splits other than the current one
-own | only: user.vscode("workbench.action.closeEditorsInOtherGroups")
+split only | own | only: user.vscode("workbench.action.closeEditorsInOtherGroups")
 
 
 # Folding
@@ -354,8 +353,8 @@ join lines: user.vscode("editor.action.joinLines")
 full screen: user.vscode("workbench.action.toggleFullScreen")
 
 isolate | iso :
-    user.vscode("workbench.action.toggleSidebarVisibility")
-    user.vscode("workbench.action.terminal.kill")
+    user.vscode("workbench.action.closeSidebar")
+    user.vscode("workbench.action.closePanel")
     user.vscode("workbench.action.closeAuxiliaryBar")
 
 curse undo: user.vscode("cursorUndo")
