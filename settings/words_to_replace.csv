@@ -16,9 +16,12 @@ auto,oto
 error,err
 
 Lewis,louis
+Lewis,lewis
+Lewis's,louis's
 Warren,warren
 Ben,ben
 Sid,sid
+Matt,matt
 P1, AP one
 polaris,pollers
 
@@ -46,6 +49,7 @@ etc,et sea
 pull request,poll request
 pull request,paul request
 ml,Emil
+PRs,pars
 
 
 .py,dot pi
@@ -85,3 +89,4 @@ site, cite
 
 
 ublock,you block
+back end, back and
