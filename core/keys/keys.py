@@ -160,7 +160,7 @@ punctuation_words = {
     "forward slash": "/",
     "slash": "/",
     "question mark": "?",
-    "quark": "?",
+    "probe": "?",
     "exclamation mark": "!",
     "exclamation point": "!",
     "bang": "!",
