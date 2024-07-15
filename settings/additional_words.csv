@@ -74,7 +74,7 @@ GlobalScape
 Sendgrid
 P1
 QA
-endpoint
+int
 npm
 nvm
 chatgpt
