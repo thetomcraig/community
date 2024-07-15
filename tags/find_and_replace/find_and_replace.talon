@@ -3,17 +3,17 @@ tag: user.find_and_replace
 tag(): user.find
 
 hunt this: user.find("")
-hunter: user.find("")
+# hunter: user.find("")
 hunt this (pace | paste):
     user.find("")
     sleep(25ms)
     edit.paste()
-hunter (pace | paste):
-    user.find("")
-    sleep(25ms)
-    edit.paste()
+# hunter (pace | paste):
+    # user.find("")
+    # sleep(25ms)
+    # edit.paste()
 hunt this <user.text>: user.find(text)
-hunter <user.text>: user.find(text)
+# hunter <user.text>: user.find(text)
 
 hunt all: user.find_everywhere("")
 hunt all (pace | paste):
