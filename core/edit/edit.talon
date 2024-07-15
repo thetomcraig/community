@@ -9,6 +9,7 @@ unfind:
     edit.find()
     user.escape()
 next one: edit.find_next()
+nexter: edit.find_next()
 
 # Navigation
 
@@ -94,6 +95,9 @@ clear down:
 clear word: edit.delete_word()
 
 clear word left:
+    edit.extend_word_left()
+    edit.delete()
+chuck word:
     edit.extend_word_left()
     edit.delete()
 
