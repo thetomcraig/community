@@ -20,6 +20,8 @@ kill word: user.terminal_kill_word()
 kill line: user.terminal_kill_line()
 kill left: user.terminal_kill_line_left()
 kill right: user.terminal_kill_line_right()
+exit: user.terminal_exit()
+
 
 word left: user.terminal_word_left()
 word right: user.terminal_word_right()

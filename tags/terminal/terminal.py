@@ -52,3 +52,6 @@ class Actions:
 
     def terminal_kill_line_right():
         """kills from cursor to end of line"""
+
+    def terminal_exit():
+        """exit the current terminal session"""
