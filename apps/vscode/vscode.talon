@@ -40,7 +40,9 @@ bar remote: user.vscode("workbench.action.remote.showMenu")
 bar source: user.vscode("workbench.view.scm")
 bar test: user.vscode("workbench.view.testing.focus")
 bar chat: user.vscode("workbench.action.focusAuxiliaryBar")
+bar PRs: user.vscode("workbench.view.extension.github-pull-requests")
 bar switch: user.vscode("workbench.action.toggleSidebarVisibility")
+bar close right: user.vscode("workbench.action.closeAuxiliaryBar")
 bar hide: user.vscode("workbench.action.closeSidebar")
 
 # Symbol search
@@ -214,6 +216,7 @@ bar azure: user.vscode("workbench.view.extension.azure")
 
 # AI chat
 pilot chat: user.vscode("continue.quickEdit")
+chat ask: user.vscode("continue.focusContinueInput")
 
 close other tabs | tab only: user.vscode("workbench.action.closeOtherEditors")
 close tabs way right: user.vscode("workbench.action.closeEditorsToTheRight")
