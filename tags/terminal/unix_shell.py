@@ -91,4 +91,8 @@ class Actions:
         """kills from cursor to end of line"""
         actions.key("ctrl-k")
 
+    def terminal_exit():
+        """exit the current terminal session"""
+        actions.key("ctrl-d")
+
 
