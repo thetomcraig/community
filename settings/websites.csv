@@ -31,7 +31,16 @@ https://github.com/AyaHealthcare/Polarisv3_stack,polaris stack
 https://github.com/AyaHealthcare/Polarisv3_stack/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc, stack PRs
 https://github.com/AyaHealthcare/Polaris_ML,polaris ML
 https://github.com/AyaHealthcare/Polaris_ML/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc, ML PRs
+
 https://dev-internal.polarishealth.ai/, dev VM
 http://sand-internal.polarishealth.ai/, sand VM
+http://int-internal.polarishealth.ai/, int VM
 http://localhost:4200/,polaris local host
 
+https://portal.azure.com/#@ayahealthcare.com/resource/subscriptions/b8cf6d69-baf8-4642-ae55-c424dd683a59/resourceGroups/polaris-int-wus-rg-1/overview, int resource group
+https://portal.azure.com/#@ayahealthcare.com/resource/subscriptions/b8cf6d69-baf8-4642-ae55-c424dd683a59/resourceGroups/polaris-int-wus-rg-1/providers/Microsoft.Storage/storageAccounts/polarisintwussta1/containersList, int storage
+https://portal.azure.com/#@ayahealthcare.com/resource/subscriptions/b8cf6d69-baf8-4642-ae55-c424dd683a59/resourceGroups/polaris-int-wus-rg-1/providers/Microsoft.KeyVault/vaults/polaris-int-wus-kv-1/secrets, int key vault
+
+https://portal.azure.com/#@ayahealthcare.com/resource/subscriptions/80304a4f-4d0a-4cbb-b3ea-556bcda96b42/resourceGroups/polaris-dev-wus-rg-1/overview, dev resource group
+https://portal.azure.com/#@ayahealthcare.com/resource/subscriptions/80304a4f-4d0a-4cbb-b3ea-556bcda96b42/resourceGroups/polaris-dev-wus-rg-1/providers/Microsoft.KeyVault/vaults/polaris-dev-wus-kv-1/secrets, dev key vault
+https://portal.azure.com/#@ayahealthcare.com/resource/subscriptions/80304a4f-4d0a-4cbb-b3ea-556bcda96b42/resourceGroups/polaris-dev-wus-rg-1/providers/Microsoft.Storage/storageAccounts/polarisdevwussta1/containersList, dev storage

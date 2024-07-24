@@ -35,6 +35,7 @@ sudo,pseudo
 dict,dicked
 pytest,pie test
 pytest,pi test 
+def,deaf
 tmux,tee mux
 tmux,te mux
 tmux,tea mux
@@ -51,7 +52,8 @@ pull request,paul request
 ml,Emil
 PRs,pars
 
-
+py,pie
+py,pi
 .py,dot pi
 .py,dot pie
 isort,eye sort
