@@ -12,9 +12,6 @@ October,october
 November,november
 December,december
 
-auto,oto
-error,err
-
 Lewis,louis
 Lewis,lewis
 Lewis's,louis's
@@ -22,20 +19,27 @@ Warren,warren
 Ben,ben
 Sid,sid
 Matt,matt
+
 P1, AP one
 polaris,pollers
+main-aya,main aya
+main-aya,main eye
+ER,er
 
+auto,oto
+error,err
+arrow,aero
+per,purr
+add,ad
+site,sight
+site, cite
+none,nun
+version,virgin
+an,anne
 
-psycopg2,psycho PG two
-psycopg2,psycho PG to
-psycopg2,psycho peg two
-sys,cis
-sys,sis
+pull request,poll request
+pull request,paul request
 sudo,pseudo
-dict,dicked
-pytest,pie test
-pytest,pi test 
-def,deaf
 tmux,tee mux
 tmux,te mux
 tmux,tea mux
@@ -43,15 +47,45 @@ tmux, teabox
 tmux,teamux
 tmux,teemux
 tmux,team ox
-django,jango
 etc,et see
 etc,Betsy
 etc,et sea
-pull request,poll request
-pull request,paul request
 ml,Emil
 PRs,pars
+hist,hissed
+config,convict
+Redis,redis
+Azure,azure
+Azure,adger
+Azure,ager
+vault,volt
+mySQL,my sequel
+sqlite,sequel light
+mkdir,make dir
+rq,cu
+endpoint,and.
+vscode,vasco
+dapr,dapper
+iTerm2,iTerm to
+iTerm2,iTerm two
+iTerm2,iTerm too
+ublock,you block
+back end, back and
+404,four or four
+404,four ou four
+404,four four
 
+psycopg2,psycho PG two
+psycopg2,psycho PG to
+psycopg2,psycho peg two
+sys,cis
+sys,sis
+dict,dicked
+pytest,pie test
+pytest,pi test
+def,deaf
+django,jango
+magic mock,magic mark
 py,pie
 py,pi
 .py,dot pi
@@ -59,38 +93,3 @@ py,pi
 isort,eye sort
 util,you till
 debugpy, debug pie
-Redis,redis
-Azure,azure
-Azure,adger
-Azure,ager
-vault,volt
-magic mock,magic mark
-arrow,aero
-per,purr
-
-mySQL,my sequel
-sqlite,sequel light
-mkdir,make dir
-ER,er
-rq,cu
-endpoint,and.
-
-hist,hissed
-none,nun
-version,virgin
-an,anne
-config,convict
-
-vscode,vasco
-dapr,dapper
-iTerm2,iTerm to
-iTerm2,iTerm two
-iTerm2,iTerm too
-
-add,ad
-site,sight
-site, cite
-
-
-ublock,you block
-back end, back and
