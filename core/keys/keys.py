@@ -156,6 +156,8 @@ punctuation_words = {
     "stack": ":",
     "stacker": ": ",
     "dripper": ", ",
+    "breath": ", ",
+    "dub quote": '"',
     "arrow": "->",
     "forward slash": "/",
     "slash": "/",
