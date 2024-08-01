@@ -20,9 +20,6 @@ class EditActions:
         actions.edit.line_end()
         actions.key("enter")
 
-    def return_text():
-        actions.key("enter")
-
     def selection_clone():
         actions.edit.copy()
         actions.edit.select_none()
