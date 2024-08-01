@@ -200,7 +200,6 @@ slapper:
     edit.line_insert_down()
     edit.line_insert_down()
 
-okay: edit.line_insert_down()
 
 okay: edit.line_insert_down()
 
@@ -226,7 +225,3 @@ file save all: edit.save_all()
 [go] line mid: user.line_middle()
 disk all: edit.save_all()
 disker: edit.save_all()
-
-# Misc Edit
-scrape: user.escape()
-abort: user.escape()
