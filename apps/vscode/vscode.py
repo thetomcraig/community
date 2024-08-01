@@ -101,10 +101,6 @@ class EditActions:
     def save_all():
         actions.user.vscode("workbench.action.files.saveAll")
 
-    def do_not_save():
-        actions.key("cmd-w")
-        actions.key("cmd-d")
-
     def find(text=None):
         actions.user.vscode("actions.find")
         if text is not None:
