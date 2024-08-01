@@ -22,6 +22,8 @@ Matt,matt
 
 P1, AP one
 polaris,pollers
+polaris,pillars
+polaris,polars
 main-aya,main aya
 main-aya,main eye
 ER,er
@@ -39,6 +41,8 @@ an,anne
 
 pull request,poll request
 pull request,paul request
+pull requests,poll requests
+pull requests,paul requests
 sudo,pseudo
 tmux,tee mux
 tmux,te mux
@@ -58,7 +62,10 @@ Redis,redis
 Azure,azure
 Azure,adger
 Azure,ager
+Azure ML, Azure email
+Azure ML, Azure emil
 vault,volt
+key vault,kiva
 mySQL,my sequel
 sqlite,sequel light
 mkdir,make dir
@@ -74,6 +81,7 @@ back end, back and
 404,four or four
 404,four ou four
 404,four four
+shell, shall
 
 psycopg2,psycho PG two
 psycopg2,psycho PG to
