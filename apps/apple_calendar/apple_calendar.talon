@@ -1,7 +1,7 @@
 os: mac
 -
 
-today: key(cmd-t)
+go to today | today: key(cmd-t)
 go date: key(cmd-shift-t)
 day view: key(cmd-1)
 weak view | week view: key(cmd-2)
