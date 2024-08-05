@@ -4,6 +4,7 @@ triple quote: "'''"
 (triple grave | triple back tick | gravy): insert("```")
 (dot dot | dotdot): ".."
 ellipsis: "..."
+ellipse: "..."
 (comma and | spamma): ", "
 arrow: "->"
 dub arrow: "=>"
