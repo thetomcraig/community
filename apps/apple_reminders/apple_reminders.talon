@@ -10,4 +10,5 @@ new section: key(cmd-alt-n)
 new section with selection: key(cmd-ctrl-n)
 new list: key(cmd-shift-n)
 
+# to replace with an import from the find and replace module
 find it: key(cmd-f)
