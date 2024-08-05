@@ -5,6 +5,8 @@ zoom reset: edit.zoom_reset()
 
 # Searching
 find it: edit.find()
+scout: edit.find()
+scout <user.text>: edit.find(text)
 unfind:
     edit.find()
     user.escape()
