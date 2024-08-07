@@ -58,7 +58,8 @@ class WinActions:
 class MacActions:
     def edit_text_file(path):
         # -t means try to open in a text editor.
-        open_with_subprocess(path, ["/usr/bin/open", "-t", path])
+        # Using VSCode instead of default text editor
+        open_with_subprocess(path, ["/opt/homebrew/bin/code", path])
 
 
 @linuxctx.action_class("self")
@@ -76,7 +77,8 @@ def open_with_subprocess(path, args):
     try:
         return subprocess.run(args, timeout=0.5, check=True)
     except subprocess.TimeoutExpired:
-        app.notify(f"Timeout trying to open file for editing: {path}")
+        # This is firing even when the file is opened using VSCode, so commenting it out
+        # app.notify(f"Timeout trying to open file for editing: {path}")
         raise
     except subprocess.CalledProcessError:
         app.notify(f"Could not open file for editing: {path}")
