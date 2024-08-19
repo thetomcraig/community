@@ -148,3 +148,6 @@ class BrowserActions:
 
     def toggle_dev_tools():
         actions.key("ctrl-shift-i")
+
+    def toggle_dev_tools_dock():
+        actions.key("ctrl-shift-d")
