@@ -91,3 +91,6 @@ class BrowserActions:
 
     def toggle_dev_tools():
         actions.key("cmd-alt-i")
+
+    def toggle_dev_tools_dock():
+        actions.key("cmd-shift-d")
