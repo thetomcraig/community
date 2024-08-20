@@ -10,6 +10,7 @@ window reload: user.vscode("workbench.action.reloadWindow")
 window close: user.vscode("workbench.action.closeWindow")
 #multiple_cursor.py support end
 
+
 settings():
     key_wait = 4
     insert_wait = 7
@@ -46,7 +47,7 @@ bar test: user.vscode("workbench.view.testing.focus")
 bar chat: user.vscode("workbench.action.focusAuxiliaryBar")
 bar PRs: user.vscode("workbench.view.extension.github-pull-requests")
 bar switch: user.vscode("workbench.action.toggleSidebarVisibility")
-bar close right: user.vscode("workbench.action.closeAuxiliaryBar")
+bar close right | bar switch right: user.vscode("workbench.action.closeAuxiliaryBar")
 bar hide: user.vscode("workbench.action.closeSidebar")
 
 # Symbol search
@@ -219,12 +220,14 @@ bar docker: user.vscode("workbench.view.extension.dockerView")
 bar azure: user.vscode("workbench.view.extension.azure")
 
 # AI chat
-pilot chat: user.vscode("continue.quickEdit")
-chat ask: user.vscode("continue.focusContinueInput")
+# pilot chat: user.vscode("continue.quickEdit")
+# chat ask | chat this: user.vscode("continue.focusContinueInput")
 
-close other tabs | tab only: user.vscode("workbench.action.closeOtherEditors")
+close other tabs | tab only | tab own: user.vscode("workbench.action.closeOtherEditors")
 close tabs way right: user.vscode("workbench.action.closeEditorsToTheRight")
 close tabs way left: user.vscode("workbench.action.closeEditorsToTheLeft")
+tab {self.letter} [{self.letter}]:
+    user.run_rpc_command("andreas.focusTab", "{letter_1}{letter_2 or ''}")
 
 # Close splits other than the current one
 split only | own | only: user.vscode("workbench.action.closeEditorsInOtherGroups")
@@ -282,6 +285,9 @@ git sync: user.vscode("git.sync")
 git unstage: user.vscode("git.unstage")
 git unstage all: user.vscode("git.unstageAll")
 pull request: user.vscode("pr.create")
+pull request link:
+    user.run_rpc_command("andreas.getGitPullRequestsURL")
+
 git open | open in GitHub: user.vscode("extension.openInGitHub")
 # Use keyboard shortcuts because VSCode relies on when clause contexts to choose the appropriate
 # action: https://code.visualstudio.com/api/references/when-clause-contexts
