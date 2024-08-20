@@ -1,4 +1,7 @@
 settings():
+    user.context_sensitive_dictation = 1
+    user.accessibility_dictation = 1
+
     # Adjust the scale of the imgui
     imgui.scale = 2
 
@@ -7,7 +10,7 @@ settings():
     # speech.timeout = 0.3
 
     # Uncomment to enable dark mode for talon help menus
-    # imgui.dark_mode = true
+    imgui.dark_mode = true
 
     # If `true`, automatically show the picker GUI when the file manager has focus
     user.file_manager_auto_show_pickers = false
@@ -19,7 +22,7 @@ settings():
     user.help_max_contexts_per_page = 20
 
     # Set the scroll amount for continuous scroll/gaze scroll
-    user.mouse_continuous_scroll_amount = 300
+    user.mouse_continuous_scroll_amount = 90
 
     # If `true`, stop continuous scroll/gaze scroll with a pop
     user.mouse_enable_pop_stops_scroll = true
@@ -28,13 +31,13 @@ settings():
     # 0 = off
     # 1 = on with eyetracker but not zoom mouse mode
     # 2 = on but not with zoom mouse mode
-    user.mouse_enable_pop_click = 1
+    user.mouse_enable_pop_click = 0
 
     # If `true`, use a hissing noise to scroll continuously
     user.mouse_enable_hiss_scroll = false
 
     # If `true`, hide the continuous scroll/gaze scroll GUI
-    user.mouse_hide_mouse_gui = false
+    user.mouse_hide_mouse_gui = true
 
     # If `true`, hide the cursor when enabling zoom mouse
     user.mouse_wake_hides_cursor = false
