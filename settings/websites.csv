@@ -15,7 +15,7 @@ https://github.com/,github
 https://gist.github.com/,gist
 https://en.wikipedia.org/,wikipedia
 https://www.youtube.com/,youtube
-https://chat.openai.com/,chat
+https://claude.ai/new,chat
 
 https://www.icloud.com/,icloud
 
@@ -36,6 +36,7 @@ https://dev-internal.polarishealth.ai/, dev VM
 http://sand-internal.polarishealth.ai/, sand VM
 http://int-internal.polarishealth.ai/, int VM
 http://localhost:4200/,polaris local host
+http://localhost:4200/,polaris local
 
 https://portal.azure.com/#@ayahealthcare.com/resource/subscriptions/b8cf6d69-baf8-4642-ae55-c424dd683a59/resourceGroups/polaris-int-wus-rg-1/overview, int resource group
 https://portal.azure.com/#@ayahealthcare.com/resource/subscriptions/b8cf6d69-baf8-4642-ae55-c424dd683a59/resourceGroups/polaris-int-wus-rg-1/providers/Microsoft.Storage/storageAccounts/polarisintwussta1/containersList, int storage

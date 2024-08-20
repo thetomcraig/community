@@ -19,7 +19,10 @@ Warren,warren
 Ben,ben
 Sid,sid
 Matt,matt
+Aierpati,air potty
 
+MCZ-,ticket num
+MCZ-,ticket numb
 P1, AP one
 polaris,pollers
 polaris,pillars
@@ -38,6 +41,10 @@ site, cite
 none,nun
 version,virgin
 an,anne
+close,clothes
+enable,and able
+main,maine
+error,air
 
 pull request,poll request
 pull request,paul request
@@ -58,6 +65,7 @@ ml,Emil
 PRs,pars
 hist,hissed
 config,convict
+console,consul
 Redis,redis
 Azure,azure
 Azure,adger
@@ -82,6 +90,13 @@ back end, back and
 404,four ou four
 404,four four
 shell, shall
+rsync,or sync
+rsync,or sink
+rsync,ur sink
+rsync,ur sync
+rsync,her sink
+rsync,her sync
+dict,dice
 
 psycopg2,psycho PG two
 psycopg2,psycho PG to
@@ -90,9 +105,12 @@ sys,cis
 sys,sis
 dict,dicked
 pytest,pie test
+pytest,pietist
 pytest,pi test
+pytest,purest
 def,deaf
 django,jango
+django,tango
 magic mock,magic mark
 py,pie
 py,pi
