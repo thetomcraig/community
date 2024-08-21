@@ -8,3 +8,4 @@ hunt this (pace | paste):
 hunt this <user.text>: user.find(text)
 hunt next: user.find_next()
 hunt previous: user.find_previous()
+last one: user.find_previous()
