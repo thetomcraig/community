@@ -35,7 +35,7 @@ extensions show: browser.show_extensions()
 history show: browser.show_history()
 cache show: browser.show_clear_cache()
 dev tools [show]: browser.toggle_dev_tools()
-dev tools redock: browser.toggle_dev_tools_dock()
+dev tools redock: user.toggle_dev_tools_dock()
 
 # Legacy [verb noun] commands to be removed at a later time
 show downloads: browser.show_downloads()

@@ -17,6 +17,8 @@ class UserActions:
     def tab_final():
         actions.key("cmd-9")
 
+    def toggle_dev_tools_dock():
+        actions.key("cmd-shift-d")
 
 @ctx.action_class("browser")
 class BrowserActions:
@@ -91,6 +93,3 @@ class BrowserActions:
 
     def toggle_dev_tools():
         actions.key("cmd-alt-i")
-
-    def toggle_dev_tools_dock():
-        actions.key("cmd-shift-d")

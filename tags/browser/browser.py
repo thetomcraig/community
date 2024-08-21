@@ -25,6 +25,9 @@ class Actions:
         """Open the url in the address bar in a new tab"""
         actions.key("alt-enter")
 
+    def toggle_dev_tools_dock():
+        """Toggle the dev tools pane between bottom and right side"""
+        actions.key("ctrl-shift-d")
 
 @ctx.action_class("user")
 class UserActions:
@@ -56,6 +59,9 @@ class UserActions:
             actions.app.tab_open()
             actions.user.paste(url_address)
             actions.key("enter")
+
+    def toggle_dev_tools_dock():
+        actions.user.toggle_dev_tools_dock()
 
 
 @ctx.action_class("browser")
@@ -148,6 +154,3 @@ class BrowserActions:
 
     def toggle_dev_tools():
         actions.key("ctrl-shift-i")
-
-    def toggle_dev_tools_dock():
-        actions.key("ctrl-shift-d")
