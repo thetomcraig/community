@@ -23,9 +23,7 @@ go word left: edit.word_left()
 go word right: edit.word_right()
 
 go left: edit.left()
-tug: edit.word_left()
 go right: edit.right()
-push: edit.word_right()
 go up: edit.up()
 north: edit.up()
 go down: edit.down()
@@ -70,7 +68,9 @@ select way down: edit.extend_file_end()
 
 # Indentation
 indent [more]: edit.indent_more()
+push: edit.indent_more()
 (indent less | out dent): edit.indent_less()
+tug: edit.indent_less()
 
 # Delete
 clear all: user.delete_all()
