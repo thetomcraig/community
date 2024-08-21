@@ -16,12 +16,12 @@ hunt all (pace | paste):
     edit.paste()
 hunt all <user.text>: user.find_everywhere(text)
 
-scout all | scout al: user.find_everywhere("")
-scout all (pace | paste) | scout all (pace | paste):
+scout all | scout al | scout hall: user.find_everywhere("")
+scout all (pace | paste) | scout all (pace | paste) | scout al (pace | paste) | scout hall (pace | paste):
     user.find_everywhere("")
     sleep(25ms)
     edit.paste()
-scout all <user.text> | scout all <user.text>: user.find_everywhere(text)
+scout all <user.text> | scout al <user.text> | scout hall <user.text>: user.find_everywhere(text)
 
 scout (pace | paste):
     edit.find()
