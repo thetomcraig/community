@@ -29,6 +29,11 @@ class Actions:
         """Toggle the dev tools pane between bottom and right side"""
         actions.key("ctrl-shift-d")
 
+    def clear_dev_tools():
+        """Clear the console output"""
+        actions.key("ctrl-`")
+        actions.key("ctrl-l")
+
 @ctx.action_class("user")
 class UserActions:
     def tab_jump(number: int):

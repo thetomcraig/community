@@ -20,6 +20,10 @@ class UserActions:
     def toggle_dev_tools_dock():
         actions.key("cmd-shift-d")
 
+    def clear_dev_tools():
+        actions.key("ctrl-`")
+        actions.key("cmd-k")
+
 @ctx.action_class("browser")
 class BrowserActions:
     def address():
