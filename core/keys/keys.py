@@ -210,7 +210,6 @@ symbol_key_words = {
     "right bracket": "]",
     "slash": "/",
     "backslash": "\\",
-    "fall": "\\",
     "whack": "\\",
     "minus": "-",
     "dash": "-",
