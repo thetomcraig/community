@@ -1,6 +1,7 @@
 os: macos
-and app.bundle: com.postmanlabs.mac
+app: postman
+and app.bundle: com.postmanlabs.com
 -
 tag(): user.tabs
 
-run that | run this | run it: key(cmd-enter)
+# send it | run it: user.send()
