@@ -149,9 +149,7 @@ file last:
     key(up)
     user.vscode("explorer.openAndPassFocus")
 file next:
-    user.vscode("workbench.files.action.showActiveFileInExplorer")
-    key(down)
-    user.vscode("explorer.openAndPassFocus")
+    user.cycle_through_files_in_dir()
 
 save ugly: user.vscode("workbench.action.files.saveWithoutFormatting")
 save all: user.vscode("workbench.action.files.saveAll")
@@ -207,6 +205,8 @@ bar projects: user.vscode("workbench.view.extension.project-manager")
 (go project | go projects):
     user.vscode("projectManager.listProjects")
 sesh pop [<user.text>] | sesher [<user.text>]:
+    user.switcher_focus("Code")
+    sleep(100ms)
     user.vscode("projectManager.listProjects")
     sleep(100ms)
     insert(text or "")
@@ -221,13 +221,16 @@ bar azure: user.vscode("workbench.view.extension.azure")
 
 # AI chat
 # pilot chat: user.vscode("continue.quickEdit")
-# chat ask | chat this: user.vscode("continue.focusContinueInput")
+chat ask | chat this: user.vscode("continue.focusContinueInput")
 
 close other tabs | tab only | tab own: user.vscode("workbench.action.closeOtherEditors")
 close tabs way right: user.vscode("workbench.action.closeEditorsToTheRight")
 close tabs way left: user.vscode("workbench.action.closeEditorsToTheLeft")
 tab {self.letter} [{self.letter}]:
     user.run_rpc_command("andreas.focusTab", "{letter_1}{letter_2 or ''}")
+tab close {self.letter} [{self.letter}]:
+    user.run_rpc_command_and_wait("andreas.focusTab", "{letter_1}{letter_2 or ''}")
+    key("cmd-w")
 
 # Close splits other than the current one
 split only | own | only: user.vscode("workbench.action.closeEditorsInOtherGroups")
@@ -288,7 +291,11 @@ pull request: user.vscode("pr.create")
 pull request link:
     user.run_rpc_command("andreas.getGitPullRequestsURL")
 
-git open | open in GitHub: user.vscode("extension.openInGitHub")
+git open file: user.git_open_remote_file_url(false, false)
+git copy file: user.git_copy_remote_file_url(false, false)
+git open branch: user.git_open_remote_file_url(false, true)
+git copy branch: user.git_copy_remote_file_url(false, true)
+
 # Use keyboard shortcuts because VSCode relies on when clause contexts to choose the appropriate
 # action: https://code.visualstudio.com/api/references/when-clause-contexts
 change next: key(alt-f5)
