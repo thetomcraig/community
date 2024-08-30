@@ -299,6 +299,7 @@ class UserActions:
         else:
             # Otherwise respect the mouse_enable_pop_click setting
             setting_val = settings.get("user.mouse_enable_pop_click")
+            print("noise_trigger_pop function called (but shouldn't do anything)")
 
             is_using_eye_tracker = (
                 actions.tracking.control_zoom_enabled()
