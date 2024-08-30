@@ -17,6 +17,11 @@ ctx.matches = r"""
 app: brave
 """
 
+@mod.action_class
+class Actions:
+    def show_vomnibar():
+        """Open the Vomnibar"""
+        actions.key("ctrl-s")
 
 @ctx.action_class("user")
 class UserActions:
