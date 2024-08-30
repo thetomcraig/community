@@ -1,47 +1,51 @@
-URL,Spoken name
-http://talonvoice.com,talon home page
-http://talonvoice.slack.com/messages/help,talon slack
-https://talon.wiki/,talon wiki
-https://chaosparrot.github.io/talon_practice/,talon practice
-https://search.talonvoice.com/search/,talon repository search
-https://www.amazon.com/,amazon
-https://dropbox.com/,dropbox
-https://www.google.com/,google
-https://calendar.google.com,google calendar
-https://maps.google.com/,google maps
-https://scholar.google.com/,google scholar
-https://mail.google.com/,gmail
-https://github.com/,github
-https://gist.github.com/,gist
-https://en.wikipedia.org/,wikipedia
-https://www.youtube.com/,youtube
-https://claude.ai/new,chat
+URL, Spoken name
+http://talonvoice.com, talon home page
+http://talonvoice.slack.com/messages/help, talon slack
+https://talon.wiki/, talon wiki
+https://chaosparrot.github.io/talon_practice/, talon practice
+https://search.talonvoice.com/search/, talon repository search
+https://www.amazon.com/, amazon
+https://www.google.com/, google
+https://calendar.google.com, google calendar
+https://scholar.google.com/, google scholar
+https://github.com/, github
+https://gist.github.com/, gist
+https://en.wikipedia.org/, wikipedia
+https://www.youtube.com/, youtube
 
-https://www.icloud.com/,icloud
+https://claude.ai/new, chat
+https://www.icloud.com/, icloud
 
-https://ayadev.atlassian.net/jira/software/c/projects/MCZ/boards/1433/backlog,backlog
-https://ayadev.atlassian.net/jira/software/c/projects/MCZ/boards/1433?assignee=712020%3Aaa4c8fe2-64f1-4e5e-97fe-ae1f306bd07e,sprint
-https://github.com/AyaHealthcare/polarisv3_FE,polaris front end
-https://github.com/AyaHealthcare/polarisv3_FE/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc, front end PRs
-https://github.com/AyaHealthcare/polarisv3_BE,polaris back end
-https://github.com/AyaHealthcare/polarisv3_BE/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc, back end PRs
-https://github.com/AyaHealthcare/polarisv3-ai,polaris AI
-https://github.com/AyaHealthcare/polarisv3-ai/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc, AI PRs
-https://github.com/AyaHealthcare/Polarisv3_stack,polaris stack
-https://github.com/AyaHealthcare/Polarisv3_stack/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc, stack PRs
-https://github.com/AyaHealthcare/Polaris_ML,polaris ML
-https://github.com/AyaHealthcare/Polaris_ML/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc, ML PRs
+https://ayadev.atlassian.net/jira/software/c/projects/MCZ/boards/1433/backlog, polaris backlog
+https://ayadev.atlassian.net/jira/software/c/projects/MCZ/boards/1433?assignee=712020%3Aaa4c8fe2-64f1-4e5e-97fe-ae1f306bd07e, polaris sprint
+https://github.com/AyaHealthcare/polarisv3_FE, polaris front end
+https://github.com/AyaHealthcare/polarisv3_FE/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc, polaris front end PRs
+https://github.com/AyaHealthcare/polarisv3_BE, polaris back end
+https://github.com/AyaHealthcare/polarisv3_BE/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc, polaris back end PRs
+https://github.com/AyaHealthcare/polarisv3-ai, polaris AI
+https://github.com/AyaHealthcare/polarisv3-ai/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc, polaris AI PRs
+https://github.com/AyaHealthcare/Polarisv3_stack, polaris stack
+https://github.com/AyaHealthcare/Polarisv3_stack/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc, polaris stack PRs
+https://github.com/AyaHealthcare/Polaris_ML, polaris ML
+https://github.com/AyaHealthcare/Polaris_ML/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc, polaris ML PRs
+http://localhost:4200/, polaris local host
+http://localhost:4200/, polaris local
+https://dev-internal.polarishealth.ai/, polaris dev VM
+http://sand-internal.polarishealth.ai/, polaris sand VM
+http://int-internal.polarishealth.ai/, polaris int VM
+https://portal.azure.com/#@ayahealthcare.com/resource/subscriptions/b8cf6d69-baf8-4642-ae55-c424dd683a59/resourceGroups/polaris-int-wus-rg-1/overview, polaris int resource group
+https://portal.azure.com/#@ayahealthcare.com/resource/subscriptions/b8cf6d69-baf8-4642-ae55-c424dd683a59/resourceGroups/polaris-int-wus-rg-1/providers/Microsoft.Storage/storageAccounts/polarisintwussta1/containersList, polaris int storage
+https://portal.azure.com/#@ayahealthcare.com/resource/subscriptions/b8cf6d69-baf8-4642-ae55-c424dd683a59/resourceGroups/polaris-int-wus-rg-1/providers/Microsoft.KeyVault/vaults/polaris-int-wus-kv-1/secrets, polaris int key vault
+https://portal.azure.com/#@ayahealthcare.com/resource/subscriptions/80304a4f-4d0a-4cbb-b3ea-556bcda96b42/resourceGroups/polaris-dev-wus-rg-1/overview, polaris dev resource group
+https://portal.azure.com/#@ayahealthcare.com/resource/subscriptions/80304a4f-4d0a-4cbb-b3ea-556bcda96b42/resourceGroups/polaris-dev-wus-rg-1/providers/Microsoft.KeyVault/vaults/polaris-dev-wus-kv-1/secrets, polaris dev key vault
+https://portal.azure.com/#@ayahealthcare.com/resource/subscriptions/80304a4f-4d0a-4cbb-b3ea-556bcda96b42/resourceGroups/polaris-dev-wus-rg-1/providers/Microsoft.Storage/storageAccounts/polarisdevwussta1/containersList, polaris dev storage
 
-https://dev-internal.polarishealth.ai/, dev VM
-http://sand-internal.polarishealth.ai/, sand VM
-http://int-internal.polarishealth.ai/, int VM
-http://localhost:4200/,polaris local host
-http://localhost:4200/,polaris local
-
-https://portal.azure.com/#@ayahealthcare.com/resource/subscriptions/b8cf6d69-baf8-4642-ae55-c424dd683a59/resourceGroups/polaris-int-wus-rg-1/overview, int resource group
-https://portal.azure.com/#@ayahealthcare.com/resource/subscriptions/b8cf6d69-baf8-4642-ae55-c424dd683a59/resourceGroups/polaris-int-wus-rg-1/providers/Microsoft.Storage/storageAccounts/polarisintwussta1/containersList, int storage
-https://portal.azure.com/#@ayahealthcare.com/resource/subscriptions/b8cf6d69-baf8-4642-ae55-c424dd683a59/resourceGroups/polaris-int-wus-rg-1/providers/Microsoft.KeyVault/vaults/polaris-int-wus-kv-1/secrets, int key vault
-
-https://portal.azure.com/#@ayahealthcare.com/resource/subscriptions/80304a4f-4d0a-4cbb-b3ea-556bcda96b42/resourceGroups/polaris-dev-wus-rg-1/overview, dev resource group
-https://portal.azure.com/#@ayahealthcare.com/resource/subscriptions/80304a4f-4d0a-4cbb-b3ea-556bcda96b42/resourceGroups/polaris-dev-wus-rg-1/providers/Microsoft.KeyVault/vaults/polaris-dev-wus-kv-1/secrets, dev key vault
-https://portal.azure.com/#@ayahealthcare.com/resource/subscriptions/80304a4f-4d0a-4cbb-b3ea-556bcda96b42/resourceGroups/polaris-dev-wus-rg-1/providers/Microsoft.Storage/storageAccounts/polarisdevwussta1/containersList, dev storage
+https://ayadev.atlassian.net/jira/software/c/projects/WIN/boards/1514/backlog, winnow backlog
+https://ayadev.atlassian.net/jira/software/c/projects/WIN/boards/1514, winnow sprint
+https://github.com/PolarisHealthAI/Winnow2.0_FE/pulls?q=sort%3Aupdated-desc+is%3Apr+is%3Aopen, winnow front end PRs
+https://github.com/PolarisHealthAI/Winnow2.0_FE/tree/develop-aya, winnow front end v two
+https://github.com/PolarisHealthAI/Winnow2.0_FE/tree/develop_v3, winnow front end v three
+https://github.com/PolarisHealthAI/Winnow_v2_BE/pulls?q=sort%3Aupdated-desc+is%3Apr+is%3Aopen, winnow back end PRs
+https://github.com/PolarisHealthAI/Winnow_v2_BE/tree/develop-aya, window back end v two
+https://github.com/PolarisHealthAI/Winnow_v2_BE/tree/develop_v3, winnow backend v three
+https://github.com/AyaHealthcare/winnow_v2_etl, winnow ETL
