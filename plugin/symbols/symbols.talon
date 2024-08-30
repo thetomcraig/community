@@ -18,7 +18,7 @@ inside (squares | brackets | square brackets | list): user.insert_between("[", "
 inside (braces | curly brackets): user.insert_between("{", "}")
 inside percent: user.insert_between("%", "%")
 inside (quotes | string): user.insert_between("'", "'")
-inside (double quotes | dub quotes): user.insert_between('"', '"')
+inside (double quotes | dub quotes | inch | inches): user.insert_between('"', '"')
 inside (graves | back ticks): user.insert_between("`", "`")
 inside ( skis): user.insert_between("`", "`")
 inside (space | spaces): user.insert_between(" ", " ")
