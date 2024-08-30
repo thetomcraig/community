@@ -22,4 +22,4 @@ go split: user.tmux_execute_command("display-panes -d 0")
 next pane | cycle: user.split_next()
 last pane: user.split_last()
 extract: user.tmux_keybind('t')
-
+mux [<user.text>]: user.tmuxinator_start_project(user.text)

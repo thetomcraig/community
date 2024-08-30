@@ -44,6 +44,12 @@ class TmuxActions:
         )
         actions.key("\n")
 
+    def tmuxinator_start_project(session_name: str):
+        """Open a tmuxinator project"""
+        actions.insert("ta ")
+        actions.insert(session_name)
+        actions.sleep("100ms")
+        actions.key("enter")
 
 ctx = Context()
 ctx.matches = "app: tmux"
