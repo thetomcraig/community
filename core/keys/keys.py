@@ -193,6 +193,7 @@ symbol_key_words = {
     # "dot": ".",
     "point": ".",
     "quote": "'",
+    "foot": "'",
     "question": "?",
     "queue": "?",
     "q": "?",
