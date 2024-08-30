@@ -11,3 +11,5 @@ tag(): user.git
 tag(): user.kubectl
 tag(): user.tabs
 tag(): user.readline
+
+AI think | think: key("cmd-y")
