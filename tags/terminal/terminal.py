@@ -50,6 +50,9 @@ class Actions:
     def terminal_kill_line_left():
         """kills from cursor to beginning of line"""
 
+    def terminal_tree():
+        """run tree command"""
+
     def terminal_kill_line_right():
         """kills from cursor to end of line"""
 

@@ -20,6 +20,7 @@ kill word: user.terminal_kill_word()
 kill line: user.terminal_kill_line()
 kill left: user.terminal_kill_line_left()
 kill right: user.terminal_kill_line_right()
+files tree: user.terminal_tree()
 exit: user.terminal_exit()
 
 

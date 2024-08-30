@@ -91,6 +91,11 @@ class Actions:
         """kills from cursor to end of line"""
         actions.key("ctrl-k")
 
+    def terminal_tree():
+        """run tree command"""
+        actions.key("mytree")
+        actions.key("enter")
+
     def terminal_exit():
         """exit the current terminal session"""
         actions.key("ctrl-d")
