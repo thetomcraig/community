@@ -20,6 +20,9 @@ class UserActions:
     def toggle_dev_tools_dock():
         actions.key("cmd-shift-d")
 
+    def toggle_inspector():
+        actions.key("cmd-shift-c")
+
     def clear_dev_tools():
         actions.key("ctrl-`")
         actions.key("cmd-k")

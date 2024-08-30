@@ -29,6 +29,10 @@ class Actions:
         """Toggle the dev tools pane between bottom and right side"""
         actions.key("ctrl-shift-d")
 
+    def toggle_inspector():
+        """Toggled the devtools inspector"""
+        actions.key("ctrl-shift-c")
+
     def clear_dev_tools():
         """Clear the console output"""
         actions.key("ctrl-`")
@@ -68,6 +72,8 @@ class UserActions:
     def toggle_dev_tools_dock():
         actions.user.toggle_dev_tools_dock()
 
+    def toggle_inspector():
+        actions.user.toggle_inspector()
 
 @ctx.action_class("browser")
 class BrowserActions:
