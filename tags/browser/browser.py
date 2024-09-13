@@ -8,6 +8,8 @@ ctx.matches = r"""
 tag: browser
 """
 
+browser_name = "Brave Browser"
+
 
 def is_url(url: str) -> bool:
     try:
@@ -24,6 +26,13 @@ class Actions:
     def browser_open_address_in_new_tab():
         """Open the url in the address bar in a new tab"""
         actions.key("alt-enter")
+
+    def browser_open(url: str):
+        """Focus browser and open url"""
+        if actions.app.name() != browser_name:
+            actions.user.browser_focus_default()
+            actions.sleep("50ms")
+        actions.user.browser_open_new_tab(url)
 
     def toggle_dev_tools_dock():
         """Toggle the dev tools pane between bottom and right side"""
