@@ -27,12 +27,15 @@ P1, AP one
 polaris,pollers
 polaris,pillars
 polaris,polars
+winnow,wino
 main-aya,main aya
 main-aya,main eye
 ER,er
 
 auto,oto
 error,err
+error,er
+error,air
 arrow,aero
 talon,talent
 per,purr
@@ -45,8 +48,11 @@ an,anne
 close,clothes
 enable,and able
 main,maine
-error,air
+hey,hay
+hi there,hither
+hi there,high there
 
+dev,dove
 pull request,poll request
 pull request,paul request
 pull requests,poll requests
@@ -110,6 +116,7 @@ pytest,pie test
 pytest,pietist
 pytest,pi test
 pytest,purest
+conftest,conf test
 def,deaf
 django,jango
 django,tango
@@ -123,3 +130,4 @@ util,you till
 debugpy, debug pie
 scripts,scrips
 scripts,scripps
+constants,constance

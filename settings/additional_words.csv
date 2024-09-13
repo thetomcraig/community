@@ -85,3 +85,6 @@ ocr
 cert
 iOS
 rm
+rpc
+init
+ngrx
