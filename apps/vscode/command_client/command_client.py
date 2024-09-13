@@ -177,6 +177,8 @@ def run_command(
 
     try:
         decoded_contents = read_json_with_timeout(response_path)
+        print("decoded_contents")
+        print(decoded_contents)
     finally:
         # NB: We remove response file first because we want to do this while we
         # still own the request file
