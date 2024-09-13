@@ -47,7 +47,7 @@ bar test: user.vscode("workbench.view.testing.focus")
 bar chat: user.vscode("workbench.action.focusAuxiliaryBar")
 bar PRs: user.vscode("workbench.view.extension.github-pull-requests")
 bar switch: user.vscode("workbench.action.toggleSidebarVisibility")
-bar close right | bar switch right: user.vscode("workbench.action.closeAuxiliaryBar")
+switch right | bar close right | bar switch right: user.vscode("workbench.action.closeAuxiliaryBar")
 bar hide: user.vscode("workbench.action.closeSidebar")
 
 # Symbol search
@@ -138,6 +138,9 @@ file move:
 file clone:
     user.vscode("fileutils.duplicateFile")
     sleep(150ms)
+file duplicate:
+    user.vscode("fileutils.duplicateFile")
+    sleep(150ms)
 file delete:
     user.vscode("fileutils.removeFile")
     sleep(150ms)
@@ -205,8 +208,6 @@ bar projects: user.vscode("workbench.view.extension.project-manager")
 (go project | go projects):
     user.vscode("projectManager.listProjects")
 sesh pop [<user.text>] | sesher [<user.text>]:
-    user.switcher_focus("Code")
-    sleep(100ms)
     user.vscode("projectManager.listProjects")
     sleep(100ms)
     insert(text or "")
@@ -325,6 +326,7 @@ debug start: user.vscode("workbench.action.debug.start")
 bug start: user.vscode("workbench.action.debug.start")
 debug pause: user.vscode("workbench.action.debug.pause")
 debug stopper: user.vscode("workbench.action.debug.stop")
+bug stop: user.vscode("workbench.action.debug.stop")
 debug continue: user.vscode("workbench.action.debug.continue")
 bug next: user.vscode("workbench.action.debug.continue")
 debug restart: user.vscode("workbench.action.debug.restart")
