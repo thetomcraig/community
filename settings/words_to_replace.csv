@@ -57,6 +57,8 @@ pull request,poll request
 pull request,paul request
 pull requests,poll requests
 pull requests,paul requests
+git pull,git poll
+git pull,git paul
 sudo,pseudo
 tmux,tee mux
 tmux,te mux
