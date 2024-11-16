@@ -1,3 +1,7 @@
+# Compound of action(select, clear, copy, cut, paste, etc.) and modifier(word, line, etc.) commands for editing text.
+# eg: "select line", "clear all"
+<user.edit_action> <user.edit_modifier>: user.edit_command(edit_action, edit_modifier)
+
 # Zoom
 zoom in: edit.zoom_in()
 zoom out: edit.zoom_out()
@@ -28,6 +32,9 @@ go up: edit.up()
 north: edit.up()
 go down: edit.down()
 south: edit.down()
+# go left, go left left down, go 5 left 2 down
+# go word left, go 2 words right
+go <user.navigation_step>+: user.perform_navigation_steps(navigation_step_list)
 
 go line start | head: edit.line_start()
 pre line: edit.line_start()
@@ -47,24 +54,14 @@ go page up: edit.page_up()
 go page down: edit.page_down()
 
 # Selecting
-select all: edit.select_all()
-select line: edit.select_line()
-select line start: user.select_line_start()
-select line end: user.select_line_end()
 
 select left: edit.extend_left()
 select right: edit.extend_right()
 select up: edit.extend_line_up()
 select down: edit.extend_line_down()
 
-select word: edit.select_word()
 select word left: edit.extend_word_left()
 select word right: edit.extend_word_right()
-
-select way left: edit.extend_line_start()
-select way right: edit.extend_line_end()
-select way up: edit.extend_file_start()
-select way down: edit.extend_file_end()
 
 # Indentation
 indent [more]: edit.indent_more()
@@ -94,8 +91,6 @@ clear down:
     edit.extend_line_down()
     edit.delete()
 
-clear word: edit.delete_word()
-
 clear word left:
     edit.extend_word_left()
     edit.delete()
@@ -105,22 +100,6 @@ chuck word:
 
 clear word right:
     edit.extend_word_right()
-    edit.delete()
-
-clear way left:
-    edit.extend_line_start()
-    edit.delete()
-
-clear way right:
-    edit.extend_line_end()
-    edit.delete()
-
-clear way up:
-    edit.extend_file_start()
-    edit.delete()
-
-clear way down:
-    edit.extend_file_end()
     edit.delete()
 
 # Copy
@@ -185,11 +164,6 @@ cut word right: user.cut_word_right()
     edit.paste()
     key(enter)
 paste match: edit.paste_match_style()
-(pace | paste) all: user.paste_all()
-(pace | paste) line: user.paste_line()
-(pace | paste) line start: user.paste_line_start()
-(pace | paste) line end: user.paste_line_end()
-(pace | paste) word: user.paste_word()
 
 # Duplication
 clone that: edit.selection_clone()

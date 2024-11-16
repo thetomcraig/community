@@ -1,5 +1,3 @@
-import os
-
 from talon import (Context, Module, actions, app, clip, cron, ctrl, imgui,
                    settings, ui)
 from talon_plugins import eye_zoom_mouse
@@ -14,39 +12,12 @@ cancel_scroll_on_pop = True
 control_mouse_forced = False
 hiss_scroll_up = False
 
-default_cursor = {
-    "AppStarting": r"%SystemRoot%\Cursors\aero_working.ani",
-    "Arrow": r"%SystemRoot%\Cursors\aero_arrow.cur",
-    "Hand": r"%SystemRoot%\Cursors\aero_link.cur",
-    "Help": r"%SystemRoot%\Cursors\aero_helpsel.cur",
-    "No": r"%SystemRoot%\Cursors\aero_unavail.cur",
-    "NWPen": r"%SystemRoot%\Cursors\aero_pen.cur",
-    "Person": r"%SystemRoot%\Cursors\aero_person.cur",
-    "Pin": r"%SystemRoot%\Cursors\aero_pin.cur",
-    "SizeAll": r"%SystemRoot%\Cursors\aero_move.cur",
-    "SizeNESW": r"%SystemRoot%\Cursors\aero_nesw.cur",
-    "SizeNS": r"%SystemRoot%\Cursors\aero_ns.cur",
-    "SizeNWSE": r"%SystemRoot%\Cursors\aero_nwse.cur",
-    "SizeWE": r"%SystemRoot%\Cursors\aero_ew.cur",
-    "UpArrow": r"%SystemRoot%\Cursors\aero_up.cur",
-    "Wait": r"%SystemRoot%\Cursors\aero_busy.ani",
-    "Crosshair": "",
-    "IBeam": "",
-}
-
-# todo figure out why notepad++ still shows the cursor sometimes.
-hidden_cursor = os.path.join(
-    os.path.dirname(os.path.realpath(__file__)), r"Resources\HiddenCursor.cur"
-)
-
 mod = Module()
 ctx = Context()
 
 mod.list(
-    "mouse_button", desc="List of mouse button words to mouse_click index parameter"
-)
-mod.tag(
-    "mouse_cursor_commands_enable", desc="Tag enables hide/show mouse cursor commands"
+    "mouse_button",
+    desc="List of mouse button words to mouse_click index parameter",
 )
 mod.setting(
     "mouse_enable_pop_click",
@@ -59,6 +30,12 @@ mod.setting(
     type=bool,
     default=False,
     desc="When enabled, pop stops continuous scroll modes (wheel upper/downer/gaze)",
+)
+mod.setting(
+    "mouse_enable_pop_stops_drag",
+    type=bool,
+    default=False,
+    desc="When enabled, pop stops mouse drag",
 )
 mod.setting(
     "mouse_enable_hiss_scroll",
@@ -115,34 +92,32 @@ class Actions:
         if eye_zoom_mouse.zoom_mouse.state == eye_zoom_mouse.STATE_OVERLAY:
             actions.tracking.zoom_cancel()
 
-    def mouse_show_cursor():
-        """Shows the cursor"""
-        show_cursor_helper(True)
-
-    def mouse_hide_cursor():
-        """Hides the cursor"""
-        show_cursor_helper(False)
-
     def mouse_wake():
         """Enable control mouse, zoom mouse, and disables cursor"""
         actions.tracking.control_zoom_toggle(True)
 
         if settings.get("user.mouse_wake_hides_cursor"):
-            show_cursor_helper(False)
+            actions.user.mouse_cursor_hide()
 
     def mouse_drag(button: int):
         """Press and hold/release a specific mouse button for dragging"""
         # Clear any existing drags
-        self.mouse_drag_end()
+        actions.user.mouse_drag_end()
 
         # Start drag
         ctrl.mouse_click(button=button, down=True)
 
     def mouse_drag_end():
         """Releases any held mouse buttons"""
-        buttons_held_down = list(ctrl.mouse_buttons_down())
-        for button in buttons_held_down:
+        for button in ctrl.mouse_buttons_down():
             ctrl.mouse_click(button=button, up=True)
+
+    def mouse_drag_toggle(button: int):
+        """If the button is held down, release the button, else start dragging"""
+        if button in list(ctrl.mouse_buttons_down()):
+            ctrl.mouse_click(button=button, up=True)
+        else:
+            actions.user.mouse_drag(button=button)
 
     def mouse_sleep():
         """Disables control mouse, zoom mouse, and re-enables cursor"""
@@ -150,13 +125,9 @@ class Actions:
         actions.tracking.control_toggle(False)
         actions.tracking.control1_toggle(False)
 
-        show_cursor_helper(True)
+        actions.user.mouse_cursor_show()
         stop_scroll()
-
-        # todo: fixme temporary fix for drag command
-        button_down = len(list(ctrl.mouse_buttons_down())) > 0
-        if button_down:
-            ctrl.mouse_click(button=0, up=True)
+        actions.user.mouse_drag_end()
 
     def mouse_scroll_down(amount: float = 1):
         """Scrolls down"""
@@ -220,9 +191,11 @@ class Actions:
     def mouse_gaze_scroll():
         """Starts gaze scroll"""
         global continuous_scroll_mode
+        # this calls stop_scroll, which resets continuous_scroll_mode
+        start_cursor_scrolling()
+
         continuous_scroll_mode = "gaze scroll"
 
-        start_cursor_scrolling()
         if not settings.get("user.mouse_hide_mouse_gui"):
             gui_wheel.show()
 
@@ -231,6 +204,13 @@ class Actions:
         if not actions.tracking.control_enabled():
             actions.tracking.control_toggle(True)
             control_mouse_forced = True
+
+    def mouse_gaze_scroll_toggle():
+        """If not scrolling, start gaze scroll, else stop scrolling."""
+        if continuous_scroll_mode == "":
+            actions.user.mouse_gaze_scroll()
+        else:
+            actions.user.mouse_scroll_stop()
 
     def copy_mouse_position():
         """Copy the current mouse position coordinates"""
@@ -253,45 +233,15 @@ class Actions:
         hiss_scroll_up = False
 
 
-def show_cursor_helper(show):
-    """Show/hide the cursor"""
-    if app.platform == "windows":
-        import ctypes
-        import winreg
-
-        import win32con
-
-        try:
-            Registrykey = winreg.OpenKey(
-                winreg.HKEY_CURRENT_USER, r"Control Panel\Cursors", 0, winreg.KEY_WRITE
-            )
-
-            for value_name, value in default_cursor.items():
-                if show:
-                    winreg.SetValueEx(
-                        Registrykey, value_name, 0, winreg.REG_EXPAND_SZ, value
-                    )
-                else:
-                    winreg.SetValueEx(
-                        Registrykey, value_name, 0, winreg.REG_EXPAND_SZ, hidden_cursor
-                    )
-
-            winreg.CloseKey(Registrykey)
-
-            ctypes.windll.user32.SystemParametersInfoA(
-                win32con.SPI_SETCURSORS, 0, None, 0
-            )
-
-        except OSError:
-            print(f"Unable to show_cursor({str(show)})")
-    else:
-        ctrl.cursor_visible(show)
-
-
 @ctx.action_class("user")
 class UserActions:
     def noise_trigger_pop():
-        if settings.get("user.mouse_enable_pop_stops_scroll") and (
+        if (
+            settings.get("user.mouse_enable_pop_stops_drag")
+            and ctrl.mouse_buttons_down()
+        ):
+            actions.user.mouse_drag_end()
+        elif settings.get("user.mouse_enable_pop_stops_scroll") and (
             gaze_job or scroll_job
         ):
             # Allow pop to stop scroll
