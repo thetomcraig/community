@@ -82,92 +82,89 @@ class Actions:
         actions.user.mouse_scroll_stop()
         actions.user.mouse_drag_end()
 
-<<<<<<< HEAD
-    def mouse_scroll_down(amount: float = 1):
-        """Scrolls down"""
-        mouse_scroll(amount * settings.get("user.mouse_wheel_down_amount"))()
+    # def mouse_scroll_down(amount: float = 1):
+    #     """Scrolls down"""
+    #     mouse_scroll(amount * settings.get("user.mouse_wheel_down_amount"))()
 
-    def mouse_scroll_down_continuous():
-        """Scrolls down continuously"""
-        global continuous_scroll_mode
-        continuous_scroll_mode = "scroll down continuous"
-        mouse_scroll(settings.get("user.mouse_continuous_scroll_amount"))()
+    # def mouse_scroll_down_continuous():
+    #     """Scrolls down continuously"""
+    #     global continuous_scroll_mode
+    #     continuous_scroll_mode = "scroll down continuous"
+    #     mouse_scroll(settings.get("user.mouse_continuous_scroll_amount"))()
 
-        if scroll_job is None:
-            start_scroll()
+    #     if scroll_job is None:
+    #         start_scroll()
 
-        if not settings.get("user.mouse_hide_mouse_gui"):
-            gui_wheel.show()
+    #     if not settings.get("user.mouse_hide_mouse_gui"):
+    #         gui_wheel.show()
 
-    def mouse_scroll_down_with_multiplier(multiplier: float = 1):
-        """Scrolls down continuously take some multiplier argument"""
-        global continuous_scroll_mode
-        continuous_scroll_mode = "scroll down continuous"
-        mouse_scroll(settings.get("user.mouse_continuous_scroll_amount")*multiplier)()
+    # def mouse_scroll_down_with_multiplier(multiplier: float = 1):
+    #     """Scrolls down continuously take some multiplier argument"""
+    #     global continuous_scroll_mode
+    #     continuous_scroll_mode = "scroll down continuous"
+    #     mouse_scroll(settings.get("user.mouse_continuous_scroll_amount")*multiplier)()
 
-        if scroll_job is None:
-            start_scroll()
+    #     if scroll_job is None:
+    #         start_scroll()
 
-        if not settings.get("user.mouse_hide_mouse_gui"):
-            gui_wheel.show()
+    #     if not settings.get("user.mouse_hide_mouse_gui"):
+    #         gui_wheel.show()
 
-    def mouse_scroll_up(amount: float = 1):
-        """Scrolls up"""
-        mouse_scroll(-amount * settings.get("user.mouse_wheel_down_amount"))()
+    # def mouse_scroll_up(amount: float = 1):
+    #     """Scrolls up"""
+    #     mouse_scroll(-amount * settings.get("user.mouse_wheel_down_amount"))()
 
-    def mouse_scroll_up_continuous():
-        """Scrolls up continuously"""
-        global continuous_scroll_mode
-        continuous_scroll_mode = "scroll up continuous"
-        mouse_scroll(-settings.get("user.mouse_continuous_scroll_amount"))()
+    # def mouse_scroll_up_continuous():
+    #     """Scrolls up continuously"""
+    #     global continuous_scroll_mode
+    #     continuous_scroll_mode = "scroll up continuous"
+    #     mouse_scroll(-settings.get("user.mouse_continuous_scroll_amount"))()
 
-        if scroll_job is None:
-            start_scroll()
-        if not settings.get("user.mouse_hide_mouse_gui"):
-            gui_wheel.show()
+    #     if scroll_job is None:
+    #         start_scroll()
+    #     if not settings.get("user.mouse_hide_mouse_gui"):
+    #         gui_wheel.show()
 
-    def mouse_scroll_left(amount: float = 1):
-        """Scrolls left"""
-        actions.mouse_scroll(
-            0, -amount * settings.get("user.mouse_wheel_horizontal_amount")
-        )
+    # def mouse_scroll_left(amount: float = 1):
+    #     """Scrolls left"""
+    #     actions.mouse_scroll(
+    #         0, -amount * settings.get("user.mouse_wheel_horizontal_amount")
+    #     )
 
-    def mouse_scroll_right(amount: float = 1):
-        """Scrolls right"""
-        actions.mouse_scroll(
-            0, amount * settings.get("user.mouse_wheel_horizontal_amount")
-        )
+    # def mouse_scroll_right(amount: float = 1):
+    #     """Scrolls right"""
+    #     actions.mouse_scroll(
+    #         0, amount * settings.get("user.mouse_wheel_horizontal_amount")
+    #     )
 
-    def mouse_scroll_stop():
-        """Stops scrolling"""
-        stop_scroll()
+    # def mouse_scroll_stop():
+    #     """Stops scrolling"""
+    #     stop_scroll()
 
-    def mouse_gaze_scroll():
-        """Starts gaze scroll"""
-        global continuous_scroll_mode
-        # this calls stop_scroll, which resets continuous_scroll_mode
-        start_cursor_scrolling()
+    # def mouse_gaze_scroll():
+    #     """Starts gaze scroll"""
+    #     global continuous_scroll_mode
+    #     # this calls stop_scroll, which resets continuous_scroll_mode
+    #     start_cursor_scrolling()
 
-        continuous_scroll_mode = "gaze scroll"
+    #     continuous_scroll_mode = "gaze scroll"
 
-        if not settings.get("user.mouse_hide_mouse_gui"):
-            gui_wheel.show()
+    #     if not settings.get("user.mouse_hide_mouse_gui"):
+    #         gui_wheel.show()
 
-        # enable 'control mouse' if eye tracker is present and not enabled already
-        global control_mouse_forced
-        if not actions.tracking.control_enabled():
-            actions.tracking.control_toggle(True)
-            control_mouse_forced = True
+    #     # enable 'control mouse' if eye tracker is present and not enabled already
+    #     global control_mouse_forced
+    #     if not actions.tracking.control_enabled():
+    #         actions.tracking.control_toggle(True)
+    #         control_mouse_forced = True
 
-    def mouse_gaze_scroll_toggle():
-        """If not scrolling, start gaze scroll, else stop scrolling."""
-        if continuous_scroll_mode == "":
-            actions.user.mouse_gaze_scroll()
-        else:
-            actions.user.mouse_scroll_stop()
+    # def mouse_gaze_scroll_toggle():
+    #     """If not scrolling, start gaze scroll, else stop scrolling."""
+    #     if continuous_scroll_mode == "":
+    #         actions.user.mouse_gaze_scroll()
+    #     else:
+    #         actions.user.mouse_scroll_stop()
 
-=======
->>>>>>> 8d0a8ee6e16b58cc5020650e71aac20ba8957035
     def copy_mouse_position():
         """Copy the current mouse position coordinates"""
         x, y = actions.mouse_x(), actions.mouse_y()
@@ -182,24 +179,7 @@ class Actions:
 @ctx.action_class("user")
 class UserActions:
     def noise_trigger_pop():
-<<<<<<< HEAD
-        if (
-            settings.get("user.mouse_enable_pop_stops_drag")
-            and ctrl.mouse_buttons_down()
-        ):
-            actions.user.mouse_drag_end()
-        elif settings.get("user.mouse_enable_pop_stops_scroll") and (
-            gaze_job or scroll_job
-        ):
-            # Allow pop to stop scroll
-            stop_scroll()
-        else:
-            # Otherwise respect the mouse_enable_pop_click setting
-            setting_val = settings.get("user.mouse_enable_pop_click")
-            print("noise_trigger_pop function called (but shouldn't do anything)")
-=======
         dont_click = False
->>>>>>> 8d0a8ee6e16b58cc5020650e71aac20ba8957035
 
         # Allow pop to stop drag
         if settings.get("user.mouse_enable_pop_stops_drag"):
