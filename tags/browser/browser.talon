@@ -1,5 +1,6 @@
 tag: browser
 -
+tag(): user.address
 tag(): user.find
 tag(): user.navigation
 
@@ -15,12 +16,8 @@ search for <user.text>$:
 hunt this <user.text>: user.find(text)
 # hunter <user.text>: user.find(text)
 go page | page focus: browser.focus_page()
-address copy | url copy | copy address | copy url:
-    browser.focus_address()
-    sleep(50ms)
-    edit.copy()
+
 go home: browser.go_home()
-go to {user.website}: browser.go(website)
 go private: browser.open_private_window()
 
 bookmark it: browser.bookmark()

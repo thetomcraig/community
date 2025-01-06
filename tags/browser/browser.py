@@ -84,6 +84,19 @@ class UserActions:
     def toggle_inspector():
         actions.user.toggle_inspector()
 
+    def address_focus():
+        actions.browser.focus_address()
+
+    def address_copy_address():
+        """Copies the current address"""
+        actions.browser.focus_address()
+        actions.sleep("100ms")
+        actions.edit.copy()
+
+    def address_navigate(address: str):
+        actions.browser.go(address)
+
+
 @ctx.action_class("browser")
 class BrowserActions:
     def address() -> str:
