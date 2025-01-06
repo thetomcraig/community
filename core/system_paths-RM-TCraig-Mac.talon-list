@@ -1,0 +1,15 @@
+list: user.system_paths
+hostname: RM-TCraig-Mac
+-
+user: /Users/tomcraig
+profile: /Users/tomcraig
+desktop: /Users/tomcraig/Desktop
+desk: /Users/tomcraig/Desktop
+documents: /Users/tomcraig/Documents
+docks: /Users/tomcraig/Documents
+downloads: /Users/tomcraig/Downloads
+music: /Users/tomcraig/Music
+pictures: /Users/tomcraig/Pictures
+videos: /Users/tomcraig/Videos
+talon home: /Users/tomcraig/.talon
+talon user: /Users/tomcraig/.talon/user

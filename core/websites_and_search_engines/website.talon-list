@@ -6,13 +6,44 @@ talon wiki: https://talon.wiki/
 talon practice: https://chaosparrot.github.io/talon_practice/
 talon repository search: https://search.talonvoice.com/search/
 amazon: https://www.amazon.com/
-dropbox: https://dropbox.com/
 google: https://www.google.com/
 google calendar: https://calendar.google.com
-google maps: https://maps.google.com/
 google scholar: https://scholar.google.com/
-gmail: https://mail.google.com/
 github: https://github.com/
 gist: https://gist.github.com/
 wikipedia: https://en.wikipedia.org/
 youtube: https://www.youtube.com/
+chat: https://claude.ai/new
+icloud: https://www.icloud.com/
+polaris backlog: https://ayadev.atlassian.net/jira/software/c/projects/MCZ/boards/1433/backlog
+polaris sprint: https://ayadev.atlassian.net/jira/software/c/projects/MCZ/boards/1433?assignee=712020%3Aaa4c8fe2-64f1-4e5e-97fe-ae1f306bd07e
+polaris front end: https://github.com/AyaHealthcare/polarisv3_FE
+polaris front end PRs: https://github.com/AyaHealthcare/polarisv3_FE/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc
+polaris back end: https://github.com/AyaHealthcare/polarisv3_BE
+polaris back end PRs: https://github.com/AyaHealthcare/polarisv3_BE/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc
+polaris AI: https://github.com/AyaHealthcare/polarisv3-ai
+polaris AI PRs: https://github.com/AyaHealthcare/polarisv3-ai/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc
+polaris stack: https://github.com/AyaHealthcare/Polarisv3_stack
+polaris stack PRs: https://github.com/AyaHealthcare/Polarisv3_stack/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc
+polaris ML: https://github.com/AyaHealthcare/Polaris_ML
+polaris ML PRs: https://github.com/AyaHealthcare/Polaris_ML/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc
+polaris local host: http://localhost:4200/
+polaris local: http://localhost:4200/
+polaris dev VM: https://dev-internal.polarishealth.ai/
+polaris sand VM: http://sand-internal.polarishealth.ai/
+polaris int VM: http://int-internal.polarishealth.ai/
+polaris int resource group: https://portal.azure.com/#@ayahealthcare.com/resource/subscriptions/b8cf6d69-baf8-4642-ae55-c424dd683a59/resourceGroups/polaris-int-wus-rg-1/overview
+polaris int storage: https://portal.azure.com/#@ayahealthcare.com/resource/subscriptions/b8cf6d69-baf8-4642-ae55-c424dd683a59/resourceGroups/polaris-int-wus-rg-1/providers/Microsoft.Storage/storageAccounts/polarisintwussta1/containersList
+polaris int key vault: https://portal.azure.com/#@ayahealthcare.com/resource/subscriptions/b8cf6d69-baf8-4642-ae55-c424dd683a59/resourceGroups/polaris-int-wus-rg-1/providers/Microsoft.KeyVault/vaults/polaris-int-wus-kv-1/secrets
+polaris dev resource group: https://portal.azure.com/#@ayahealthcare.com/resource/subscriptions/80304a4f-4d0a-4cbb-b3ea-556bcda96b42/resourceGroups/polaris-dev-wus-rg-1/overview
+polaris dev key vault: https://portal.azure.com/#@ayahealthcare.com/resource/subscriptions/80304a4f-4d0a-4cbb-b3ea-556bcda96b42/resourceGroups/polaris-dev-wus-rg-1/providers/Microsoft.KeyVault/vaults/polaris-dev-wus-kv-1/secrets
+polaris dev storage: https://portal.azure.com/#@ayahealthcare.com/resource/subscriptions/80304a4f-4d0a-4cbb-b3ea-556bcda96b42/resourceGroups/polaris-dev-wus-rg-1/providers/Microsoft.Storage/storageAccounts/polarisdevwussta1/containersList
+winnow backlog: https://ayadev.atlassian.net/jira/software/c/projects/WIN/boards/1514/backlog
+winnow sprint: https://ayadev.atlassian.net/jira/software/c/projects/WIN/boards/1514
+winnow front end PRs: https://github.com/PolarisHealthAI/Winnow2.0_FE/pulls?q=sort%3Aupdated-desc+is%3Apr+is%3Aopen
+winnow front end v two: https://github.com/PolarisHealthAI/Winnow2.0_FE/tree/develop-aya
+winnow front end v three: https://github.com/PolarisHealthAI/Winnow2.0_FE/tree/develop_v3
+winnow back end PRs: https://github.com/PolarisHealthAI/Winnow_v2_BE/pulls?q=sort%3Aupdated-desc+is%3Apr+is%3Aopen
+window back end v two: https://github.com/PolarisHealthAI/Winnow_v2_BE/tree/develop-aya
+winnow backend v three: https://github.com/PolarisHealthAI/Winnow_v2_BE/tree/develop_v3
+winnow ETL: https://github.com/AyaHealthcare/winnow_v2_etl
