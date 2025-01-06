@@ -27,7 +27,7 @@ scout (pace | paste):
     edit.find()
     sleep(25ms)
     edit.paste()
-scout <user.text>: user.find(text)
+scout <user.text>: edit.find(text)
 
 hunt case: user.find_toggle_match_by_case()
 hunt word: user.find_toggle_match_by_word()
