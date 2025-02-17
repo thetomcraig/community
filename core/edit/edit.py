@@ -95,6 +95,11 @@ class Actions:
         """Escape key"""
         actions.key("escape")
 
+    def delete_all():
+        """Delete all text in the current document"""
+        actions.edit.select_all()
+        actions.edit.delete()
+
     def words_left(n: int):
         """Moves left by n words."""
         for _ in range(n):

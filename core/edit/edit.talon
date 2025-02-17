@@ -53,16 +53,6 @@ go bottom: edit.file_end()
 go page up: edit.page_up()
 go page down: edit.page_down()
 
-# Selecting
-
-select left: edit.extend_left()
-select right: edit.extend_right()
-select up: edit.extend_line_up()
-select down: edit.extend_line_down()
-
-select word left: edit.extend_word_left()
-select word right: edit.extend_word_right()
-
 # Indentation
 indent [more]: edit.indent_more()
 push: edit.indent_more()
@@ -102,6 +92,8 @@ clear word right:
     edit.extend_word_right()
     edit.delete()
 
+
+
 # Copy
 copy that: edit.copy()
 snag | snag that: edit.copy()
@@ -116,20 +108,6 @@ snag | snag that: edit.copy()
 # copy word left: user.copy_word_left()
 # copy word right: user.copy_word_right()
 
-#to do: do we want these variants, seem to conflict
-# copy left:
-#      edit.extend_left()
-#      edit.copy()
-# copy right:
-#     edit.extend_right()
-#     edit.copy()
-# copy up:
-#     edit.extend_up()
-#     edit.copy()
-# copy down:
-#     edit.extend_down()
-#     edit.copy()
-
 # Cut
 cut that: edit.cut()
 carve that: edit.cut()
@@ -142,20 +120,6 @@ cut line end: user.cut_line_end()
 cut word: user.cut_word()
 cut word left: user.cut_word_left()
 cut word right: user.cut_word_right()
-
-#to do: do we want these variants
-# cut left:
-#      edit.select_all()
-#      edit.cut()
-# cut right:
-#      edit.select_all()
-#      edit.cut()
-# cut up:
-#      edit.select_all()
-#     edit.cut()
-# cut down:
-#     edit.select_all()
-#     edit.cut()
 
 # Paste
 (pace | paste) that: edit.paste()
