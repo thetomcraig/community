@@ -105,16 +105,16 @@ clear word right:
 # Copy
 copy that: edit.copy()
 snag | snag that: edit.copy()
-copy all: user.copy_all()
-snag all: user.copy_all()
-copy line: user.copy_line()
-snag line: user.copy_line()
-copy line start: user.copy_line_start()
-copy line end: user.copy_line_end()
-copy word: user.copy_word()
-snag this: user.copy_word()
-copy word left: user.copy_word_left()
-copy word right: user.copy_word_right()
+# copy all: user.copy_all()
+# snag all: user.copy_all()
+# copy line: user.copy_line()
+# snag line: user.copy_line()
+# copy line start: user.copy_line_start()
+# copy line end: user.copy_line_end()
+# copy word: user.copy_word()
+# snag this: user.copy_word()
+# copy word left: user.copy_word_left()
+# copy word right: user.copy_word_right()
 
 #to do: do we want these variants, seem to conflict
 # copy left:
