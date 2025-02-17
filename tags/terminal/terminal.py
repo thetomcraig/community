@@ -29,6 +29,9 @@ class Actions:
     def terminal_rerun_search(command: str):
         """Searches through the previously executed commands"""
 
+    def terminal_rerun_command(command_number: str):
+        """Reruns a command with a given number"""
+
     def terminal_word_left():
         """moves one word to the left"""
 
@@ -37,6 +40,9 @@ class Actions:
 
     def terminal_complete_suggestion():
         """Complete the ZSH suggested command"""
+
+    def terminal_pre_line():
+        """move the cursor to the beginning of the line"""
 
     def terminal_kill_all():
         """kills the running command"""
@@ -47,11 +53,11 @@ class Actions:
     def terminal_kill_line():
         """kills the entire line"""
 
-    def terminal_kill_line_left():
-        """kills from cursor to beginning of line"""
-
     def terminal_tree():
         """run tree command"""
+
+    def terminal_history():
+        """run history command"""
 
     def terminal_kill_line_right():
         """kills from cursor to end of line"""

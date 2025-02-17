@@ -55,6 +55,12 @@ class Actions:
         actions.key("ctrl-r")
         actions.insert(command)
 
+    def terminal_rerun_command(command_number: str):
+        """Reruns a command with a given number"""
+        actions.insert("!")
+        actions.insert(command_number)
+        actions.key("enter")
+
     def terminal_word_left():
         """moves one word to the left"""
         actions.key("alt-left")
@@ -69,6 +75,10 @@ class Actions:
         actions.key("ctrl-j")
         actions.key("enter")
 
+    def terminal_pre_line():
+        """move the cursor to the beginning of the line"""
+        actions.key("ctrl-a")
+
     def terminal_kill_all():
         """kills the running command"""
         actions.key("ctrl-c")
@@ -80,11 +90,6 @@ class Actions:
 
     def terminal_kill_line():
         """kills the entire line"""
-        actions.key("home")
-        actions.key("ctrl-k")
-
-    def terminal_kill_line_left():
-        """kills from cursor to beginning of line"""
         actions.key("ctrl-u")
 
     def terminal_kill_line_right():
@@ -93,7 +98,12 @@ class Actions:
 
     def terminal_tree():
         """run tree command"""
-        actions.key("mytree")
+        actions.insert("mytree")
+        actions.key("enter")
+
+    def terminal_history():
+        """run history command"""
+        actions.insert("history")
         actions.key("enter")
 
     def terminal_exit():
