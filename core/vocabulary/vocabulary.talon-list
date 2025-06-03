@@ -58,6 +58,7 @@ dir
 charfield
 featurize
 featurized
+UUID
 er
 MCZ
 DTO
@@ -75,8 +76,10 @@ GlobalScape
 Sendgrid
 P1
 QA
+UAT
 int
 npm
+pnpm
 nvm
 chatgpt
 pdf
@@ -93,3 +96,12 @@ css
 scss
 redis
 Gagan
+SCP
+ETL
+enum
+typescript
+v4
+az
+dendron
+ORM
+RBAC
