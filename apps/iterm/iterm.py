@@ -79,3 +79,27 @@ class UserActions:
     def terminal_clear_screen():
         """Clear screen"""
         actions.key("ctrl-l")
+
+    def gui_tab_previous():
+        """
+        Switch to previous tab.
+        This is separate from the regular tab commands,
+        because I use those in tea max
+        """
+        actions.key("cmd-shift-{")
+
+    def gui_tab_next():
+        """
+        Switch to previous tab.
+        This is separate from the regular tab commands,
+        because I use those in tea max
+        """
+        actions.key("cmd-shift-}")
+
+@mod.action_class
+class Actions:
+    def gui_tab_previous():
+        """Switch to previous tab"""
+
+    def gui_tab_next():
+        """Switch to next tab"""
