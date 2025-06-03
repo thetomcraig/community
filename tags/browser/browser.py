@@ -39,8 +39,12 @@ class Actions:
         actions.key("ctrl-shift-d")
 
     def toggle_inspector():
-        """Toggled the devtools inspector"""
+        """Toggle the devtools inspector"""
         actions.key("ctrl-shift-c")
+
+    def show_network_dev_tools():
+        """Toggle the devtools network tab"""
+        actions.key("p-shift-j")
 
     def clear_dev_tools():
         """Clear the console output"""
@@ -80,6 +84,9 @@ class UserActions:
 
     def toggle_dev_tools_dock():
         actions.user.toggle_dev_tools_dock()
+
+    def show_network_dev_tools():
+        actions.user.show_network_dev_tools()
 
     def toggle_inspector():
         actions.user.toggle_inspector()

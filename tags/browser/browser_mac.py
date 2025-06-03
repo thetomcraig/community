@@ -22,6 +22,14 @@ class UserActions:
     def toggle_inspector():
         actions.key("cmd-shift-c")
 
+    def show_network_dev_tools():
+        actions.key("cmd-alt-j")
+        actions.sleep("300ms")
+        actions.key("cmd-shift-p")
+        actions.sleep("300ms")
+        actions.insert("network")
+        actions.key("enter")
+
     def clear_dev_tools():
         actions.key("ctrl-`")
         actions.key("cmd-k")

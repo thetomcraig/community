@@ -36,6 +36,7 @@ dev tools [show]: browser.toggle_dev_tools()
 dev tools redock: user.toggle_dev_tools_dock()
 dev tools clear: user.clear_dev_tools()
 dev tools inspect: user.toggle_inspector()
+dev tools network: user.show_network_dev_tools()
 
 # Legacy [verb noun] commands to be removed at a later time
 show downloads: browser.show_downloads()
