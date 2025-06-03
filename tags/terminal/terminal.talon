@@ -2,12 +2,16 @@ tag: terminal
 -
 # tags should be activated for each specific terminal in the respective talon file
 
-lisa: user.terminal_list_directories()
-lisa all: user.terminal_list_all_directories()
+# lisa: user.terminal_list_directories()
+# lisa all: user.terminal_list_all_directories()
 katie [dir] [<user.text>]: user.terminal_change_directory(text or "")
 katie root: user.terminal_change_directory_root()
 katie (up | back): user.terminal_change_directory("..")
 go <user.system_path>: insert('cd "{system_path}"\n')
+go home: insert('cd \n')
+go back: insert('cd - \n')
+go dot | dot: insert('dot \n')
+go project | go projects: insert('proj \n')
 path <user.system_path>: insert('"{system_path}"')
 clear screen: user.terminal_clear_screen()
 run last: user.terminal_run_last()
@@ -23,7 +27,14 @@ kill this: user.terminal_kill_all()
 kill word | chuck word: user.terminal_kill_word()
 kill line: user.terminal_kill_line()
 kill right: user.terminal_kill_line_right()
-files tree | tree: user.terminal_tree()
+files tree | tree | list: user.terminal_tree()
+tree all | list long | long list
+:
+    key(ctrl-c)
+    insert("eza -L=1 -alT .")
+    key(enter)
+check out new: insert('gcb /')
+check out: user.git_fuzzy_checkout()
 show history | history: user.terminal_history()
 exit: user.terminal_exit()
 

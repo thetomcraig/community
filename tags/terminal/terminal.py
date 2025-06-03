@@ -53,8 +53,11 @@ class Actions:
     def terminal_kill_line():
         """kills the entire line"""
 
-    def terminal_tree():
+    def terminal_tree(args: str = ""):
         """run tree command"""
+
+    def git_fuzzy_checkout():
+        """run custom get checkout command using fzf"""
 
     def terminal_history():
         """run history command"""

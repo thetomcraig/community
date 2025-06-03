@@ -21,7 +21,7 @@ class Actions:
 
     def terminal_list_all_directories():
         """Lists all directories including hidden"""
-        actions.insert("ls -a")
+        actions.insert("ls -al")
         actions.key("enter")
 
     def terminal_change_directory(path: str):
@@ -96,9 +96,14 @@ class Actions:
         """kills from cursor to end of line"""
         actions.key("ctrl-k")
 
-    def terminal_tree():
+    def terminal_tree(args: str = ""):
         """run tree command"""
-        actions.insert("mytree")
+        actions.insert(f"t {args}")
+        actions.key("enter")
+
+    def git_fuzzy_checkout():
+        """run custom get checkout command using fzf"""
+        actions.insert("gv")
         actions.key("enter")
 
     def terminal_history():
