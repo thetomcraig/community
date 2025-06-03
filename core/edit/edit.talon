@@ -16,6 +16,7 @@ unfind:
     user.escape()
 next one: edit.find_next()
 nexter: edit.find_next()
+last one: edit.find_previous()
 
 # Navigation
 
