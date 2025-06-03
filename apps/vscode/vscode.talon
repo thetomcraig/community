@@ -28,7 +28,7 @@ go view [<user.text>]:
 toggle vim | vim toggle | switch vim | vim switch:
     user.vscode("toggleVim")
 
-toggle hats:
+toggle hats | toggle hints | hints on:
     user.vscode("cursorless.toggleDecorations")
 # Sidebar
 bar explore: user.vscode("workbench.view.explorer")
@@ -38,19 +38,17 @@ bar outline: user.vscode("outline.focus")
 bar run: user.vscode("workbench.view.debug")
 bar debug: user.vscode("workbench.view.debug")
 bar remote: user.vscode("workbench.action.remote.showMenu")
-# bar search | searcher:
-# # hunt this <user.text>: user.find(text)
-#     # Hide first because if it's already shown and the search bar itself isn't in focus,
-#     # then the search bar text will not be highlighted
-#     user.vscode("workbench.action.closeSidebar")
-#     user.vscode("workbench.view.search")
 bar source: user.vscode("workbench.view.scm")
 bar test: user.vscode("workbench.view.testing.focus")
 bar chat: user.vscode("workbench.action.focusAuxiliaryBar")
-bar PRs: user.vscode("workbench.view.extension.github-pull-requests")
+bar tabs: user.vscode("andreas.tabs.focus")
+bar PRs: user.vscode("pr:github.focus")
 bar switch: user.vscode("workbench.action.toggleSidebarVisibility")
 switch right | bar close right | bar switch right: user.vscode("workbench.action.closeAuxiliaryBar")
 bar hide: user.vscode("workbench.action.closeSidebar")
+
+show include | show exclude:
+    user.vscode("workbench.action.search.toggleQueryDetails")
 
 # Symbol search
 symbol hunt [<user.text>]:
@@ -68,7 +66,7 @@ panel control: user.vscode("workbench.panel.repl.view.focus")
 panel output: user.vscode("workbench.panel.output.focus")
 panel problems: user.vscode("workbench.panel.markers.view.focus")
 panel switch: user.vscode("workbench.action.togglePanel")
-panel terminal: user.vscode("workbench.action.terminal.focus")
+panel terminal | panel term: user.vscode("workbench.action.terminal.toggleTerminal")
 focus editor: user.vscode("workbench.action.focusActiveEditorGroup")
 
 # Settings
@@ -78,8 +76,8 @@ show settings folder: user.vscode("workbench.action.openFolderSettings")
 show settings folder json: user.vscode("workbench.action.openFolderSettingsFile")
 show settings workspace: user.vscode("workbench.action.openWorkspaceSettings")
 show settings workspace json: user.vscode("workbench.action.openWorkspaceSettingsFile")
-show shortcuts: user.vscode("workbench.action.openGlobalKeybindings")
-show shortcuts json: user.vscode("workbench.action.openGlobalKeybindingsFile")
+show (shortcuts | hotkeys): user.vscode("workbench.action.openGlobalKeybindings")
+show (shortcuts | hotkeys) json: user.vscode("workbench.action.openGlobalKeybindingsFile")
 show snippets: user.vscode("workbench.action.openSnippets")
 
 # VSCode Snippets
@@ -112,6 +110,12 @@ doc pop [<user.text>]:
     insert(text or "")
     sleep(100ms)
     key(enter)
+toggle regex:
+    user.vscode("toggleSearchEditorRegex")
+toggle case:
+    user.vscode("toggleSearchEditorCaseSensitive")
+toggle word:
+    user.vscode("toggleSearchEditorWholeWord")
 res next:
     user.vscode("search.action.focusNextSearchResult")
 res second:
@@ -127,7 +131,7 @@ res last:
 file copy name: user.vscode("fileutils.copyFileName")
 file copy path: user.vscode("copyFilePath")
 file copy local [path]: user.vscode("copyRelativeFilePath")
-file create sibling: user.vscode_and_wait("explorer.newFile")
+file create sibling: user.vscode_and_wait(".newFile")
 file create: user.vscode("workbench.action.files.newUntitledFile")
 file create relative: user.vscode("fileutils.newFile")
 file create root: user.vscode("fileutils.newFileAtRoot")
@@ -146,6 +150,7 @@ file duplicate:
 file delete:
     user.vscode("fileutils.removeFile")
     sleep(150ms)
+file new: user.vscode("welcome.showNewFileEntries")
 file open folder: user.vscode("revealFileInOS")
 file show: user.vscode("revealFileInOS")
 file reveal: user.vscode("workbench.files.action.showActiveFileInExplorer")
@@ -237,10 +242,11 @@ tab close {self.letter} [{self.letter}]:
 
 # Close splits other than the current one
 split only | own | only: user.vscode("workbench.action.closeEditorsInOtherGroups")
-
+split go left: user.vscode("workbench.action.moveActiveEditorGroupLeft")
+split go right: user.vscode("workbench.action.moveActiveEditorGroupRight")
 
 # Folding
-fold that: user.vscode("editor.fold")
+fold that | fold this: user.vscode("editor.fold")
 unfold that: user.vscode("editor.unfold")
 fold those: user.vscode("editor.foldAllMarkerRegions")
 unfold those: user.vscode("editor.unfoldRecursively")
@@ -290,7 +296,7 @@ git stage all: user.vscode("git.stageAll")
 git sync: user.vscode("git.sync")
 git unstage: user.vscode("git.unstage")
 git unstage all: user.vscode("git.unstageAll")
-pull request: user.vscode("pr.create")
+pull request | pr create: user.vscode("pr.create")
 pull request link:
     user.run_rpc_command("andreas.getGitPullRequestsURL")
 
@@ -320,6 +326,7 @@ test cancel: user.vscode("testing.cancelRun")
 
 # Debugging
 break point: user.vscode("editor.debug.action.toggleBreakpoint")
+no breaks | toggle breaks: user.vscode("workbench.debug.viewlet.action.toggleBreakpointsActivatedAction")
 step over: user.vscode("workbench.action.debug.stepOver")
 bug over: user.vscode("workbench.action.debug.stepOver")
 debug step into: user.vscode("workbench.action.debug.stepInto")
@@ -335,6 +342,7 @@ debug restart: user.vscode("workbench.action.debug.restart")
 bug restart: user.vscode("workbench.action.debug.restart")
 debug console: user.vscode("workbench.debug.action.toggleRepl")
 bug console: user.vscode("workbench.debug.action.toggleRepl")
+panel debug: user.vscode("workbench.debug.action.toggleRepl")
 debug clean: user.vscode("workbench.debug.panel.action.clearReplAction")
 
 # Terminal
@@ -345,6 +353,7 @@ terminal last: user.vscode("workbench.action.terminal.focusPrevious")
 terminal split: user.vscode("workbench.action.terminal.split")
 terminal zoom: user.vscode("workbench.action.toggleMaximizedPanel")
 terminal trash: user.vscode("workbench.action.terminal.kill")
+kill this: user.vscode("workbench.action.terminal.kill")
 terminal toggle: user.vscode_and_wait("workbench.action.terminal.toggleTerminal")
 terminal scroll up: user.vscode("workbench.action.terminal.scrollUp")
 terminal scroll down: user.vscode("workbench.action.terminal.scrollDown")
@@ -363,7 +372,7 @@ select (more | this): user.vscode("editor.action.smartSelect.expand")
 
 minimap: user.vscode("editor.action.toggleMinimap")
 maximize: user.vscode("workbench.action.minimizeOtherEditors")
-restore: user.vscode("workbench.action.evenEditorWidths")
+restore | equalize: user.vscode("workbench.action.evenEditorWidths")
 
 #breadcrumb
 select breadcrumb: user.vscode("breadcrumbs.focusAndSelect")
