@@ -76,9 +76,7 @@ class UserActions:
             actions.user.tmux_execute_command(f"select-window -t {number}")
 
     def tab_close_wrapper():
-        actions.user.tmux_execute_command_with_confirmation(
-            "kill-window", "kill-window #W?"
-        )
+        actions.user.tmux_execute_command("kill-window")
 
     def split_window_right():
         actions.user.split_window_horizontally()
