@@ -241,6 +241,7 @@ formatter_list = [
     CodeFormatter("SNAKE_CASE", "_", lower, lower),
     CodeFormatter("DASH_SEPARATED", "-", lower, lower),
     CodeFormatter("DOT_SEPARATED", ".", lower, lower),
+    CodeFormatter("DOT_STAR_SEPARATED", ".*", lower, lower),
     CodeFormatter("SLASH_SEPARATED", "/", lower, lower),
     CodeFormatter("ALL_SLASHES", "/", lambda text: f"/{text.lower()}", lower),
     CodeFormatter("DOUBLE_UNDERSCORE", "__", lower, lower),
