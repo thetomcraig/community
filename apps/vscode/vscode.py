@@ -175,23 +175,6 @@ class Actions:
         """Show command palette"""
         actions.key("ctrl-shift-p")
 
-    def cycle_through_files_in_dir():
-        """Go to the next file in the current directory"""
-        current_file_path = ui.active_window().doc
-        parent_dir = os.path.dirname(current_file_path)
-        # This is a sorted list of all of the files in the directory
-        all_files = sorted([os.path.join(parent_dir, f) for f in os.listdir(parent_dir)])
-        # Find the next file after the current file
-        current_index = all_files.index(current_file_path)
-        next_file_index = current_index + 1
-        if next_file_index == len(all_files):
-            next_file_index = 0
-
-        app.notify(f"OPEN THIS FILE: {all_files[next_file_index]}")
-
-
-
-
 @mac_ctx.action_class("edit")
 class MacEditActions:
     def find(text: str = None):
