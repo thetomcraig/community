@@ -21,9 +21,11 @@ Sid,sid
 Matt,matt
 Aierpati,air potty
 Erik,eric
+Dan,dan
 
 MCZ-,ticket num
 MCZ-,ticket numb
+jira,jur a
 P1, AP one
 polaris,pollers
 polaris,pillars
@@ -37,8 +39,8 @@ auto,oto
 error,err
 error,er
 error,air
+erring,erroring
 arrow,aero
-talon,talent
 per,purr
 add,ad
 site,sight
@@ -52,6 +54,8 @@ main,maine
 hey,hay
 hi there,hither
 hi there,high there
+for sure,for short
+favorite,favourite
 
 dev,dove
 pull request,poll request
@@ -68,10 +72,12 @@ tmux, teabox
 tmux,teamux
 tmux,teemux
 tmux,team ox
+tmux,tea max
 etc,et see
 etc,Betsy
 etc,et sea
 ml,Emil
+lifepoint,life point
 PRs,pars
 hist,hissed
 config,convict
@@ -90,6 +96,7 @@ mkdir,make dir
 rq,cu
 endpoint,and.
 vscode,vasco
+vscode,bs code
 vscode,bs codc
 vscode,vies code
 dapr,dapper
@@ -139,10 +146,14 @@ serif,seraph
 finish,finnish
 lol,lull
 bro,brow
+sure,shire
 regex,reject
 checksum, check some
 checksum, check sum
+CRUD,crud
 sql,sequel
+caching,cashing
+cache,cash
 pyenv,py env
 virtualenv,virtual env
 Logic Plum,Logic Blum
@@ -151,5 +162,28 @@ Logic Plum,Logic Glum
 redis,read his
 redis,read is
 readis,red is
+service bus,service bust
 eslint,es lint
 package.json, package json
+launchdarkly, launched darkly
+launchdarkly, lodge darkly
+launchdarkly, launch turkey
+kanban,con bon
+kanban,con ban
+yep,yup
+typescript,type crypt
+typescript,type script
+typescript,types corrupt
+podman,pod man
+teams,teens
+GUI,gooey
+winnow back end, window back end
+oh no,ono
+endpoint, and point
+git commit, get commit
+yeah,ya
+mail,male
+openAI,open ai
+.net,dot net
+mySQL,mi sql
+nit,knit
