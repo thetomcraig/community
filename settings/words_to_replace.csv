@@ -21,6 +21,7 @@ Sid,sid
 Matt,matt
 Aierpati,air potty
 Erik,eric
+Erik's,eric's
 Dan,dan
 
 MCZ-,ticket num
@@ -156,8 +157,9 @@ caching,cashing
 cache,cash
 pyenv,py env
 virtualenv,virtual env
-Logic Plum,Logic Blum
-Logic Plum,Logic Glum
+LogicPlum,Logic Blum
+LogicPlum,Logic Glum
+LogicPlum,logic plum
 .env,dot env
 redis,read his
 redis,read is
@@ -168,6 +170,7 @@ package.json, package json
 launchdarkly, launched darkly
 launchdarkly, lodge darkly
 launchdarkly, launch turkey
+launchdarkly, launch darkly
 kanban,con bon
 kanban,con ban
 yep,yup
@@ -187,3 +190,8 @@ openAI,open ai
 .net,dot net
 mySQL,mi sql
 nit,knit
+VSCode,the es code
+npis,np is
+GitHub,get hub
+c#,see sharp
+c#,sea sharp
