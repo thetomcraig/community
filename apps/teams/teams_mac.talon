@@ -48,6 +48,9 @@ attach local file:
     key(space)
 [start] new line: key(shift-enter)
 reply [to] [thread]: key(shift-alt-r)
+bold: key(cmd-b)
+(italic | italicize): key(cmd-i)
+(strike | strikethrough): key(cmd-shift-x)
 
 # Meetings, Calls and Calendar
 accept video call: key(super-shift-a)
