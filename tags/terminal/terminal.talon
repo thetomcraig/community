@@ -7,6 +7,7 @@ tag: terminal
 katie [dir] [<user.text>]: user.terminal_change_directory(text or "")
 katie root: user.terminal_change_directory_root()
 katie (up | back): user.terminal_change_directory("..")
+go parent: user.terminal_change_directory("..")
 go <user.system_path>: insert('cd "{system_path}"\n')
 go home: insert('cd \n')
 go back: insert('cd - \n')
@@ -28,8 +29,7 @@ kill word | chuck word: user.terminal_kill_word()
 kill line: user.terminal_kill_line()
 kill right: user.terminal_kill_line_right()
 files tree | tree | list: user.terminal_tree()
-tree all | list long | long list
-:
+tree all | list long | long list:
     key(ctrl-c)
     insert("eza -L=1 -alT .")
     key(enter)
