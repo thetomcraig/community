@@ -165,6 +165,8 @@ file next:
     key(down)
     user.vscode("explorer.openAndPassFocus")
 
+folder new: user.vscode("explorer.newFolder")
+
 save ugly: user.vscode("workbench.action.files.saveWithoutFormatting")
 save all: user.vscode("workbench.action.files.saveAll")
 
