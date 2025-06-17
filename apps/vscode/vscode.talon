@@ -271,8 +271,13 @@ git checkout [<user.text>]:
     insert(text or "")
 git commit [<user.text>]:
     user.vscode("git.commitStaged")
-    sleep(100ms)
+    # There needed to be more of a delay for this to work
+    sleep(300ms)
     user.insert_formatted(text or "", "CAPITALIZE_FIRST_WORD")
+commit done | finish commit:
+    user.vscode("workbench.action.files.save")
+    sleep(50ms)
+    user.vscode("workbench.action.closeWindow")
 git commit undo: user.vscode("git.undoCommit")
 git commit amend: user.vscode("git.commitStagedAmend")
 git publish: user.vscode("git.publish")
