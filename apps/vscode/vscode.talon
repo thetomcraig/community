@@ -269,6 +269,7 @@ git checkout [<user.text>]:
     user.vscode("git.checkout")
     sleep(50ms)
     insert(text or "")
+# WIP TODO: working on commit flow
 git commit [<user.text>]:
     user.vscode("git.commitStaged")
     # There needed to be more of a delay for this to work
