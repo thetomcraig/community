@@ -295,7 +295,10 @@ pull request | pr create: user.vscode("pr.create")
 pull request link:
     user.run_rpc_command("andreas.getGitPullRequestsURL")
 
-git open file: user.git_open_remote_file_url(false, false)
+# TODO: Why doesn't this work?
+# Would like to always be able to always have a choice of what branch to use
+# git open file: user.git_open_remote_file_url(false, false)
+git open file: user.vscode("gitlens.openFileOnRemote")
 git copy file: user.git_copy_remote_file_url(false, false)
 git open branch: user.git_open_remote_file_url(false, true)
 git copy branch: user.git_copy_remote_file_url(false, true)
