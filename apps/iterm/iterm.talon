@@ -15,3 +15,4 @@ tag(): user.readline
 AI think | think: key("cmd-y")
 big tab (last | previous): user.gui_tab_previous()
 big tab next: user.gui_tab_next()
+big tab new: user.gui_tab_new()

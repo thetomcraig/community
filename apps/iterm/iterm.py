@@ -84,7 +84,7 @@ class UserActions:
         """
         Switch to previous tab.
         This is separate from the regular tab commands,
-        because I use those in tea max
+        because I use those in tmux
         """
         actions.key("cmd-shift-{")
 
@@ -92,9 +92,17 @@ class UserActions:
         """
         Switch to previous tab.
         This is separate from the regular tab commands,
-        because I use those in tea max
+        because I use those in tmux
         """
         actions.key("cmd-shift-}")
+
+    def gui_tab_new():
+        """
+        Switch to next tab
+        This is separate from the regular tab commands,
+        because I use those in tmux
+        """
+        actions.key("cmd-t")
 
 @mod.action_class
 class Actions:
@@ -103,3 +111,6 @@ class Actions:
 
     def gui_tab_next():
         """Switch to next tab"""
+
+    def gui_tab_new():
+        """Create a new tab"""
