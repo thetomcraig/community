@@ -17,6 +17,9 @@ class Actions:
     def terminal_change_directory_root():
         """Root of current drive"""
 
+    def terminal_remove_directory(path: str):
+        """Remove a directory"""
+
     def terminal_clear_screen():
         """Clear screen"""
 

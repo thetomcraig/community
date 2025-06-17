@@ -35,6 +35,11 @@ class Actions:
         actions.insert("cd /")
         actions.key("enter")
 
+    def terminal_remove_directory(path: str):
+        """Remove a directory"""
+        actions.insert(f"rm {path}")
+        actions.key("enter")
+
     def terminal_clear_screen():
         """Clear screen"""
         actions.insert("clear")
