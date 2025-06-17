@@ -154,12 +154,16 @@ file new: user.vscode("welcome.showNewFileEntries")
 file open folder: user.vscode("revealFileInOS")
 file show: user.vscode("revealFileInOS")
 file reveal: user.vscode("workbench.files.action.showActiveFileInExplorer")
+# TODO
+#Works except for the first and last file on a list does not loop...
 file last:
     user.vscode("workbench.files.action.showActiveFileInExplorer")
     key(up)
     user.vscode("explorer.openAndPassFocus")
 file next:
-    user.cycle_through_files_in_dir()
+    user.vscode("workbench.files.action.showActiveFileInExplorer")
+    key(down)
+    user.vscode("explorer.openAndPassFocus")
 
 save ugly: user.vscode("workbench.action.files.saveWithoutFormatting")
 save all: user.vscode("workbench.action.files.saveAll")
