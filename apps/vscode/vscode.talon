@@ -230,7 +230,7 @@ bar azure: user.vscode("workbench.view.extension.azure")
 
 # AI chat
 # pilot chat: user.vscode("continue.quickEdit")
-chat ask | chat this: user.vscode("continue.focusContinueInput")
+# chat ask | chat this: user.vscode("continue.focusContinueInput")
 
 close other tabs | tab only | tab own: user.vscode("workbench.action.closeOtherEditors")
 close tabs way right: user.vscode("workbench.action.closeEditorsToTheRight")
