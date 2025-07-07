@@ -2,6 +2,7 @@ list: user.vocabulary
 -
 admin
 auth
+brace
 sudo
 env
 conf
@@ -40,6 +41,7 @@ util
 urls
 vars
 isort
+v3
 v4
 zsh
 
@@ -56,8 +58,10 @@ json
 toml
 typescript
 scss
+HTML
 css
 Django
+C++
 ngrx
 ng
 Apache
@@ -72,7 +76,6 @@ ETL
 macOS
 iOS
 zsh
-TODO
 org
 eng
 UI
