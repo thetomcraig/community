@@ -39,10 +39,6 @@ not speech.engine: dragon
     speech.disable()
     tracking.control_zoom_toggle(false)
 
-key(ctrl-cmd-t):
-    speech.toggle()
-    tracking.control_zoom_toggle()
-
 ^sleep all [<phrase>]$:
     user.switcher_hide_running()
     user.history_disable()
