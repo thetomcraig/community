@@ -344,6 +344,10 @@ test cancel: user.vscode("testing.cancelRun")
 
 # Debugging
 break point: user.vscode("editor.debug.action.toggleBreakpoint")
+break point <number>$:
+    edit.jump_line(number)
+    sleep(50ms)
+    user.vscode("editor.debug.action.toggleBreakpoint")
 no breaks | toggle breaks: user.vscode("workbench.debug.viewlet.action.toggleBreakpointsActivatedAction")
 step over: user.vscode("workbench.action.debug.stepOver")
 bug over: user.vscode("workbench.action.debug.stepOver")
