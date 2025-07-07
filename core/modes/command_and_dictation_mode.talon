@@ -15,3 +15,4 @@ mode: dictation
   mode.disable("sleep")
   mode.enable("dictation")
   mode.enable("command")
+  app.notify("Mixed mode enabled!")
