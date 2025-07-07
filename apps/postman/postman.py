@@ -20,6 +20,10 @@ class Actions:
         """Sends the current request in Postman"""
         actions.key("cmd-enter")
 
+    def duplicate():
+        """Duplicate the current request"""
+        actions.key("cmd-d")
+
 @ctx.action_class("app")
 class AppActions:
     def tab_previous():
