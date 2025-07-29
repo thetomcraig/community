@@ -128,7 +128,7 @@ punctuation_words = {
     "stacker": ": ",
     "dripper": ", ",
     "breath": ", ",
-    "ellipse": "...",
+    "ellipse": "... ",
     "wildcard": ".*",
     "dub quote": '"',
     "arrow": "->",
