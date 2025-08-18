@@ -25,7 +25,6 @@ basename
 normpath
 ssl
 jwt
-CORS
 API
 CLI
 REPL
@@ -44,6 +43,9 @@ isort
 v3
 v4
 zsh
+az ssh
+az login
+TTL
 
 jq
 vim
@@ -79,6 +81,10 @@ zsh
 org
 eng
 UI
+VM
+SKU
+SKUs
+VPN
 
 
 pdf
