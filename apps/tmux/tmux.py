@@ -35,7 +35,7 @@ class TmuxActions:
         """execute tmux command"""
         actions.user.tmux_enter_command(command)
         actions.key("enter")
-        actions.sleep("100ms")
+        actions.sleep("150ms")
 
     def tmux_execute_command_with_confirmation(command: str, confirmation_prompt: str):
         """execute tmux command with confirm-before"""
