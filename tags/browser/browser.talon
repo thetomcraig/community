@@ -9,7 +9,18 @@ search address <user.text>$:
     browser.focus_address()
     insert("{text}")
     key(enter)
-search for <user.text>$:
+search paste:
+    app.tab_open()
+    edit.paste()
+    key(enter)
+soft search paste:
+    app.tab_open()
+    edit.paste()
+search <user.text>$:
+    app.tab_open()
+    insert("{text}")
+    key(enter)
+soft search <user.text>$:
     app.tab_open()
     insert("{text}")
     key(enter)

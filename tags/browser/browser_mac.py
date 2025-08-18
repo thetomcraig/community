@@ -24,9 +24,9 @@ class UserActions:
 
     def show_network_dev_tools():
         actions.key("cmd-alt-j")
-        actions.sleep("300ms")
+        actions.sleep("400ms")
         actions.key("cmd-shift-p")
-        actions.sleep("300ms")
+        actions.sleep("400ms")
         actions.insert("network")
         actions.key("enter")
 
