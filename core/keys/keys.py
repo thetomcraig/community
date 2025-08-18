@@ -145,12 +145,12 @@ punctuation_words = {
     "number sign": "#",
     "percent sign": "%",
     "at sign": "@",
+    "swirl": "@",
     "and sign": "&",
     "ampersand": "&",
     # Currencies
     "dollar sign": "$",
     "pound sign": "£",
-
     "hyphen": "-",
     "L paren": "(",
     "left paren": "(",
@@ -160,7 +160,6 @@ punctuation_words = {
     "right paren": ")",
     "right round": ")",
     "rare": ")",
-
     "void": " ",
 }
 symbol_key_words = {
