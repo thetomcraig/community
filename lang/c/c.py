@@ -17,11 +17,12 @@ ctx.lists["self.c_pointers"] = {
 ctx.lists["self.stdint_signed"] = {
     "signed": "",
     "unsigned": "u",
+    "you": "u",
 }
 
 ctx.lists["self.c_signed"] = {
-    "signed": "signed ",
-    "unsigned": "unsigned ",
+    "signed": "signed",
+    "unsigned": "unsigned",
 }
 
 ctx.lists["self.c_keywords"] = {
@@ -83,50 +84,6 @@ ctx.lists["user.code_libraries"] = {
     "standard int": "stdint.h",
 }
 
-ctx.lists["user.code_common_function"] = {
-    "mem copy": "memcpy",
-    "mem set": "memset",
-    "string cat": "strcat",
-    "stir cat": "strcat",
-    "stir en cat": "strncat",
-    "stir elle cat": "strlcat",
-    "stir copy": "strcpy",
-    "stir en copy": "strncpy",
-    "stir elle copy": "strlcpy",
-    "string char": "strchr",
-    "string dupe": "strdup",
-    "stir dupe": "strdup",
-    "stir comp": "strcmp",
-    "stir en comp": "strncmp",
-    "string len": "strlen",
-    "stir len": "strlen",
-    "is digit": "isdigit",
-    "get char": "getchar",
-    "print eff": "printf",
-    "es print eff": "sprintf",
-    "es en print eff": "sprintf",
-    "stir to int": "strtoint",
-    "stir to unsigned int": "strtouint",
-    "ay to eye": "atoi",
-    "em map": "mmap",
-    "ma map": "mmap",
-    "em un map": "munmap",
-    "size of": "sizeof",
-    "ef open": "fopen",
-    "ef write": "fwrite",
-    "ef read": "fread",
-    "ef close": "fclose",
-    "exit": "exit",
-    "signal": "signal",
-    "set jump": "setjmp",
-    "get op": "getopt",
-    "malloc": "malloc",
-    "see alloc": "calloc",
-    "alloc ah": "alloca",
-    "re alloc": "realloc",
-    "free": "free",
-}
-
 mod.list("c_pointers", desc="Common C pointers")
 mod.list("c_signed", desc="Common C datatype signed modifiers")
 mod.list("c_keywords", desc="C keywords")
@@ -151,12 +108,6 @@ def c_signed(m) -> str:
 def c_keywords(m) -> str:
     "Returns a string"
     return m.c_keywords
-
-
-@mod.capture(rule="{self.c_types}")
-def c_types(m) -> str:
-    "Returns a string"
-    return m.c_types
 
 
 @mod.capture(rule="{self.c_types}")
@@ -249,53 +200,11 @@ class UserActions:
     def code_insert_is_not_null():
         actions.auto_insert(" != NULL")
 
-    def code_state_if():
-        actions.insert("if () {\n}\n")
-        actions.key("up:2 left:3")
-
-    def code_state_else_if():
-        actions.insert("else if () {\n}\n")
-        actions.key("up:2 left:3")
-
-    def code_state_else():
-        actions.insert("else\n{\n}\n")
-        actions.key("up:2")
-
-    def code_state_switch():
-        actions.insert("switch ()")
-        actions.edit.left()
-
-    def code_state_case():
-        actions.insert("case \nbreak;")
-        actions.edit.up()
-
-    def code_state_for():
-        actions.auto_insert("for ")
-
-    def code_state_go_to():
-        actions.auto_insert("goto ")
-
-    def code_state_while():
-        actions.insert("while ()")
-        actions.edit.left()
-
-    def code_state_return():
-        actions.auto_insert("return ")
-
-    def code_break():
-        actions.auto_insert("break;")
-
-    def code_next():
-        actions.auto_insert("continue;")
-
     def code_insert_true():
         actions.auto_insert("true")
 
     def code_insert_false():
         actions.auto_insert("false")
-
-    def code_comment_line_prefix():
-        actions.auto_insert("//")
 
     def code_insert_function(text: str, selection: str):
         if selection:

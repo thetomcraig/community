@@ -15,31 +15,26 @@ not speech.engine: dragon
 # because it's part of the rule definition, but "hey bob" will be ignored, because
 # we don't do anything with the <phrase> in the body of the command.
 
-^talon wake [<phrase>]$:
-    speech.enable()
-    tracking.control_zoom_toggle(true)
-
-# We define this *only* if the speech engine isn't Dragon, because if you're using Dragon,
-# "wake up" is used to specifically control Dragon, and not affect Talon.
-#
-# It's a useful and well known command, though, so if you're using any other speech
-# engine, this controls Talon.
-^(wake up)+$:
-    speech.enable()
-    tracking.control_zoom_toggle(true)
-
 # We define this *only* if the speech engine isn't Dragon, because if you're using Dragon,
 # "go to sleep" is used to specifically control Dragon, and not affect Talon.
 #
 # It's a useful and well known command, though, so if you're using any other speech
 # engine, this controls Talon.
 ^go to sleep [<phrase>]$: speech.disable()
-^talon sleep [<phrase>]$: speech.disable()
-^drowse [<phrase>]$:
+^talon sleep [<phrase>]$:
     speech.disable()
+    user.deprecate_command("2025-06-25", "talon sleep (without dragon)", "go to sleep")
     tracking.control_zoom_toggle(false)
 
 ^sleep all [<phrase>]$:
+    user.switcher_hide_running()
+    user.history_disable()
+    user.homophones_hide()
+    user.help_hide()
+    user.mouse_sleep()
+    speech.disable()
+
+^drowse [<phrase>]$:
     user.switcher_hide_running()
     user.history_disable()
     user.homophones_hide()
