@@ -263,22 +263,15 @@ fold six: user.vscode("editor.foldLevel6")
 fold seven: user.vscode("editor.foldLevel7")
 
 # Git / Github (not using verb-noun-adjective pattern, mirroring terminal commands.)
-git branch: user.vscode("git.branchFrom")
+git branch [<user.text>]:
+    user.git_branch_from(text or "")
 git branch this: user.vscode("git.branch")
 git checkout [<user.text>]:
     user.vscode("git.checkout")
     sleep(50ms)
     insert(text or "")
-# WIP TODO: working on commit flow
 git commit [<user.text>]:
-    user.vscode("git.commitStaged")
-    # There needed to be more of a delay for this to work
-    sleep(300ms)
-    user.insert_formatted(text or "", "CAPITALIZE_FIRST_WORD")
-commit done | finish commit:
-    user.vscode("workbench.action.files.save")
-    sleep(50ms)
-    user.vscode("workbench.action.closeWindow")
+    user.git_commit(text or "")
 git commit undo: user.vscode("git.undoCommit")
 git commit amend: user.vscode("git.commitStagedAmend")
 git publish: user.vscode("git.publish")
@@ -296,6 +289,7 @@ git pull: user.vscode("git.pullRebase")
 git push: user.vscode("git.push")
 git push force: user.vscode("git.pushForce")
 git rebase abort: user.vscode("git.rebaseAbort")
+git rebase: user.vscode("gitlens.gitCommands.rebase")
 git reveal: user.vscode("git.revealInExplorer")
 git revert$: user.vscode("git.revertChange")
 git revert all: user.vscode("git.cleanAll")
@@ -311,7 +305,10 @@ pull request | pr create: user.vscode("pr.create")
 pr (refresh | reload): user.vscode("pr.refreshChanges")
 pull request link:
     user.run_rpc_command("andreas.getGitPullRequestsURL")
-
+pr [change | diff] next:
+    user.vscode("pr.goToNextDiffInPr")
+pr [change | diff] (previous | last):
+    user.vscode("pr.goToPreviousDiffInPr")
 # TODO: Why doesn't this work?
 # Would like to always be able to always have a choice of what branch to use
 # git open file: user.git_open_remote_file_url(false, false)
@@ -325,8 +322,16 @@ git cherry pick: user.vscode("git.cherryPick")
 
 # Use keyboard shortcuts because VSCode relies on when clause contexts to choose the appropriate
 # action: https://code.visualstudio.com/api/references/when-clause-contexts
-change next: key(alt-f5)
-change last: key(shift-alt-f5)
+[git] [change | diff] (previous | last):
+#     Quick and dirty way to accomplish the same thing in two different views
+#     just call both commands one will fail that we don't care
+    user.vscode("workbench.action.editor.previousChange")
+    user.vscode("workbench.action.compareEditor.previousChange")
+[git] [change | diff] next:
+#     Quick and dirty way to accomplish the same thing in two different views
+#     just call both commands one will fail that we don't care
+    user.vscode("workbench.action.editor.nextChange")
+    user.vscode("workbench.action.compareEditor.nextChange")
 
 # Testing
 test run: user.vscode("testing.runAtCursor")
@@ -366,6 +371,11 @@ debug console: user.vscode("workbench.debug.action.toggleRepl")
 bug console: user.vscode("workbench.debug.action.toggleRepl")
 panel debug: user.vscode("workbench.debug.action.toggleRepl")
 debug clean: user.vscode("workbench.debug.panel.action.clearReplAction")
+debug run last:
+    user.vscode("workbench.debug.action.toggleRepl")
+    sleep(50ms)
+    key(up)
+    key(enter)
 
 # Terminal
 terminal external: user.vscode("workbench.action.terminal.openNativeConsole")
@@ -380,6 +390,11 @@ terminal toggle: user.vscode_and_wait("workbench.action.terminal.toggleTerminal"
 terminal scroll up: user.vscode("workbench.action.terminal.scrollUp")
 terminal scroll down: user.vscode("workbench.action.terminal.scrollDown")
 terminal <number_small>: user.vscode_terminal(number_small)
+run last:
+    user.vscode("workbench.debug.action.toggleTerminal")
+    sleep(50ms)
+    key(up)
+    key(enter)
 
 task run [<user.text>]:
     user.vscode("workbench.action.tasks.runTask")
