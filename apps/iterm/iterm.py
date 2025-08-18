@@ -70,6 +70,11 @@ class UserActions:
     #     """selects the file"""
     #     actions.insert(path)
 
+    def open_file_manager_here():
+        """Open the file manager in the current directory"""
+        actions.insert("open .")
+        actions.key("enter")
+
     def tab_jump(number: int):
         actions.key(f"cmd-{number}")
 
@@ -106,6 +111,9 @@ class UserActions:
 
 @mod.action_class
 class Actions:
+    def open_file_manager_here():
+        """Open the file manager in the current directory"""
+
     def gui_tab_previous():
         """Switch to previous tab"""
 
