@@ -9,6 +9,9 @@ os: linux
 # generics
 show shortcuts: key(ctrl-.)
 [go] [to] search: key(ctrl-e)
+# go to <user.text>$:
+#     key(ctrl-e)
+#     insert("{text}")
 show commands: key(ctrl-/)
 open filter: key(ctrl-shift-f)
 go to: key(ctrl-g)

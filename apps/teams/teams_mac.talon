@@ -7,6 +7,20 @@ open history: key(super-shift-h)
 view shortcuts: key(super-.)
 show shortcuts: key(super-.)
 [go] [to] search: key(super-e)
+go to <user.text>$:
+    key(super-e)
+    insert("{text}")
+pop <user.text>$:
+    key(super-e)
+    insert("{text}")
+    app.notify("{text}")
+    # There's a sizable lag between inserting the text,
+    # and having Teams populate everything
+    sleep(1000ms)
+    key(down)
+    key(down)
+    sleep(100ms)
+    key(enter)
 show commands: key(super-/)
 open filter: key(super-shift-f)
 go to: key(super-g)
@@ -35,6 +49,8 @@ move [selected] team up: key(super-shift-up)
 move [selected] team down: key(super-shift-down)
 [go] [to] (prev | previous) section: key(super-shift-f6)
 [go] [to] next section: key(super-f6)
+go back: key(cmd-[)
+go forward: key(cmd-])
 
 # messaging
 [go] [to] compose [box]: key(shift-alt-c)
@@ -47,10 +63,15 @@ attach local file:
     key(down)
     key(space)
 [start] new line: key(shift-enter)
-reply [to] [thread]: key(shift-alt-r)
+reply [to] [thread]: key(shift-cmd-r)
 bold: key(cmd-b)
 (italic | italicize): key(cmd-i)
 (strike | strikethrough): key(cmd-shift-x)
+# using "style" because code is the word that I use to launch VSCode
+code style: key(cmd-shift-alt-c)
+react last: key(cmd-alt-r)
+reword last: key(up)
+formatting options: key(super-shift-x)
 
 # Meetings, Calls and Calendar
 accept video call: key(super-shift-a)
