@@ -167,6 +167,17 @@ class WinActions:
 
 @mod.action_class
 class Actions:
+
+    def git_commit(text: str):
+        """Git commit with optional text for conventional commits extension"""
+        actions.user.vscode("extension.conventionalCommits")
+        actions.insert(text)
+
+    def git_branch_from(text: str):
+        """Create a new branch from the current branch"""
+        actions.user.vscode("git.branchFrom")
+        actions.insert(text)
+
     def vscode_terminal(number: int):
         """Activate a terminal by number"""
         actions.user.vscode(f"workbench.action.terminal.focusAtIndex{number}")
