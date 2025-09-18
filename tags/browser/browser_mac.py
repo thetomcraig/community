@@ -1,5 +1,4 @@
 from talon import Context, actions, app, mac, ui
-from talon.mac import applescript
 
 ctx = Context()
 ctx.matches = r"""
@@ -17,6 +16,23 @@ class UserActions:
     def tab_final():
         actions.key("cmd-9")
 
+    def toggle_dev_tools_dock():
+        actions.key("cmd-shift-d")
+
+    def toggle_inspector():
+        actions.key("cmd-shift-c")
+
+    def show_network_dev_tools():
+        actions.key("cmd-alt-j")
+        actions.sleep("400ms")
+        actions.key("cmd-shift-p")
+        actions.sleep("400ms")
+        actions.insert("network")
+        actions.key("enter")
+
+    def clear_dev_tools():
+        actions.key("ctrl-`")
+        actions.key("cmd-k")
 
 @ctx.action_class("browser")
 class BrowserActions:
@@ -27,22 +43,37 @@ class BrowserActions:
         except IndexError:
             return ""
         try:
-            web_area = window.element.children.find_one(AXRole="AXWebArea")
-            address = web_area.AXURL
-        except (ui.UIErr, AttributeError):
-            try:
-                address = applescript.run(
-                    """
-                    tell application id "{bundle}"
-                        if not (exists (window 1)) then return ""
-                        return the URL of the active tab of the front window
-                    end tell""".format(
-                        bundle=actions.app.bundle()
-                    )
-                )
-            except mac.applescript.ApplescriptErr:
-                return actions.next()
-        return address
+            # for Firefox and Chromium-based browsers (if accessibility available)
+            addresses = [
+                web_area.AXURL for web_area in window.children.find(AXRole="AXWebArea")
+            ]
+            match len(addresses):
+                case 0:
+                    pass
+                case 1:
+                    return addresses[0]
+                case _:
+                    addresses = [
+                        a
+                        for a in addresses
+                        if not (
+                            a.startswith("devtools:")
+                            or a.startswith("about:devtools")
+                            or a.startswith("chrome://devtools/")
+                        )
+                    ]
+                    if len(addresses) == 1:
+                        return addresses[0]
+        except (ui.UIErr, AttributeError) as e:
+            pass
+        try:
+            # for Chromium-based browsers (if scripting available)
+            front_window = window.appscript()
+            if tab := getattr(front_window, "active_tab", None):
+                return tab.URL()
+            return ""
+        except:
+            return actions.next()
 
     def bookmark():
         actions.key("cmd-d")

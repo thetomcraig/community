@@ -8,6 +8,8 @@ ctx.matches = r"""
 tag: browser
 """
 
+browser_name = "Brave Browser"
+
 
 def is_url(url: str) -> bool:
     try:
@@ -25,6 +27,29 @@ class Actions:
         """Open the url in the address bar in a new tab"""
         actions.key("alt-enter")
 
+    def browser_open(url: str):
+        """Focus browser and open url"""
+        if actions.app.name() != browser_name:
+            actions.user.browser_focus_default()
+            actions.sleep("50ms")
+        actions.user.browser_open_new_tab(url)
+
+    def toggle_dev_tools_dock():
+        """Toggle the dev tools pane between bottom and right side"""
+        actions.key("ctrl-shift-d")
+
+    def toggle_inspector():
+        """Toggle the devtools inspector"""
+        actions.key("ctrl-shift-c")
+
+    def show_network_dev_tools():
+        """Toggle the devtools network tab"""
+        actions.key("p-shift-j")
+
+    def clear_dev_tools():
+        """Clear the console output"""
+        actions.key("ctrl-`")
+        actions.key("ctrl-l")
 
 @ctx.action_class("user")
 class UserActions:
@@ -56,6 +81,27 @@ class UserActions:
             actions.app.tab_open()
             actions.user.paste(url_address)
             actions.key("enter")
+
+    def toggle_dev_tools_dock():
+        actions.user.toggle_dev_tools_dock()
+
+    def show_network_dev_tools():
+        actions.user.show_network_dev_tools()
+
+    def toggle_inspector():
+        actions.user.toggle_inspector()
+
+    def address_focus():
+        actions.browser.focus_address()
+
+    def address_copy_address():
+        """Copies the current address"""
+        actions.browser.focus_address()
+        actions.sleep("100ms")
+        actions.edit.copy()
+
+    def address_navigate(address: str):
+        actions.browser.go(address)
 
 
 @ctx.action_class("browser")

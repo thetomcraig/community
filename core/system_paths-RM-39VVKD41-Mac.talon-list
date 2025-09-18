@@ -1,0 +1,16 @@
+list: user.system_paths
+hostname: RM-39VVKD41-Mac
+-
+user: /Users/tomcraig
+desktop: /Users/tomcraig/Desktop
+desk: /Users/tomcraig/Desktop
+documents: /Users/tomcraig/Documents
+docks: /Users/tomcraig/Documents
+downloads: /Users/tomcraig/Downloads
+music: /Users/tomcraig/Music
+pictures: /Users/tomcraig/Pictures
+videos: /Users/tomcraig/Videos
+talon home: /Users/tomcraig/.talon
+talon recordings: /Users/tomcraig/.talon/recordings
+talon user: /Users/tomcraig/.talon/user
+home: /Users/tomcraig

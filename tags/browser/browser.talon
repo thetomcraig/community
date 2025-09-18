@@ -1,20 +1,40 @@
 tag: browser
 -
+tag(): user.address
+tag(): user.find
 tag(): user.navigation
 
 address bar | go address | go url: browser.focus_address()
-go page | page focus: browser.focus_page()
-address copy | url copy | copy address | copy url:
+search address <user.text>$:
     browser.focus_address()
-    sleep(50ms)
-    edit.copy()
+    insert("{text}")
+    key(enter)
+search paste:
+    app.tab_open()
+    edit.paste()
+    key(enter)
+soft search paste:
+    app.tab_open()
+    edit.paste()
+search <user.text>$:
+    app.tab_open()
+    insert("{text}")
+    key(enter)
+soft search <user.text>$:
+    app.tab_open()
+    insert("{text}")
+    key(enter)
+hunt this <user.text>: user.find(text)
+# hunter <user.text>: user.find(text)
+go page | page focus: browser.focus_page()
+
 go home: browser.go_home()
-go to {user.website}: browser.go(website)
 go private: browser.open_private_window()
 
 bookmark it: browser.bookmark()
 bookmark tabs: browser.bookmark_tabs()
 (refresh | reload) it: browser.reload()
+tab reload: browser.reload()
 (refresh | reload) it hard: browser.reload_hard()
 
 bookmark show: browser.bookmarks()
@@ -24,6 +44,10 @@ extensions show: browser.show_extensions()
 history show: browser.show_history()
 cache show: browser.show_clear_cache()
 dev tools [show]: browser.toggle_dev_tools()
+dev tools redock: user.toggle_dev_tools_dock()
+dev tools clear: user.clear_dev_tools()
+dev tools inspect: user.toggle_inspector()
+dev tools network: user.show_network_dev_tools()
 
 # Legacy [verb noun] commands to be removed at a later time
 show downloads: browser.show_downloads()

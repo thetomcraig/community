@@ -1,6 +1,7 @@
 import time
 
-from talon import Context, Module, actions, app, cron, settings, speech_system, ui
+from talon import (Context, Module, actions, app, cron, settings,
+                   speech_system, ui)
 
 mod = Module()
 ctx = Context()
@@ -23,6 +24,7 @@ class UserActions:
     def listening_timeout_expired():
         """Action called when the listening timeout expires"""
         actions.speech.disable()
+        actions.tracking.control_zoom_toggle(False)
 
         if settings.get("user.listening_timeout_show_notification"):
             show_notification()

@@ -5,9 +5,9 @@ mod = Module()
 
 mod.apps.brave = "app.name: Brave Browser"
 mod.apps.brave = "app.name: Brave-browser"
-mod.apps.brave = """
+mod.apps.brave = r"""
 os: windows
-and app.exe: brave.exe
+and app.exe: /^brave\.exe$/i
 os: linux
 and app.exe: brave
 os: mac
@@ -17,6 +17,11 @@ ctx.matches = r"""
 app: brave
 """
 
+@mod.action_class
+class Actions:
+    def show_vomnibar():
+        """Open the Vomnibar"""
+        actions.key("ctrl-s")
 
 @ctx.action_class("user")
 class UserActions:

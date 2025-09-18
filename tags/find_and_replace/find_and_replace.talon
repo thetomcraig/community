@@ -2,12 +2,33 @@ tag: user.find_and_replace
 -
 tag(): user.find
 
+hunt this: user.find("")
+hunt this (pace | paste):
+    user.find("")
+    sleep(25ms)
+    edit.paste()
+hunt this <user.text>: user.find(text)
+
 hunt all: user.find_everywhere("")
 hunt all (pace | paste):
     user.find_everywhere("")
     sleep(25ms)
     edit.paste()
 hunt all <user.text>: user.find_everywhere(text)
+
+scout (all | al | hall) | scouter: user.find_everywhere("")
+scout (all | al | hall) (pace | paste) | scouter (pace | paste):
+    user.find_everywhere("")
+    sleep(25ms)
+    edit.paste()
+scout (all | al | hall) <user.text> | scouter <user.text>: user.find_everywhere(text)
+
+scout (pace | paste):
+    edit.find()
+    sleep(25ms)
+    edit.paste()
+scout <user.text>: edit.find(text)
+
 hunt case: user.find_toggle_match_by_case()
 hunt word: user.find_toggle_match_by_word()
 hunt expression: user.find_toggle_match_by_regex()

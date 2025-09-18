@@ -4,7 +4,7 @@ mod = Module()
 
 
 @mod.action_class
-class tab_actions:
+class TabActions:
     def tab_jump(number: int):
         """Jumps to the specified tab"""
 
@@ -19,3 +19,6 @@ class tab_actions:
 
     def tab_duplicate():
         """Duplicates the current tab."""
+
+    def tab_abandon():
+        """Closes current tab and selects 'do not save' on dialog"""

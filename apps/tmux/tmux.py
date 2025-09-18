@@ -35,7 +35,7 @@ class TmuxActions:
         """execute tmux command"""
         actions.user.tmux_enter_command(command)
         actions.key("enter")
-        actions.sleep("100ms")
+        actions.sleep("150ms")
 
     def tmux_execute_command_with_confirmation(command: str, confirmation_prompt: str):
         """execute tmux command with confirm-before"""
@@ -44,6 +44,12 @@ class TmuxActions:
         )
         actions.key("\n")
 
+    def tmuxinator_start_project(session_name: str):
+        """Open a tmuxinator project"""
+        actions.insert("ta ")
+        actions.insert(session_name)
+        actions.sleep("100ms")
+        actions.key("enter")
 
 ctx = Context()
 ctx.matches = "app: tmux"
@@ -70,9 +76,7 @@ class UserActions:
             actions.user.tmux_execute_command(f"select-window -t {number}")
 
     def tab_close_wrapper():
-        actions.user.tmux_execute_command_with_confirmation(
-            "kill-window", "kill-window #W?"
-        )
+        actions.user.tmux_execute_command("kill-window")
 
     def split_window_right():
         actions.user.split_window_horizontally()

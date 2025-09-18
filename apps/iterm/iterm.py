@@ -15,15 +15,6 @@ directories_to_remap = {}
 directories_to_exclude = {}
 
 
-@ctx.action_class("edit")
-class EditActions:
-    def line_start():
-        actions.key("home")
-
-    def line_end():
-        actions.key("end")
-
-
 @ctx.action_class("user")
 class UserActions:
     # def file_manager_current_path():
@@ -70,6 +61,11 @@ class UserActions:
     #     """selects the file"""
     #     actions.insert(path)
 
+    def open_file_manager_here():
+        """Open the file manager in the current directory"""
+        actions.insert("open .")
+        actions.key("enter")
+
     def tab_jump(number: int):
         actions.key(f"cmd-{number}")
 
@@ -79,3 +75,41 @@ class UserActions:
     def terminal_clear_screen():
         """Clear screen"""
         actions.key("ctrl-l")
+
+    def gui_tab_previous():
+        """
+        Switch to previous tab.
+        This is separate from the regular tab commands,
+        because I use those in tmux
+        """
+        actions.key("cmd-shift-{")
+
+    def gui_tab_next():
+        """
+        Switch to previous tab.
+        This is separate from the regular tab commands,
+        because I use those in tmux
+        """
+        actions.key("cmd-shift-}")
+
+    def gui_tab_new():
+        """
+        Switch to next tab
+        This is separate from the regular tab commands,
+        because I use those in tmux
+        """
+        actions.key("cmd-t")
+
+@mod.action_class
+class Actions:
+    def open_file_manager_here():
+        """Open the file manager in the current directory"""
+
+    def gui_tab_previous():
+        """Switch to previous tab"""
+
+    def gui_tab_next():
+        """Switch to next tab"""
+
+    def gui_tab_new():
+        """Create a new tab"""
