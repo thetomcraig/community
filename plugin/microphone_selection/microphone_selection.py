@@ -19,6 +19,18 @@ def update_microphone_list():
     devices = [
         dev.name for dev in ctx.inputs() if dev.state == cubeb.DeviceState.ENABLED
     ]
+    # we'll need to get the device id here so I can set a name appropriately,I think
+    # ID: AppleUSBAudioEngine:C-Media Electronics Inc.:USB Advanced Audio Device:4400000:2
+    # ID: AppleUSBAudioEngine:C-Media Electronics Inc.:USB Advanced Audio Device:3100000:2
+    # Perhaps not possible
+    print("Devices:")
+    print("--------------------------------")
+    for i in ctx.inputs():
+        if "Advanced" in i.device_id:
+            print(f"ID: {i.device_id}")
+            print(f"Name: '{i.name}'")
+    print("--------------------------------")
+
 
     devices.sort()
     microphone_device_list += devices
@@ -57,6 +69,13 @@ class Actions:
 
     def microphone_select(index: int):
         """Selects a micropohone"""
+        # Can check this list to see if the usb version is always
+        # before/after the 3.5mm version of the device
+        # microphone pick N
+        print(f"Selecting microphone: {index}")
+        print(microphone_device_list[index - 1].device_id)
+
+
         if 1 <= index and index <= len(microphone_device_list):
             actions.sound.set_microphone(microphone_device_list[index - 1])
             app.notify(f"Activating microphone: {microphone_device_list[index - 1]}")
