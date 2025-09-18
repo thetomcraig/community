@@ -4,7 +4,7 @@ import re
 from collections import defaultdict
 from itertools import islice
 from textwrap import wrap
-from typing import Any, Iterable, Tuple
+from typing import Any, Iterable, Optional, Tuple
 
 from talon import Context, Module, actions, imgui, registry, settings
 
@@ -121,8 +121,11 @@ def update_operators_text():
                     # If the operator is implemented as text insertion,
                     # display the operator text
                     operator = operators.get(operator_text)
-                    if type(operator) == str:
+                    if isinstance(operator, str):
                         text = ": " + operator
+                    # If a documentation string is available, use that
+                    elif doc_string := getattr(operator, "__doc__", None):
+                        text = ": " + doc_string
                     # Otherwise display the operator name from list
                     else:
                         has_operator_without_text_implementation = True
@@ -745,13 +748,13 @@ class Actions:
         register_events(True)
         ctx.tags = ["user.help_open"]
 
-    def help_search(phrase: str):
+    def help_search(phrase: str, enabled_only: Optional[bool] = False):
         """Display command info for search phrase"""
         global search_phrase
 
         reset()
         search_phrase = phrase
-        refresh_context_command_map()
+        refresh_context_command_map(enabled_only=enabled_only)
         hide_all_help_guis()
         gui_context_help.show()
         register_events(True)
