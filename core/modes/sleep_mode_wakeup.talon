@@ -28,3 +28,7 @@ not tag: user.deep_sleep
     user.mouse_wake()
     user.history_enable()
     user.talon_mode()
+
+^talon wake [<phrase>]$:
+    speech.enable()
+    tracking.control_zoom_toggle(true)
