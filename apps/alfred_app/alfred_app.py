@@ -3,8 +3,6 @@ from talon import Context, Module, actions
 ctx = Context()
 mod = Module()
 
-# mod.tag("alfred_clipboard")
-
 @ctx.action_class("user")
 class UserActions:
     def alfred_search():
@@ -16,10 +14,6 @@ class UserActions:
             actions.sleep("100ms")
             actions.insert(text)
 
-    def alfred_clipboard_append():
-        actions.key("cmd-c-c")
-
-
 @mod.action_class
 class Actions:
     def alfred_search():
@@ -27,6 +21,3 @@ class Actions:
 
     def alfred_clipboard(text: str = None):
         """Search Alfred clipboard"""
-
-    def alfred_clipboard_append():
-        """Append to Alfred clipboard"""
