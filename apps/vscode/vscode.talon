@@ -331,7 +331,10 @@ git cherry pick: user.vscode("git.cherryPick")
 #     just call both commands one will fail that we don't care
     user.vscode("workbench.action.editor.nextChange")
     user.vscode("workbench.action.compareEditor.nextChange")
-
+git blame line:
+    user.vscode("gitlens.toggleLineBlame")
+git log | git history:
+    user.vscode("git.viewHistory")
 # Testing
 test run: user.vscode("testing.runAtCursor")
 test run file: user.vscode("testing.runCurrentFile")
