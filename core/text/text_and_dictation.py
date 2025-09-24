@@ -142,6 +142,7 @@ def text(m) -> str:
         "| <user.prose_currency>"
         "| <user.prose_time>"
         "| <user.number_prose_prefixed>"
+        "| <user.number_smart_unprefixed>"
         "| <user.prose_percent>"
         "| <user.prose_modifier>"
         "| <user.abbreviation>"
