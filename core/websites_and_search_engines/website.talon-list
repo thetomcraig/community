@@ -19,12 +19,3 @@ claude: https://claude.ai/
 icloud: https://www.icloud.com/
 my tickets: https://ayadev.atlassian.net/jira/software/c/projects/MCZ/issues/?filter=22280
 assignee=712020%3Aaa4c8fe2-64f1-4e5e-97fe-ae1f306bd07e
-
-winnow backlog: https://ayadev.atlassian.net/jira/software/c/projects/WIN/boards/1514/backlog
-winnow sprint: https://ayadev.atlassian.net/jira/software/c/projects/WIN/boards/1514
-winnow front end PRs: https://github.com/PolarisHealthAI/Winnow2.0_FE/pulls?q=sort%3Aupdated-desc+is%3Apr+is%3Aopen
-winnow front end: https://github.com/PolarisHealthAI/Winnow2.0_FE/tree/develop_v3
-winnow back end PRs: https://github.com/PolarisHealthAI/Winnow_v2_BE/pulls?q=sort%3Aupdated-desc+is%3Apr+is%3Aopen
-winnow backend: https://github.com/PolarisHealthAI/Winnow_v2_BE/tree/develop_v3
-winnow ETL: https://github.com/AyaHealthcare/winnow_v2_etl
-winnow pipelines: https://dev.azure.com/AyaTechTeam/WorkforceAI/_build?definitionScope=%5CWinnow%5CV3&treeState=XFdpbm5vd1xWM1xEZXBsb3kkXFdpbm5vd1xWM1xCdWlsZA%3D%3D
