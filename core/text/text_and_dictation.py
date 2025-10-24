@@ -133,6 +133,8 @@ def text(m) -> str:
     return format_phrase(m)
 
 
+# TODO, testing formatter, should go in list below 
+# "| <user.number_smart_unprefixed>"
 @mod.capture(
     rule=(
         "("
@@ -142,7 +144,6 @@ def text(m) -> str:
         "| <user.prose_currency>"
         "| <user.prose_time>"
         "| <user.number_prose_prefixed>"
-        "| <user.number_smart_unprefixed>"
         "| <user.prose_percent>"
         "| <user.prose_modifier>"
         "| <user.abbreviation>"
