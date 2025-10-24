@@ -15,3 +15,5 @@ __pycache__
 .\#*
 # Vim (from https://github.com/github/gitignore/blob/main/Global/Vim.gitignore)
 [._]*.swp
+# my personal website list
+core/websites_and_search_engines/website-local.talon-list
