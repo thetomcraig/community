@@ -25,10 +25,7 @@ settings():
     # user.help_sort_contexts_by_specificity = false
 
     # Set the scroll amount for continuous scroll/gaze scroll
-    user.mouse_continuous_scroll_amount = 30
-
-    # Set the scroll multiplier for gaze scroll
-    user.mouse_gaze_scroll_speed_multiplier = 1.0
+    user.mouse_continuous_scroll_amount = 8
 
     # Set the maximum acceleration factor when scrolling continuously. 1=constant speed/no acceleration.
     user.mouse_continuous_scroll_acceleration = 1
@@ -59,7 +56,7 @@ settings():
     user.mouse_wake_hides_cursor = false
 
     # Set the amount to scroll up/down
-    user.mouse_wheel_down_amount = .1
+    user.mouse_wheel_down_amount = 40
 
     # Set the amount to scroll left/right
     user.mouse_wheel_horizontal_amount = 40
