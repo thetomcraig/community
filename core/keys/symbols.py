@@ -59,7 +59,7 @@ symbols = [
     Symbol(".", ["period", "full stop"], ["dot", "point"]),
     Symbol(";", ["semicolon, semi"]),
     Symbol(":", ["colon", "stack"]),
-    Symbol("?", ["question mark"], ["question"]),
+    Symbol("?", ["question mark", "probe"], ["question"]),
     Symbol("!", ["exclamation mark", "exclamation point"], ["bang"]),
     Symbol("*", ["asterisk"], ["star"]),
     Symbol("#", ["hash sign", "number sign"], ["hash"]),
@@ -71,7 +71,7 @@ symbols = [
     Symbol("+", None, ["plus"]),
     Symbol("~", None, ["tilde"]),
     Symbol("_", None, ["down score", "underscore", "blank"]),
-    Symbol(" ", None, ["void"]),
+    Symbol(" ", ["void"], None),
     Symbol("(", ["paren", "L paren", "left paren", "left round"], None),
     Symbol(")", ["R paren", "right paren", "right round"], None),
     Symbol("[", None,["brack", "L brack", "bracket", "L bracket", "left bracket", "square", "L square", "left square",],),
@@ -84,7 +84,7 @@ symbols = [
     Symbol(">", None, ["rangle", "R angle", "right angle", "greater than"]),
     Symbol("^", None, ["caret"]),
     Symbol("|", None, ["pipe"]),
-    Symbol("'", None, ["quote", "apostrophe"]),
+    Symbol("'", None, ["quote", "apostrophe", "foot"]),
     Symbol('"', None, ["dub quote", "double quote", "inch"]),
 ]
 
