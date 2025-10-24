@@ -46,7 +46,7 @@ zsh
 az ssh
 az login
 TTL
-
+pylance
 jq
 vim
 grep
@@ -95,7 +95,7 @@ ocr
 
 rango
 dendron
-
+IDE
 
 
 Aya
