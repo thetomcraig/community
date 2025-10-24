@@ -3,7 +3,7 @@ from typing import Iterator, Union
 
 from talon import Context, Module
 
-from ..create_spoken_forms import create_spoken_form_for_number
+# from ..create_spoken_forms import create_spoken_form_for_number
 
 mod = Module()
 ctx = Context()
@@ -290,26 +290,27 @@ def number_prose_prefixed(m) -> str:
     return m.number_prose_unprefixed
 
 
-@mod.capture(
-    rule="<user.number_signed_string> | <user.number_prose_with_dot> | <user.number_prose_with_comma> | <user.number_prose_with_colon>"
-)
-def number_smart_unprefixed(m) -> str:
-    """
-    Returns numbers in numeric form if > 10, otherwise keeps spoken form.
-    Examples: "five" -> "five", "twenty three" -> "23"
-    """
-    number_str = m[0]
-    try:
-        # Try to parse as integer to check if > 10
-        number_value = int(number_str)
-        if number_value > 10:
-            return str(number_value)
-        else:
-            # For numbers <= 10, return the original spoken form using the existing function
-            return create_spoken_form_for_number(number_value)
-    except ValueError:
-        # If it contains dots, commas, colons, return as-is (these are already formatted)
-        return number_str
+# TODO, testing this new formatter specific to small numbers
+# @mod.capture(
+#     rule="<user.number_signed_string> | <user.number_prose_with_dot> | <user.number_prose_with_comma> | <user.number_prose_with_colon>"
+# )
+# def number_smart_unprefixed(m) -> str:
+#     """
+#     Returns numbers in numeric form if > 10, otherwise keeps spoken form.
+#     Examples: "five" -> "five", "twenty three" -> "23"
+#     """
+#     number_str = m[0]
+#     try:
+#         # Try to parse as integer to check if > 10
+#         number_value = int(number_str)
+#         if number_value > 10:
+#             return str(number_value)
+#         else:
+#             # For numbers <= 10, return the original spoken form using the existing function
+#             return create_spoken_form_for_number(number_value)
+#     except ValueError:
+#         # If it contains dots, commas, colons, return as-is (these are already formatted)
+#         return number_str
 
 
 @mod.capture(rule="(numb | numeral) <user.number_smart_unprefixed>")
