@@ -44,7 +44,7 @@ bar chat: user.vscode("workbench.action.chat.openInSidebar")
 bar tabs: user.vscode("andreas.tabs.focus")
 bar PRs: user.vscode("pr:github.focus")
 bar switch: user.vscode("workbench.action.toggleSidebarVisibility")
-switch right | bar close right | bar switch right: user.vscode("workbench.action.closeAuxiliaryBar")
+aux | switch right | bar close right | bar switch right: user.vscode("workbench.action.closeAuxiliaryBar")
 bar hide: user.vscode("workbench.action.closeSidebar")
 
 show include | show exclude:
@@ -212,6 +212,7 @@ go marks:
     user.deprecate_command("2023-06-06", "go marks", "bar marks")
     user.vscode("workbench.view.extension.bookmarks")
 toggle mark: user.vscode("bookmarks.toggle")
+toggle [hi | high | highlight]: user.vscode("textmarker.toggleHighlight")
 go next mark: user.vscode("bookmarks.jumpToNext")
 go last mark: user.vscode("bookmarks.jumpToPrevious")
 
@@ -447,3 +448,4 @@ cell run: user.vscode("notebook.cell.execute")
 install local: user.vscode("workbench.extensions.action.installVSIX")
 preview markdown: user.vscode("markdown.showPreview")
 split markdown | split preview: user.vscode("markdown.showPreviewToSide")
+
