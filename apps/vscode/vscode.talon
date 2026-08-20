@@ -40,7 +40,7 @@ bar debug: user.vscode("workbench.view.debug")
 bar remote: user.vscode("workbench.action.remote.showMenu")
 bar source: user.vscode("workbench.view.scm")
 bar test: user.vscode("workbench.view.testing.focus")
-bar chat: user.vscode("workbench.action.chat.openInSidebar")
+bar chat: user.vscode("chatgpt.openSidebar")
 bar tabs: user.vscode("andreas.tabs.focus")
 bar PRs: user.vscode("pr:github.focus")
 bar switch: user.vscode("workbench.action.toggleSidebarVisibility")
@@ -309,6 +309,10 @@ pr [change | diff] next:
     user.vscode("pr.goToNextDiffInPr")
 pr [change | diff] (previous | last):
     user.vscode("pr.goToPreviousDiffInPr")
+pr comment:    
+    user.vscode("workbench.action.addComment")
+pr mark viewed:
+    user.vscode("pr.markFileAsViewed")
 # TODO: Why doesn't this work?
 # Would like to always be able to always have a choice of what branch to use
 # git open file: user.git_open_remote_file_url(false, false)
@@ -448,4 +452,3 @@ cell run: user.vscode("notebook.cell.execute")
 install local: user.vscode("workbench.extensions.action.installVSIX")
 preview markdown: user.vscode("markdown.showPreview")
 split markdown | split preview: user.vscode("markdown.showPreviewToSide")
-
