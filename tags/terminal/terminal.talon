@@ -30,12 +30,21 @@ kill all: user.terminal_kill_all()
 kill it: user.terminal_kill_all()
 kill this: user.terminal_kill_all()
 kill word | chuck word: user.terminal_kill_word()
-kill line: user.terminal_kill_line()
+kill line | clear line: user.terminal_kill_line()
 kill right: user.terminal_kill_line_right()
-files tree | tree | list: user.terminal_tree()
+files tree | tree | list:
+    key(ctrl-c)
+    insert("eza -L=1 -l .")
+    key("enter")
 tree all | list long | long list:
     key(ctrl-c)
     insert("eza -L=1 -alT .")
+    key(enter)
+mux:
+    insert('ta ')
+    key(enter)
+mux [<user.text>]:
+    insert('ta {text}')
     key(enter)
 check out new: insert('gcb /')
 check out: user.git_fuzzy_checkout()
