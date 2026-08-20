@@ -77,7 +77,7 @@ supported_csv_files = [
     CSVData(
         "user.website",
         os.path.join("settings", "websites.csv"),
-        os.path.join("core", "websites_and_search_engines", "website.talon-list"),
+        os.path.join("core", "websites_and_search_engines", "website-local.talon-list"),
     ),
     CSVData(
         "user.emoji",
