@@ -17,6 +17,14 @@ class EditActions:
         """
         )
 
+    def append_to_clipboard():
+        actions.key("cmd-c-c")
+        applescript.run(
+            r"""
+        display notification "Text appended to clipboard" with title "Talon"
+        """
+        )
+
     def cut():
         actions.key("cmd-x")
         applescript.run(
