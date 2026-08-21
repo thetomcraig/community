@@ -97,7 +97,9 @@ chuck word:
 clear word right:
     edit.extend_word_right()
     edit.delete()
-
+chop word:
+    edit.extend_word_right()
+    edit.delete()
 
 
 # Copy
