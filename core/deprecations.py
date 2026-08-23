@@ -52,7 +52,6 @@ See https://github.com/talonhub/community/issues/940 for original discussion
 import datetime
 import os.path
 import warnings
-from typing import Optional
 
 from talon import Module, actions, settings, speech_system
 
@@ -87,7 +86,7 @@ def calculate_rule_info():
         filename = current_command[0].target.filename
         rule = " ".join(current_command[1]._unmapped)
         return f'\nTriggered from "{rule}" ({filename}:{start_line})'
-    except Exception as e:
+    except:
         return ""
 
 
@@ -135,15 +134,16 @@ class Actions:
         notified_in_phrase.add(name)
         msg = (
             f'The "{name}" command is deprecated. Instead, say: "{replacement}".'
-            f" See log for more."
+            + " See log for more."
         )
         actions.app.notify(msg, "Deprecation warning")
         msg = (
             f'The "{name}" command is deprecated since {time_deprecated}.'
-            f' Instead, say: "{replacement}".'
-            f' See {os.path.join(REPO_DIR, "BREAKING_CHANGES.txt")}'
+            + f' Instead, say: "{replacement}".'
+            + f" See {os.path.join(REPO_DIR, 'BREAKING_CHANGES.txt')}"
         )
-        warnings.warn(msg, DeprecationWarning)
+        # No caller makes sense, since a voice command triggered this action.
+        warnings.warn_explicit(msg, DeprecationWarning, "", 0)
 
     def deprecate_capture(time_deprecated: str, name: str):
         """
@@ -157,8 +157,8 @@ class Actions:
 
         msg = (
             f"The `{name}` capture is deprecated since {time_deprecated}."
-            f' See {os.path.join(REPO_DIR, "BREAKING_CHANGES.txt")}'
-            f"{calculate_rule_info()}"
+            + f" See {os.path.join(REPO_DIR, 'BREAKING_CHANGES.txt')}"
+            + f"{calculate_rule_info()}"
         )
         warnings.warn(msg, DeprecationWarning, stacklevel=3)
 
@@ -176,8 +176,8 @@ class Actions:
 
         msg = (
             f"The `{name}` action is deprecated since {time_deprecated}."
-            f"{replacement_msg}"
-            f' See {os.path.join(REPO_DIR, "BREAKING_CHANGES.txt")}'
-            f"{calculate_rule_info()}"
+            + f"{replacement_msg}"
+            + f" See {os.path.join(REPO_DIR, 'BREAKING_CHANGES.txt')}"
+            + f"{calculate_rule_info()}"
         )
         warnings.warn(msg, DeprecationWarning, stacklevel=5)

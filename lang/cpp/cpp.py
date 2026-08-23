@@ -12,13 +12,6 @@ ctx.matches = r"""
 code.language: cpp
 """
 
-ctx.lists["self.cpp_pointers"] = {
-    "pointer": "*",
-    "reference": "&",
-    "ref": "&",
-    "array": "[]",
-}
-
 mod.list("cpp_pointers", desc="C++ pointer and reference annotations")
 mod.list("cpp_standard_type", desc="Types from the C++ standard library")
 mod.list("cpp_standard_function", desc="Functions in the std namespace")
@@ -58,19 +51,19 @@ class UserActions:
         return operators
 
     def code_insert_null():
-        actions.auto_insert("nullptr")
+        actions.insert("nullptr")
 
     def code_insert_is_null():
-        actions.auto_insert(" == nullptr")
+        actions.insert(" == nullptr")
 
     def code_insert_is_not_null():
-        actions.auto_insert(" != nullptr")
+        actions.insert(" != nullptr")
 
     def code_insert_true():
-        actions.auto_insert("true")
+        actions.insert("true")
 
     def code_insert_false():
-        actions.auto_insert("false")
+        actions.insert("false")
 
     def code_operator_object_accessor():
         actions.insert(".")
