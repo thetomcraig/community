@@ -5,7 +5,7 @@ tag(): user.address
 tag(): user.find
 tag(): user.navigation
 
-address bar | go address | go url: browser.focus_address()
+address bar | go address | take address | go url: browser.focus_address()
 search address <user.text>$:
     browser.focus_address()
     insert("{text}")
